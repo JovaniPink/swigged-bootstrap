@@ -1,0 +1,60 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# Apple
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore Temps
+src/.tmp/
+dist/
+
+### JavaScript ###
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Project dependencies (CRA)
+/coverage
+/build
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Project dependencies (Gatsby)
+.cache
+public
+node_modules
+package-lock.json
+yarn.lock
+
+### Elm ###
+# elm-package generated files
+elm-stuff
+# elm-repl generated files
+repl-temp-*
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+logs
+*.log
+.netlify/
