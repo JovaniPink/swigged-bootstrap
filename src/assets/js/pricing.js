@@ -4,14 +4,12 @@
 //
 
 (function() {
-  
   //
   // Variables
   //
 
   var toggle = document.querySelector('[data-toggle="price"]');
   var DURATION = 1;
-
 
   //
   // Functions
@@ -31,8 +29,10 @@
       var duration = e.dataset.duration ? e.dataset.duration : DURATION;
       var options = e.dataset.options ? JSON.parse(e.dataset.options) : null;
 
-      var countUp = (!checked) ? new CountUp(e, monthly, annual, decimals, duration, options) : new CountUp(e, annual, monthly, decimals, duration, options);
-      
+      var countUp = !checked
+        ? new CountUp(e, monthly, annual, decimals, duration, options)
+        : new CountUp(e, annual, monthly, decimals, duration, options);
+
       if (!countUp.error) {
         countUp.start();
       } else {
@@ -50,5 +50,4 @@
       update(e);
     });
   }
-
 })();

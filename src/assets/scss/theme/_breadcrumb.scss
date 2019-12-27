@@ -7,14 +7,12 @@
   font-size: $breadcrumb-font-size;
 
   + .breadcrumb-item {
-
     &::before {
-      content: "\e930";
-      font-family: "Feather";
+      content: '\e930';
+      font-family: 'Feather';
     }
   }
 }
-
 
 // Horizontal scroll
 

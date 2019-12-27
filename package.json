@@ -1,9 +1,9 @@
 {
-  "title": "Barkeep by Swigged",
-  "name": "barkeep",
+  "title": "Swigged with Bootstrap",
+  "name": "swigged-bootstrap",
   "version": "0.1.0",
   "private": true,
-  "description": "The simplest way to build cocktails, mocktails, menus socially.",
+  "description": "The simplest way to build cocktails, mocktails, menus - socially.",
   "keywords": [
     "bartender",
     "bartending",
@@ -14,10 +14,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/MeasuredStudios/swigged-bootstrap"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/MeasuredStudios/swigged-bootstrap/issues"
   },
   "author": "Jovani Pink",
   "contributors": [
@@ -31,15 +31,33 @@
     "countup.js": "2.0.4",
     "flickity": "2.2.1",
     "flickity-fade": "1.0.0",
-    "highlightjs": "9.16.2",
+    "highlight.js": "9.17.1",
     "imagesloaded": "4.1.4",
     "isotope-layout": "3.0.6",
     "jarallax": "1.12.0",
     "jquery": "3.4.1",
+    "popper.js": "1.16.0",
     "smooth-scroll": "16.1.0",
     "typed.js": "2.0.11"
   },
   "devDependencies": {
+    "@types/aos": "3.0.3",
+    "@types/bootstrap": "4.3.1",
+    "@types/flickity": "2.2.2",
+    "@types/gulp": "4.0.6",
+    "@types/gulp-autoprefixer": "0.0.32",
+    "@types/gulp-cached": "0.0.31",
+    "@types/gulp-file-include": "0.14.3",
+    "@types/gulp-sass": "4.0.0",
+    "@types/gulp-uglify": "3.0.6",
+    "@types/highlight.js": "9.12.3",
+    "@types/imagesloaded": "4.1.2",
+    "@types/isotope-layout": "3.0.8",
+    "@types/jquery": "3.3.31",
+    "@types/node": "12.12.22",
+    "@types/prettier": "1.19.0",
+    "@types/smooth-scroll": "16.1.0",
+    "@types/stylelint": "9.10.1",
     "browser-sync": "2.26.7",
     "del": "5.1.0",
     "gulp": "4.0.2",
@@ -53,7 +71,11 @@
     "gulp-sass": "4.0.2",
     "gulp-uglify": "3.0.2",
     "gulp-useref": "4.0.0",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "stylelint": "12.0.0",
+    "stylelint-config-prettier": "8.0.0",
+    "stylelint-config-twbs-bootstrap": "1.0.0",
+    "stylelint-prettier": "1.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -63,6 +85,6 @@
     "not dead"
   ],
   "engines": {
-    "node": ">= 8.16.2"
+    "node": ">= 10.18.0"
   }
 }

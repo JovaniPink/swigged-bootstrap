@@ -6,14 +6,15 @@
 'use strict';
 
 (function() {
-
   //
   // Variables
   //
 
   var navbar = document.querySelector('.navbar');
   var isLight = false;
-  var isTogglable = navbar ? navbar.classList.contains('navbar-togglable') : false;
+  var isTogglable = navbar
+    ? navbar.classList.contains('navbar-togglable')
+    : false;
 
   //
   // Functions
@@ -55,7 +56,7 @@
 
     if (scrollTop > 0 && !isLight) {
       makeNavbarLight();
-    } else if (scrollTop == 0 || scrollTop < 0 && isLight) {
+    } else if (scrollTop == 0 || (scrollTop < 0 && isLight)) {
       makeNavbarDark();
     }
   }
@@ -65,7 +66,7 @@
   //
 
   if (navbar && isTogglable) {
-    "load scroll".split(' ').forEach(function(e) {
+    'load scroll'.split(' ').forEach(function(e) {
       window.addEventListener(e, function(e) {
         var type = e.type;
 
@@ -73,5 +74,4 @@
       });
     });
   }
-
 })();

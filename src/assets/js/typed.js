@@ -4,13 +4,11 @@
 //
 
 (function() {
-  
   //
   // Variables
   //
 
   var toggle = document.querySelectorAll('[data-toggle="typed"]');
-
 
   //
   // Functions
@@ -18,19 +16,18 @@
 
   function init(el) {
     var elementOptions = el.dataset.options;
-        elementOptions = elementOptions ? JSON.parse(elementOptions) : {};
+    elementOptions = elementOptions ? JSON.parse(elementOptions) : {};
     var defaultOptions = {
       typeSpeed: 40,
       backSpeed: 40,
       backDelay: 1000,
-      loop: true
-    }
+      loop: true,
+    };
     var options = Object.assign(defaultOptions, elementOptions);
 
     // Init
     new Typed(el, options);
   }
-
 
   //
   // Events
@@ -41,5 +38,4 @@
       init(el);
     });
   }
-  
 })();

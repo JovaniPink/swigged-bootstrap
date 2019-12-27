@@ -14,7 +14,7 @@
     var target = $this.data('target');
 
     $(target).isotope({
-      filter: filter
+      filter: filter,
     });
   });
 

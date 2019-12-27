@@ -5,13 +5,11 @@
 'use strict';
 
 (function() {
-
   //
   // Variables
   //
 
   var toggle = document.querySelectorAll('.highlight');
-
 
   //
   // Functions
@@ -20,7 +18,6 @@
   function init(el) {
     hljs.highlightBlock(el);
   }
-
 
   //
   // Events
@@ -31,5 +28,4 @@
       init(el);
     });
   }
-
 })();

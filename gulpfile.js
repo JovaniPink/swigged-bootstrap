@@ -2,6 +2,9 @@
 // Variables ===================================
 //
 
+// Load config
+const config = require('./config');
+
 // Load dependencies
 const autoprefixer = require('gulp-autoprefixer');
 const browsersync = require('browser-sync').create();
@@ -123,6 +126,7 @@ gulp.task('fileinclude', function(callback) {
         prefix: '@@',
         basepath: '@file',
         indent: true,
+        context: config,
       })
     )
     .pipe(cached())
@@ -133,6 +137,11 @@ gulp.task('clean:tmp', function(callback) {
   del.sync(paths.src.tmp.dir);
   callback();
 });
+
+// gulp.task('clean:packageLock', function(callback) {
+//   del.sync(paths.base.packageLock.files);
+//   callback();
+// });
 
 gulp.task('clean:dist', function(callback) {
   del.sync(paths.dist.base.dir);
@@ -178,6 +187,7 @@ gulp.task('html', function() {
         prefix: '@@',
         basepath: '@file',
         indent: true,
+        context: config,
       })
     )
     .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
@@ -192,7 +202,12 @@ gulp.task('html', function() {
 gulp.task(
   'build',
   gulp.series(
-    gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'),
+    gulp.parallel(
+      'clean:tmp',
+      'clean:dist',
+      'copy:all',
+      'copy:libs'
+    ),
     'scss',
     'html'
   )

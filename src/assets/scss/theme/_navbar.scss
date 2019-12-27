@@ -9,17 +9,15 @@
   z-index: $zindex-fixed;
 }
 
-
 // Dark version
 
 .navbar-dark {
-
   @include media-breakpoint-down(md) {
-
     .navbar-nav .nav-item .nav-link {
       color: $navbar-light-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $navbar-light-hover-color;
       }
     }
@@ -35,15 +33,13 @@
   }
 }
 
-
-// Contaner
+// Container
 
 .navbar > .container,
 .navbar > .container-fluid {
   padding-left: $grid-gutter-width / 2 !important;
   padding-right: $grid-gutter-width / 2 !important;
 }
-
 
 // Brand
 
@@ -60,11 +56,9 @@
   filter: brightness(0) invert(1);
 }
 
-
 // Button
 
 .navbar-btn {
-
   @include media-breakpoint-down(md) {
     width: 100%;
     padding: $btn-padding-y $btn-padding-x;
@@ -73,7 +67,6 @@
     font-size: $btn-font-size;
   }
 }
-
 
 // Navigation
 
@@ -85,27 +78,24 @@
   }
 }
 
-
 // Boxed layout
 
 .navbar-dark.fixed-top > .container {
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     right: 0;
     bottom: -$navbar-padding-y;
     left: 0;
-    border-top: $border-width solid fade-out($white, .8);
+    border-top: $border-width solid fade-out($white, 0.8);
   }
 }
-
 
 // Collapse
 
 @include media-breakpoint-down(md) {
-
   .navbar-collapse {
     position: fixed;
     top: $spacer;
@@ -136,11 +126,9 @@
 
   .navbar-collapse.collapsing {
     opacity: 0;
-    transform: scale(.9);
+    transform: scale(0.9);
   }
-
 }
-
 
 // Toggler
 
@@ -155,11 +143,9 @@
   }
 }
 
-
 // Navigation
 
 .navbar-nav .nav-item {
-
   @include media-breakpoint-down(md) {
     padding: $navbar-nav-item-spacing;
 
@@ -170,13 +156,11 @@
 }
 
 .navbar-nav .nav-link {
-
   @include media-breakpoint-down(md) {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
-
 
 // Dropdown menu
 
@@ -198,7 +182,6 @@
 }
 
 .navbar-nav .dropright > .dropdown-menu {
-
   @include media-breakpoint-down(md) {
     padding-top: $spacer;
     padding-bottom: $spacer;
@@ -206,12 +189,10 @@
   }
 }
 
-
 // Dropdown item
 
 .navbar-nav .dropdown-item,
 .navbar-nav .dropdown-header {
-
   @include media-breakpoint-down(md) {
     margin-left: 0;
     margin-right: 0;
@@ -220,11 +201,9 @@
   }
 }
 
-
 // Dropdown toggle
 
 .navbar-nav .dropdown > .dropdown-toggle {
-
   &::after {
     display: none;
   }
@@ -243,18 +222,16 @@
   }
 
   @include media-breakpoint-down(md) {
-
     &::after {
-      content: "\e92e";
+      content: '\e92e';
     }
 
-    &[aria-expanded="true"]::after {
+    &[aria-expanded='true']::after {
       transform-origin: center center;
       transform: rotate(180deg);
     }
   }
 }
-
 
 // Dropdown image
 
@@ -276,13 +253,13 @@
   // Overlay
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: fade-out($primary, .2);
+    background-color: fade-out($primary, 0.2);
     border-radius: inherit;
   }
 
@@ -295,17 +272,14 @@
 
 .navbar-nav .dropdown-menu-lg .dropdown-img-left,
 .navbar-nav .dropdown-menu-xl .dropdown-img-left {
-
   @include media-breakpoint-up(lg) {
     padding: $dropdown-padding-y-lg $dropdown-padding-x-lg;
   }
 }
 
-
 // Dropdown body
 
 .navbar-nav .dropdown-body {
-
   @include media-breakpoint-up(lg) {
     padding: $dropdown-padding-y $dropdown-padding-x;
   }
@@ -313,7 +287,6 @@
 
 .navbar-nav .dropdown-menu-lg .dropdown-body,
 .navbar-nav .dropdown-menu-xl .dropdown-body {
-
   @include media-breakpoint-up(lg) {
     padding: $dropdown-padding-y-lg $dropdown-padding-x-lg;
   }
@@ -333,11 +306,9 @@
   }
 }
 
-
 // Toggle dropdown on hover
 
 @include media-breakpoint-up(lg) {
-
   .navbar-nav .dropdown-menu {
     z-index: $zindex-fixed;
     display: block !important;
@@ -372,5 +343,50 @@
 
   .navbar-nav .dropright.show > .dropdown-menu {
     transform: translate3d(0, 0, 0);
+  }
+}
+// Vertical
+//
+// Creates a vertically aligned version of the navbar
+
+.navbar-vertical {
+  .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link[data-toggle='collapse'] {
+    &:after {
+      display: block;
+      content: '\e92e';
+      font-family: 'Feather';
+      margin-left: auto;
+      transition: transform 0.2s;
+    }
+
+    // Expanded
+    &[aria-expanded='true'] {
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  // Second level
+  .navbar-nav .nav .nav-link {
+    padding-left: $navbar-padding-x + $navbar-icon-min-width;
+  }
+
+  // Third level
+  .navbar-nav .nav .nav .nav-link {
+    padding-left: $navbar-padding-x * 1.5 + $navbar-icon-min-width;
+  }
+
+  .navbar-heading {
+    padding-top: $nav-link-padding-y;
+    padding-bottom: $nav-link-padding-y;
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 }

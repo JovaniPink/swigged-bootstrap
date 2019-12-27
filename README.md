@@ -1,6 +1,6 @@
-# LANDKIT
+# SWIGGED
 
-Landkit Theme by Good Themes.
+Using the Landkit & Dashkit Themes by Good Themes for the creation of Swiggeed.
 
 ### Documentation
 

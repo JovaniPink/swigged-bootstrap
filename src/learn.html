@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  @@include("partials/head.html", {
+  "pageTitle": "Swigged"
+  })
+</head>
+
+<body>
+
+  <!-- MODALS
+    ================================================== -->
+  @@include("partials/modals.html")
+
+  <!-- NAVBAR
+    ================================================== -->
+  @@include("partials/navbar.html", {
+  "classList": "navbar-dark",
+  "type": "boxed"
+  })
+
+  <!-- WELCOME
+    ================================================== -->
+  <section data-jarallax data-speed=".8"
+    class="pt-12 pt-md-14 pb-12 pb-md-15 overlay overlay-black overlay-60 bg-cover jarallax"
+    style="margin-top: -83px; background-image: url(assets/img/covers/cover-19.jpg);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-7 text-center">
+
+          <!-- Headin -->
+          <h1 class="display-2 font-weight-bold text-white">
+            Our Work.
+          </h1>
+
+          <!-- Text -->
+          <p class="lead text-white-75 mb-4">
+            We design & build a set of knowledge bases, tools, apps, and resources to do great things for your bar.
+          </p>
+
+          <!-- Badges -->
+          <nav class="nav justify-content-center">
+            <a class="badge badge-pill badge-white-soft active mr-1 mb-1" href="#" data-toggle="pill" data-filter="*"
+              data-target="#portfolio">
+              <span class="h6 text-uppercase">Primary</span>
+            </a>
+            <a class="badge badge-pill badge-white-soft mr-1 mb-1" href="#" data-toggle="pill" data-filter=".sake"
+              data-target="#portfolio">
+              <span class="h6 text-uppercase">Sakes</span>
+            </a>
+            <a class="badge badge-pill badge-white-soft mr-1 mb-1" href="#" data-toggle="pill" data-filter=".wine"
+              data-target="#portfolio">
+              <span class="h6 text-uppercase">Wines</span>
+            </a>
+            <a class="badge badge-pill badge-white-soft mr-1 mb-1" href="#" data-toggle="pill" data-filter=".beer"
+              data-target="#portfolio">
+              <span class="h6 text-uppercase">Beers</span>
+            </a>
+            <a class="badge badge-pill badge-white-soft mr-1 mb-1" href="#" data-toggle="pill" data-filter=".spirit"
+              data-target="#portfolio">
+              <span class="h6 text-uppercase">Spirits</span>
+            </a>
+          </nav>
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE
+    ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+      @@include("assets/img/shapes/curves/curve-1.svg")
+    </div>
+  </div>
+
+  <!-- CONTENT
+    ================================================== -->
+  <section class="py-8 py-md-11 mt-n10 mt-md-n14">
+    <div class="container">
+      <div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'>
+        <div class="col-12 col-md-4 resources">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Beer</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Beer</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 product">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Spirit</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Spirit</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 resources">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Wine</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Wine</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 ux">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Beer</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Beer</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 ux">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Sake</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Sake</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 product">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Spirit</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Spirit</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 product">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Wine</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Wine</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 ux">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Sake</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Sake</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+        <div class="col-12 col-md-4 ux">
+
+          <!-- Card -->
+          <a class="card shadow-light-lg mb-7" href="#!">
+
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img" src="assets/img/portfolio/portfolio-20.jpg" alt="...">
+            </div>
+
+            <!-- Overlay -->
+            <div class="card-img-overlay card-img-overlay-hover">
+              <div class="card-body bg-white">
+
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-1.svg")
+                </div>
+
+                <!-- Preheading -->
+                <h6 class="text-uppercase mb-1 text-muted">Beer</h6>
+
+                <!-- Heading -->
+                <h4 class="mb-0">Type of Beer</h4>
+
+              </div>
+            </div>
+
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHAPE
+    ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
+      @@include("assets/img/shapes/curves/curve-1.svg")
+    </div>
+  </div>
+
+  <!-- INFO
+    ================================================== -->
+  <section class="py-7 py-md-9 border-bottom border-gray-300 bg-gray-200" id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+
+          <!-- Button -->
+          <a href="#info" class="btn btn-white btn-rounded-circle shadow mt-n11 mt-md-n13" data-toggle="smooth-scroll">
+            <i class="fe fe-arrow-down"></i>
+          </a>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row">
+        <div class="col-12 col-md-3 text-center border-right border-gray-300">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1">
+            Facebook
+          </h6>
+
+          <!-- Link -->
+          <div class="mb-5 mb-md-0">
+            <a href="#!" class="h4 text-primary">
+              ?
+            </a>
+          </div>
+
+        </div>
+        <div class="col-12 col-md-3 text-center border-right border-gray-300">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1">
+            Instagram
+          </h6>
+
+          <!-- Link -->
+          <div class="mb-5 mb-md-0">
+            <a href="#!" class="h4">
+              ?
+            </a>
+          </div>
+
+        </div>
+        <div class="col-12 col-md-3 text-center border-right border-gray-300">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1">
+            Twitter
+          </h6>
+
+          <!-- Link -->
+          <div class="mb-5 mb-md-0">
+            <a href="#!" class="h4">
+              ?
+            </a>
+          </div>
+
+        </div>
+        <div class="col-12 col-md-3 text-center">
+
+          <!-- Heading -->
+          <h6 class="text-uppercase text-gray-700 mb-1">
+            Team
+          </h6>
+
+          <!-- Link -->
+          <a href="#!" class="h4">
+            ?
+          </a>
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+  </section>
+
+  <!-- FORM
+    ================================================== -->
+  <section class="pt-8 pt-md-11 pb-8 pb-md-14 bg-gray-200">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+
+          <!-- Heading -->
+          <h2 class="font-weight-bold">
+            Let us hear from you directly!
+          </h2>
+
+          <!-- Text -->
+          <p class="font-size-lg text-muted mb-7 mb-md-9">
+            We always want to hear from you! Let us know how we can best help you and we'll do our very best for your
+            bar.
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12 col-lg-10">
+
+          <!-- Form -->
+          <form>
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label for="contactName">
+                    Full name
+                  </label>
+
+                  <!-- Input -->
+                  <input type="text" class="form-control" id="contactName" placeholder="Full name">
+
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label for="contactEmail">
+                    Email
+                  </label>
+
+                  <!-- Input -->
+                  <input type="email" class="form-control" id="contactEmail" placeholder="hello@domain.com">
+
+                </div>
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group mb-7 mb-md-9">
+
+                  <!-- Label -->
+                  <label for="contactMessage">
+                    What can we help you with?
+                  </label>
+
+                  <!-- Input -->
+                  <textarea class="form-control" id="contactMessage" rows="5"
+                    placeholder="Tell us what we can help you with!"></textarea>
+
+                </div>
+              </div>
+            </div> <!-- / .row -->
+            <div class="row justify-content-center">
+              <div class="col-auto">
+
+                <!-- Submit -->
+                <button type="submit" class="btn btn-primary lift">
+                  Send message
+                </button>
+
+              </div>
+            </div> <!-- / .row -->
+          </form>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- SHAPE
+    ================================================== -->
+  <div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-300">
+      @@include("assets/img/shapes/curves/curve-1.svg")
+    </div>
+  </div>
+
+
+  <!-- FOOTER
+    ================================================== -->
+  @@include("partials/footer-full.html", {
+  "classList": "bg-gray-300"
+  })
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  @@include("partials/scripts.html")
+
+</body>
+
+</html>

@@ -4,7 +4,6 @@
 //
 
 (function() {
-  
   //
   // Functions
   //
@@ -15,7 +14,6 @@
     $.fancybox.defaults.clickContent = false;
   }
 
-
   //
   // Events
   //
@@ -23,5 +21,4 @@
   if (jQuery().fancybox) {
     globalOptions();
   }
-
 })();

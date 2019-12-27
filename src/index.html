@@ -5,9 +5,69 @@
   @@include("partials/head.html", {
   "pageTitle": "Swigged"
   })
+
+  <style>
+    .btn-group-fab {
+      position: fixed;
+      width: 50px;
+      height: auto;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    .btn-group-fab div {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    .btn-group-fab .btn {
+      position: absolute;
+      bottom: 0;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: 4px;
+      width: 40px;
+      height: 40px;
+      margin: 4px auto;
+    }
+
+    .btn-group-fab .btn-main {
+      width: 50px;
+      height: 50px;
+      right: 50%;
+      margin-right: -25px;
+      z-index: 9;
+    }
+
+    .btn-group-fab .btn-sub {
+      bottom: 0;
+      z-index: 8;
+      right: 50%;
+      margin-right: -20px;
+      -webkit-transition: all 2s;
+      transition: all 0.5s;
+    }
+
+    .btn-group-fab.active .btn-sub:nth-child(2) {
+      bottom: 60px;
+    }
+
+    .btn-group-fab.active .btn-sub:nth-child(3) {
+      bottom: 110px;
+    }
+
+    .btn-group-fab.active .btn-sub:nth-child(4) {
+      bottom: 160px;
+    }
+
+    .btn-group-fab .btn-sub:nth-child(5) {
+      bottom: 210px;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-light">
 
   <!-- MODALS
     ================================================== -->
@@ -16,52 +76,28 @@
   <!-- NAVBAR
     ================================================== -->
   @@include("partials/navbar.html", {
-  "classList": "navbar-dark",
+  "classList": "navbar-light bg-white",
   "type": "boxed"
   })
 
   <!-- WELCOME
     ================================================== -->
-  <section data-jarallax data-speed=".8"
-    class="pt-12 pt-md-14 pb-12 pb-md-15 overlay overlay-black overlay-60 bg-cover jarallax"
-    style="margin-top: -83px; background-image: url(assets/img/covers/cover-19.jpg);">
+  <section data-jarallax data-speed=".8" class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover jarallax"
+    style="background-image: url(assets/img/covers/cover-13.jpg);">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-7 text-center">
 
-          <!-- Headin -->
+          <!-- Heading -->
           <h1 class="display-2 font-weight-bold text-white">
-            Our Work.
+            Create, Store, Find
           </h1>
 
           <!-- Text -->
-          <p class="lead text-white-75 mb-4">
-            We design & build a set of knowledge bases, tools, apps, and resources to do great things for your bar.
+          <p class="lead mb-0 text-white-75">
+            Welcome to Swigged, the simplest way to build cocktails socially...
           </p>
 
-          <!-- Badges -->
-          <nav class="nav justify-content-center">
-            <a class="badge badge-pill badge-white-soft active mr-1 mb-1" href="#" data-toggle="pill" data-filter="*"
-              data-target="#portfolio">
-              <span class="h6 text-uppercase">Primary</span>
-            </a>
-            <a class="badge badge-pill badge-white-soft mr-1 mb-1" href="#" data-toggle="pill" data-filter=".sake"
-              data-target="#portfolio">
-              <span class="h6 text-uppercase">Sakes</span>
-            </a>
-            <a class="badge badge-pill badge-white-soft mr-1 mb-1" href="#" data-toggle="pill" data-filter=".wine"
-              data-target="#portfolio">
-              <span class="h6 text-uppercase">Wines</span>
-            </a>
-            <a class="badge badge-pill badge-white-soft mr-1 mb-1" href="#" data-toggle="pill" data-filter=".beer"
-              data-target="#portfolio">
-              <span class="h6 text-uppercase">Beers</span>
-            </a>
-            <a class="badge badge-pill badge-white-soft mr-1 mb-1" href="#" data-toggle="pill" data-filter=".spirit"
-              data-target="#portfolio">
-              <span class="h6 text-uppercase">Spirits</span>
-            </a>
-          </nav>
         </div>
       </div> <!-- / .row -->
     </div> <!-- / .container -->
@@ -75,292 +111,1017 @@
     </div>
   </div>
 
-  <!-- CONTENT
+  <!-- SEARCH
     ================================================== -->
-  <section class="py-8 py-md-11 mt-n10 mt-md-n14">
+  <section class="mt-n6">
     <div class="container">
-      <div class="row" id="portfolio" data-isotope='{"layoutMode": "masonry"}'>
-        <div class="col-12 col-md-4 resources">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Form -->
+          <form class="rounded shadow mb-4">
+            <div class="input-group input-group-lg">
+
+              <!-- Prepend -->
+              <div class="input-group-prepend">
+                <span class="input-group-text border-0 pr-1">
+                  <i class="fe fe-search"></i>
+                </span>
+              </div>
+
+              <!-- Input -->
+              <input type="text" class="form-control border-0 px-1" aria-label="Search the beverages..."
+                placeholder="Search the beverages...">
+
+              <!-- Append -->
+              <div class="input-group-append">
+                <span class="input-group-text border-0 py-0 pl-1 pr-3">
+                  <a class="btn btn-sm btn-primary" href="#">
+                    Search
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </form>
+
+          <!-- Badges -->
+          <div class="row align-items-center">
+            <div class="col-auto">
+
+              <!-- Heading -->
+              <h6 class="font-weight-bold text-uppercase text-muted mb-0">
+                Tags:
+              </h6>
+
+            </div>
+            <div class="col ml-n5">
+
+              <!-- Badges -->
+              <a class="badge badge-pill badge-secondary-soft" href="#">
+                <span class="h6 text-uppercase">Rum</span>
+              </a>
+              <a class="badge badge-pill badge-secondary-soft" href="#">
+                <span class="h6 text-uppercase">Bitter</span>
+              </a>
+              <a class="badge badge-pill badge-secondary-soft" href="#">
+                <span class="h6 text-uppercase">Vodka</span>
+              </a>
+              <a class="badge badge-pill badge-secondary-soft" href="#">
+                <span class="h6 text-uppercase">Lime</span>
+              </a>
+
+            </div>
+          </div> <!-- / .row -->
+
+        </div>
+      </div> <!-- / .row -->
+    </div>
+  </section>
+
+  <!-- ARTICLES
+    ================================================== -->
+  <section class="pt-7 pt-md-10">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card card-row shadow-light-lg mb-6 lift lift-lg">
+            <div class="row no-gutters">
+              <div class="col-12">
 
-            <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
-
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
-
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
-                </div>
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Beer</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Beer</h4>
+                <!-- Badge -->
+                <span class="badge badge-pill badge-light badge-float badge-float-inside">
+                  <span class="h6 text-uppercase">Featured</span>
+                </span>
 
               </div>
-            </div>
+              <a class="col-12 col-md-6 order-md-2 bg-cover card-img-right"
+                style="background-image: url(assets/img/photos/photo-27.jpg);" href="#!">
 
+                <!-- Image (placeholder) -->
+                <img src="assets/img/photos/photo-27.jpg" alt="..." class="img-fluid d-md-none invisible">
+
+                <!-- Shape -->
+                <div class="shape shape-left shape-fluid-y svg-shim text-white d-none d-md-block">
+                  @@include("assets/img/shapes/curves/curve-5.svg")
+                </div>
+
+              </a>
+              <div class="col-12 col-md-6 order-md-1">
+
+                <!-- Body -->
+                <a class="card-body" href="#!">
+
+                  <!-- Heading -->
+                  <h3>
+                    Nice cocktail name and possible description.
+                  </h3>
+
+                  <!-- Text -->
+                  <p class="mb-0 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce
+                    pellentesque faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin
+                    erat purus.
+                  </p>
+
+                </a>
+
+                <!-- Meta -->
+                <a class="card-meta" href="#!">
+
+                  <!-- Divider -->
+                  <hr class="card-meta-divider">
+
+                  <!-- Avatar -->
+                  <div class="avatar avatar-sm mr-2">
+                    <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <!-- Author -->
+                  <h6 class="text-uppercase text-muted mr-2 mb-0">
+                    Christine Pink
+                  </h6>
+
+                  <!-- Date -->
+                  <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                    <time datetime="2019-12-17">Dec 17</time>
+                  </p>
+
+                </a>
+
+              </div>
+
+            </div> <!-- / .row -->
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- ARTICLES
+    ================================================== -->
+  <section class="pt-7 pt-md-10">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-12 col-md">
+
+          <!-- Heading -->
+          <h3 class="mb-0">
+            Latest Cocktails
+          </h3>
+
+          <!-- Text -->
+          <p class="mb-0 text-muted">
+            Here’s what you've been up to recently...
+          </p>
+
+        </div>
+        <div class="col-12 col-md-auto">
+
+          <!-- Button -->
+          <a href="#!" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
+            View all
           </a>
 
         </div>
-        <div class="col-12 col-md-4 product">
+      </div> <!-- / .row -->
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
 
             <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
+            <a class="card-img-top" href="#!">
 
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
+              <!-- Image -->
+              <img src="assets/img/photos/photo-15.jpg" alt="..." class="card-img-top">
 
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
                 </div>
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Spirit</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Spirit</h4>
-
               </div>
-            </div>
 
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Christine Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+          <!-- Card -->
+          <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+
+            <!-- Image -->
+            <a class="card-img-top" href="#!">
+
+              <!-- Image -->
+              <img src="assets/img/photos/photo-14.jpg" alt="..." class="card-img-top">
+
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
+                </div>
+              </div>
+
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Jovani Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+          <!-- Card -->
+          <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
+
+            <!-- Image -->
+            <a class="card-img-top" href="#!">
+
+              <!-- Image -->
+              <img src="assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
+
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
+                </div>
+              </div>
+
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Christine Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+
+          <!-- Card -->
+          <div class="card d-lg-none shadow-light-lg lift lift-lg">
+
+            <!-- Image -->
+            <a class="card-img-top" href="#!">
+
+              <!-- Image -->
+              <img src="assets/img/photos/photo-5.jpg" alt="..." class="card-img-top">
+
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
+                </div>
+              </div>
+
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Christine Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- ARTICLES
+    ================================================== -->
+  <section class="pt-7 pt-md-10">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-12 col-md">
+
+          <!-- Heading -->
+          <h3 class="mb-0">
+            Top Trending
+          </h3>
+
+          <!-- Text -->
+          <p class="mb-0 text-muted">
+            In-depth looks at the most voted...
+          </p>
+
+        </div>
+        <div class="col-12 col-md-auto">
+
+          <!-- Button -->
+          <a href="#!" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
+            View all
           </a>
 
         </div>
-        <div class="col-12 col-md-4 resources">
+      </div> <!-- / .row -->
+      <div class="row">
+        <div class="col-12">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card card-row shadow-light-lg mb-6">
+            <div class="row no-gutters">
+              <div class="col-12 col-md-6">
 
-            <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
+                <!-- Slider -->
+                <div class="card-img-slider"
+                  data-flickity='{"fade": true, "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "asNavFor": "#blogSlider", "draggable": false}'>
+                  <a class="card-img-left bg-cover" style="background-image: url(assets/img/photos/photo-1.jpg);"
+                    href="#!">
 
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
+                    <!-- Image (placeholder) -->
+                    <img src="assets/img/photos/photo-1.jpg" alt="..." class="img-fluid d-md-none invisible">
 
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
+                  </a>
+                  <a class="card-img-left bg-cover" style="background-image: url(assets/img/photos/photo-26.jpg);"
+                    href="#!">
+
+                    <!-- Image (placeholder) -->
+                    <img src="assets/img/photos/photo-26.jpg" alt="..." class="img-fluid d-md-none invisible">
+
+                  </a>
                 </div>
 
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Wine</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Wine</h4>
+                <!-- Shape -->
+                <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
+                  @@include("assets/img/shapes/curves/curve-4.svg")
+                </div>
 
               </div>
-            </div>
+              <div class="col-12 col-md-6 position-static">
 
-          </a>
+                <!-- Slider -->
+                <div class="position-static"
+                  data-flickity='{"wrapAround": true, "pageDots": false, "imagesLoaded": true, "adaptiveHeight": true}'
+                  id="blogSlider">
+                  <div class="w-100">
+
+                    <!-- Body -->
+                    <a class="card-body" href="#!">
+
+                      <!-- Heading -->
+                      <h3>
+                        Nice cocktail name and possible description.
+                      </h3>
+
+                      <!-- Text -->
+                      <p class="mb-0 text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce
+                        pellentesque faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin
+                        erat purus.
+                      </p>
+
+                    </a>
+
+                    <!-- Meta -->
+                    <a class="card-meta mt-auto" href="#!">
+
+                      <!-- Divider -->
+                      <hr class="card-meta-divider">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-sm mr-2">
+                        <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                      </div>
+
+                      <!-- Author -->
+                      <h6 class="text-uppercase text-muted mr-2 mb-0">
+                        Jovani Pink
+                      </h6>
+
+                      <!-- Date -->
+                      <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                        <time datetime="2019-12-17">Dec 17</time>
+                      </p>
+
+                    </a>
+
+                  </div>
+                  <div class="w-100">
+
+                    <!-- Body -->
+                    <a class="card-body" href="#!">
+
+                      <!-- Heading -->
+                      <h3>
+                        Nice cocktail name and possible description.
+                      </h3>
+
+                      <!-- Text -->
+                      <p class="mb-0 text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce
+                        pellentesque faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin
+                        erat purus.
+                      </p>
+
+                    </a>
+
+                    <!-- Meta -->
+                    <a class="card-meta mt-auto" href="#!">
+
+                      <!-- Divider -->
+                      <hr class="card-meta-divider">
+
+                      <!-- Avatar -->
+                      <div class="avatar avatar-sm mr-2">
+                        <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+                      </div>
+
+                      <!-- Author -->
+                      <h6 class="text-uppercase text-muted mr-2 mb-0">
+                        Christine Pink
+                      </h6>
+
+                      <!-- Date -->
+                      <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                        <time datetime="2019-12-17">Dec 17</time>
+                      </p>
+
+                    </a>
+
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
 
         </div>
-        <div class="col-12 col-md-4 ux">
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- ARTICLES
+    ================================================== -->
+  <section class="pt-7 pt-md-10">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- Heading -->
+          <h3 class="mb-0">
+            Popular Cocktails
+          </h3>
+
+          <!-- Text -->
+          <p class="mb-5 text-muted">
+            Here’s what’s big in the past Quarter!
+          </p>
+
+        </div>
+      </div> <!-- / .row -->
+      <div class="row">
+        <div class="col-12 col-md-6 d-flex">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card mb-6 shadow-light-lg lift lift-lg">
 
             <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
+            <a class="card-img-top" href="#!">
 
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
+              <!-- Image -->
+              <img src="assets/img/photos/photo-28.jpg" alt="..." class="card-img-top">
 
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
                 </div>
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Beer</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Beer</h4>
-
               </div>
-            </div>
 
-          </a>
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce pellentesque
+                faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin erat purus.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Christine Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
 
         </div>
-        <div class="col-12 col-md-4 ux">
+        <div class="col-12 col-md-6 d-flex">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card mb-6 shadow-light-lg lift lift-lg">
 
             <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
+            <a class="card-img-top" href="#!">
 
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
+              <!-- Image -->
+              <img src="assets/img/photos/photo-29.jpg" alt="..." class="card-img-top">
 
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
                 </div>
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Sake</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Sake</h4>
-
               </div>
-            </div>
 
-          </a>
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce pellentesque
+                faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin erat purus.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Jovani Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
 
         </div>
-        <div class="col-12 col-md-4 product">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
 
             <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
+            <a class="card-img-top" href="#!">
 
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
+              <!-- Image -->
+              <img src="assets/img/photos/photo-6.jpg" alt="..." class="card-img-top">
 
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
                 </div>
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Spirit</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Spirit</h4>
-
               </div>
-            </div>
 
-          </a>
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Christine Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
 
         </div>
-        <div class="col-12 col-md-4 product">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
 
             <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
+            <a class="card-img-top" href="#!">
 
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
+              <!-- Image -->
+              <img src="assets/img/photos/photo-4.jpg" alt="..." class="card-img-top">
 
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
                 </div>
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Wine</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Wine</h4>
-
               </div>
-            </div>
 
-          </a>
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Jovani Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
 
         </div>
-        <div class="col-12 col-md-4 ux">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
 
             <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
+            <a class="card-img-top" href="#!">
 
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
+              <!-- Image -->
+              <img src="assets/img/photos/photo-5.jpg" alt="..." class="card-img-top">
 
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
                 </div>
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Sake</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Sake</h4>
-
               </div>
-            </div>
 
-          </a>
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Christine Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
 
         </div>
-        <div class="col-12 col-md-4 ux">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
 
           <!-- Card -->
-          <a class="card shadow-light-lg mb-7" href="#!">
+          <div class="card d-lg-none shadow-light-lg lift lift-lg">
 
             <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img" src="assets/img/portfolio/portfolio-15.jpg" alt="...">
-            </div>
+            <a class="card-img-top" href="#!">
 
-            <!-- Overlay -->
-            <div class="card-img-overlay card-img-overlay-hover">
-              <div class="card-body bg-white">
+              <!-- Image -->
+              <img src="assets/img/photos/photo-27.jpg" alt="..." class="card-img-top">
 
-                <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-1.svg")
+              <!-- Shape -->
+              <div class="position-relative">
+                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                  @@include("assets/img/shapes/curves/curve-3.svg")
                 </div>
-
-                <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Beer</h6>
-
-                <!-- Heading -->
-                <h4 class="mb-0">Type of Beer</h4>
-
               </div>
-            </div>
 
-          </a>
+            </a>
+
+            <!-- Body -->
+            <a class="card-body" href="#!">
+
+              <!-- Heading -->
+              <h3>
+                Nice cocktail name and possible description.
+              </h3>
+
+              <!-- Text -->
+              <p class="mb-0 text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+              </p>
+
+            </a>
+
+            <!-- Meta -->
+            <a class="card-meta mt-auto" href="#!">
+
+              <!-- Divider -->
+              <hr class="card-meta-divider">
+
+              <!-- Avatar -->
+              <div class="avatar avatar-sm mr-2">
+                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
+              </div>
+
+              <!-- Author -->
+              <h6 class="text-uppercase text-muted mr-2 mb-0">
+                Christine Pink
+              </h6>
+
+              <!-- Date -->
+              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                <time datetime="2019-12-17">Dec 17</time>
+              </p>
+
+            </a>
+
+          </div>
 
         </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <aside>
+    <div class="btn-group-fab" role="group" aria-label="FAB Menu">
+      <div>
+        <button type="button" class="btn btn-main btn-primary has-tooltip" data-placement="left" title="Menu"> <i
+            class="fa fa-bars"></i> </button>
+        <button type="button" class="btn btn-sub btn-info has-tooltip" data-placement="left" title="Fullscreen"> <i
+            class="fa fa-arrows-alt"></i> </button>
+        <button type="button" class="btn btn-sub btn-danger has-tooltip" data-placement="left" title="Save"> <i
+            class="fa fa-floppy-o"></i> </button>
+        <button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="Download"> <i
+            class="fa fa-download"></i> </button>
       </div>
     </div>
+  </aside>
+
+  <!-- MORE
+    ================================================== -->
+  <section class="py-7 py-md-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9 col-lg-8 col-xl-7">
+
+          <!-- Button -->
+          <a href="#!" class="btn btn-block btn-outline-gray-300 d-flex align-items-center">
+            <span class="mx-auto">Load more</span> <i class="fe fe-arrow-right"></i>
+          </a>
+
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
   </section>
 
   <!-- SHAPE
@@ -371,158 +1132,40 @@
     </div>
   </div>
 
-  <!-- INFO
+  <!-- CTA
     ================================================== -->
-  <section class="py-7 py-md-9 border-bottom border-gray-300 bg-gray-200" id="info">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-
-          <!-- Button -->
-          <a href="#info" class="btn btn-white btn-rounded-circle shadow mt-n11 mt-md-n13" data-toggle="smooth-scroll">
-            <i class="fe fe-arrow-down"></i>
-          </a>
-
-        </div>
-      </div> <!-- / .row -->
-      <div class="row">
-        <div class="col-12 col-md-3 text-center border-right border-gray-300">
+  <section class="pt-6 pt-md-8 bg-gray-200">
+    <div class="container pb-6 pb-md-8 border-bottom border-gray-300">
+      <div class="row align-items-center">
+        <div class="col-12 col-md">
 
           <!-- Heading -->
-          <h6 class="text-uppercase text-gray-700 mb-1">
-            Facebook
-          </h6>
-
-          <!-- Link -->
-          <div class="mb-5 mb-md-0">
-            <a href="#!" class="h4 text-primary">
-              ?
-            </a>
-          </div>
-
-        </div>
-        <div class="col-12 col-md-3 text-center border-right border-gray-300">
-
-          <!-- Heading -->
-          <h6 class="text-uppercase text-gray-700 mb-1">
-            Instagram
-          </h6>
-
-          <!-- Link -->
-          <div class="mb-5 mb-md-0">
-            <a href="#!" class="h4">
-              ?
-            </a>
-          </div>
-
-        </div>
-        <div class="col-12 col-md-3 text-center border-right border-gray-300">
-
-          <!-- Heading -->
-          <h6 class="text-uppercase text-gray-700 mb-1">
-            Twitter
-          </h6>
-
-          <!-- Link -->
-          <div class="mb-5 mb-md-0">
-            <a href="#!" class="h4">
-              ?
-            </a>
-          </div>
-
-        </div>
-        <div class="col-12 col-md-3 text-center">
-
-          <!-- Heading -->
-          <h6 class="text-uppercase text-gray-700 mb-1">
-            Team
-          </h6>
-
-          <!-- Link -->
-          <a href="#!" class="h4">
-            ?
-          </a>
-
-        </div>
-      </div> <!-- / .row -->
-    </div>
-  </section>
-
-  <!-- FORM
-    ================================================== -->
-  <section class="pt-8 pt-md-11 pb-8 pb-md-14 bg-gray-200">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8 text-center">
-
-          <!-- Heading -->
-          <h2 class="font-weight-bold">
-            Let us hear from you directly!
-          </h2>
+          <h3 class="mb-1 font-weight-bold">
+            Get the latest Beverages
+          </h3>
 
           <!-- Text -->
-          <p class="font-size-lg text-muted mb-7 mb-md-9">
-            We always want to hear from you! Let us know how we can best help you and we'll do our very best for your
-            bar.
+          <p class="font-size-lg text-muted mb-6 mb-md-0">
+            From us to your inbox weekly.
           </p>
 
         </div>
-      </div> <!-- / .row -->
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-12 col-lg-10">
+        <div class="col-12 col-md-5">
 
           <!-- Form -->
           <form>
             <div class="row">
-              <div class="col-12 col-md-6">
-                <div class="form-group mb-5">
+              <div class="col">
 
-                  <!-- Label -->
-                  <label for="contactName">
-                    Full name
-                  </label>
+                <!-- Input -->
+                <input type="email" class="form-control" placeholder="Enter your email">
 
-                  <!-- Input -->
-                  <input type="text" class="form-control" id="contactName" placeholder="Full name">
-
-                </div>
               </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group mb-5">
+              <div class="col-auto ml-n5">
 
-                  <!-- Label -->
-                  <label for="contactEmail">
-                    Email
-                  </label>
-
-                  <!-- Input -->
-                  <input type="email" class="form-control" id="contactEmail" placeholder="hello@domain.com">
-
-                </div>
-              </div>
-            </div> <!-- / .row -->
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group mb-7 mb-md-9">
-
-                  <!-- Label -->
-                  <label for="contactMessage">
-                    What can we help you with?
-                  </label>
-
-                  <!-- Input -->
-                  <textarea class="form-control" id="contactMessage" rows="5"
-                    placeholder="Tell us what we can help you with!"></textarea>
-
-                </div>
-              </div>
-            </div> <!-- / .row -->
-            <div class="row justify-content-center">
-              <div class="col-auto">
-
-                <!-- Submit -->
-                <button type="submit" class="btn btn-primary lift">
-                  Send message
+                <!-- Button -->
+                <button class="btn btn-primary" type="submit">
+                  Subscribe
                 </button>
 
               </div>
@@ -534,24 +1177,24 @@
     </div> <!-- / .container -->
   </section>
 
-  <!-- SHAPE
-    ================================================== -->
-  <div class="position-relative">
-    <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-300">
-      @@include("assets/img/shapes/curves/curve-1.svg")
-    </div>
-  </div>
-
-
   <!-- FOOTER
     ================================================== -->
-  @@include("partials/footer.html", {
-  "classList": "bg-gray-300"
+  @@include("partials/footer-full.html", {
+  "classList": "bg-gray-200"
   })
 
   <!-- JAVASCRIPT
     ================================================== -->
   @@include("partials/scripts.html")
+
+  <script>
+    $(function () {
+      $('.btn-group-fab').on('click', '.btn', function () {
+        $('.btn-group-fab').toggleClass('active');
+      });
+      $('has-tooltip').tooltip();
+    });
+  </script>
 
 </body>
 
