@@ -54,7 +54,7 @@
     "@types/imagesloaded": "4.1.2",
     "@types/isotope-layout": "3.0.8",
     "@types/jquery": "3.3.31",
-    "@types/node": "12.12.22",
+    "@types/node": "12.12.24",
     "@types/prettier": "1.19.0",
     "@types/smooth-scroll": "16.1.0",
     "@types/stylelint": "9.10.1",
