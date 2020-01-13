@@ -73,7 +73,7 @@
     "gulp-useref": "4.0.0",
     "prettier": "1.19.1",
     "stylelint": "12.0.1",
-    "stylelint-config-prettier": "8.0.0",
+    "stylelint-config-prettier": "8.0.1",
     "stylelint-config-twbs-bootstrap": "1.1.0",
     "stylelint-prettier": "1.1.2"
   },
