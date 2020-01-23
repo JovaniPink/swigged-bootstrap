@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg @@classList">
+  <div
+    class="@@if(type=='boxed'){container}@@if(type!=='boxed'){container-fluid}"
+  >
+    <!-- Brand -->
+    <a class="navbar-brand" href="@@webRoot/index.html">
+      <img
+        src="@@webRoot/assets/img/brand.svg"
+        class="navbar-brand-img"
+        alt="..."
+      />
+    </a>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!-- Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fe fe-x"></i>
+      </button>
+
+      <!-- Navigation -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a
+            href="https://www.instagram.com/swiggedapp/"
+            class="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://www.facebook.com/pg/SwiggedApp/about/"
+            class="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://twitter.com/SwiggedApp"
+            class="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </a>
+        </li>
+      </ul>
+
+      <!-- Button -->
+      <a
+        class="navbar-btn btn btn-sm btn-primary lift ml-auto"
+        href="@@webRoot/signin-cover.html"
+      >
+        Login
+      </a>
+    </div>
+  </div>
+</nav>
