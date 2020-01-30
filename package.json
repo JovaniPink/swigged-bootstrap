@@ -25,9 +25,15 @@
   ],
   "main": "gulpfile.js",
   "dependencies": {
+    "bootstrap": "4.4.1",
+    "animate.css": "3.7.2",
+    "font-awesome": "4.7.0",
+    "@fortawesome/fontawesome-svg-core": "1.2.26",
+    "@fortawesome/free-brands-svg-icons": "5.12.0",
+    "@fortawesome/free-solid-svg-icons": "5.12.0",
+    "@fortawesome/react-fontawesome": "0.1.8",
     "@fancyapps/fancybox": "3.5.7",
     "aos": "3.0.0-beta.6",
-    "bootstrap": "4.4.1",
     "countup.js": "2.0.4",
     "flickity": "2.2.1",
     "flickity-fade": "1.0.0",
@@ -41,23 +47,26 @@
     "typed.js": "2.0.11"
   },
   "devDependencies": {
-    "@types/aos": "3.0.3",
+    "@types/node": "12.12.26",
+    "@types/node-sass": "4.11.0",
     "@types/bootstrap": "4.3.1",
+    "@types/jquery": "3.3.31",
+    "@types/popper.js": "1.11.0",
     "@types/flickity": "2.2.2",
+    "@types/aos": "3.0.3",
+    "@types/highlight.js": "9.12.3",
+    "@types/imagesloaded": "4.1.2",
+    "@types/isotope-layout": "3.0.8",
+    "@types/smooth-scroll": "16.1.0",
     "@types/gulp": "4.0.6",
     "@types/gulp-autoprefixer": "0.0.32",
     "@types/gulp-cached": "0.0.31",
     "@types/gulp-file-include": "0.14.3",
     "@types/gulp-sass": "4.0.0",
     "@types/gulp-uglify": "3.0.6",
-    "@types/highlight.js": "9.12.3",
-    "@types/imagesloaded": "4.1.2",
-    "@types/isotope-layout": "3.0.8",
-    "@types/jquery": "3.3.31",
-    "@types/node": "12.12.26",
     "@types/prettier": "1.19.0",
-    "@types/smooth-scroll": "16.1.0",
     "@types/stylelint": "9.10.1",
+    "@types/eslint-plugin-prettier": "2.2.0",
     "browser-sync": "2.26.7",
     "del": "5.1.0",
     "gulp": "4.0.2",
@@ -69,16 +78,48 @@
     "gulp-npm-dist": "1.0.3",
     "gulp-replace": "1.0.0",
     "gulp-sass": "4.0.2",
+    "gulp-typescript": "6.0.0-alpha.1",
     "gulp-uglify": "3.0.2",
     "gulp-useref": "4.0.1",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-unicorn": "^10.0.0",
     "prettier": "1.19.1",
     "stylelint": "13.0.0",
     "stylelint-config-prettier": "8.0.1",
     "stylelint-config-twbs-bootstrap": "2.0.0",
-    "stylelint-prettier": "1.1.2"
+    "stylelint-prettier": "1.1.2",
+    "typescript": "3.3.3333"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "plugin:prettier/recommended",
+      "plugin:unicorn/recommended"
+    ],
+    "env": {
+      "browser": false
+    },
+    "overrides": [],
+    "plugins": [],
+    "rules": {
+      "unicorn/no-abusive-eslint-disable": 0,
+      "unicorn/filename-case": [
+        "error",
+        {
+          "cases": {
+            "camelCase": true,
+            "kebabCase": true
+          }
+        }
+      ]
+    }
   },
   "browserslist": [
     "last 2 versions",

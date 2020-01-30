@@ -1,12 +1,14 @@
 # SWIGGED
 
-Using the Landkit & Dashkit Themes by Good Themes for the creation of Swiggeed.
+Using the Landkit & Dashkit Themes by Good Themes and Pipeline by Medium Rare for the creation of Swiggeed.
 
-### Documentation
+Docs on bootstrap theming: https://github.com/twbs/bootstrap/blob/master/site/content/docs/4.3/getting-started/theming.md#sass
+
+## Documentation
 
 Development documentation is available at `src/docs/index.html` (or `dist/docs/index.html` once you've compiled), or visit http://landkit.goodthemes.co/docs/index.html.
 
-### Getting Started
+## Getting Started
 
 The steps to compile and get started with development are covered in detail in documentation mentioned above, but the summary is:
 
@@ -14,10 +16,8 @@ The steps to compile and get started with development are covered in detail in d
 - npm install
 - gulp
 
-### Design Files
+## Design Files
 
 We provide an "unofficial" Landkit Figma file for you to play with. Learn more about it at http://landkit.goodthemes.co/docs/figma.html and view/download it here: https://www.figma.com/file/o8Z7FIXUYW08Rl3AfFK7iD/LandKit-1.1.1-Distributed.
 
-### Support
-
-Good Themes is happy to provide support for issues. Shoot us an email at support@goodthemes.co and we'll get you squared away.
+## Support

@@ -6,19 +6,20 @@
 const config = require('./config');
 
 // Load dependencies
-const autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp');
+const ts = require('gulp-typescript');
+const sass = require('gulp-sass');
 const browsersync = require('browser-sync').create();
 const cached = require('gulp-cached');
 const cleancss = require('gulp-clean-css');
 const del = require('del');
 const fileinclude = require('gulp-file-include');
-const gulp = require('gulp');
+const useref = require('gulp-useref');
 const gulpif = require('gulp-if');
 const npmdist = require('gulp-npm-dist');
 const replace = require('gulp-replace');
-const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
-const useref = require('gulp-useref');
 
 // Define paths
 const paths = {
