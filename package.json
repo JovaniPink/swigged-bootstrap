@@ -31,7 +31,6 @@
     "@fortawesome/fontawesome-svg-core": "1.2.26",
     "@fortawesome/free-brands-svg-icons": "5.12.0",
     "@fortawesome/free-solid-svg-icons": "5.12.0",
-    "@fortawesome/react-fontawesome": "0.1.8",
     "@fancyapps/fancybox": "3.5.7",
     "aos": "3.0.0-beta.6",
     "countup.js": "2.0.4",
