@@ -63,6 +63,7 @@
     "@types/gulp-file-include": "0.14.3",
     "@types/gulp-sass": "4.0.0",
     "@types/gulp-uglify": "3.0.6",
+    "@types/eslint": "",
     "@types/prettier": "1.19.0",
     "@types/stylelint": "9.10.1",
     "@types/eslint-plugin-prettier": "2.2.0",
@@ -103,7 +104,8 @@
       "plugin:unicorn/recommended"
     ],
     "env": {
-      "browser": false
+      "browser": true,
+      "node": true
     },
     "overrides": [],
     "plugins": [],
