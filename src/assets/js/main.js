@@ -3,17 +3,21 @@
 // Main Playground JavaScript
 //
 
-let ingredient = [{ id: 0, text: '2 Bacardi Rum', measurement: 'oz' }];
+const ingredientTest = [{ id: 0, text: '2 Bacardi Rum', measurement: 'oz' }];
 
-let currentIngredient = {
+const currentIngredient = {
   id: 0,
   text: '',
   measurement: 'oz',
 };
 
-document.getElementById('ingredient-input').oninput = function(e) {
-  currentIngredient.text = e.target.value;
-};
+function captureCurrentIngredient(event) {
+  currentIngredient.text = event.target.value;
+}
+
+document
+  .querySelector('#ingredient-input')
+  .addEventListener('input', captureCurrentIngredient);
 
 /*
 //jQuery Version
@@ -23,7 +27,7 @@ $('#ingredient-input').on('input',function(e){
 */
 
 function DrawIngredient(ingredient) {
-  let newIngredientHTML = `
+  const newIngredientHTML = `
   <div class="col col-12 ingredient-item p-2" ingredient-id="${ingredient.id}">
     <div class="input-group">
       <div class="input-group-prepend">
@@ -38,11 +42,9 @@ function DrawIngredient(ingredient) {
   </div>
   `;
 
-  let dummy = document.createElement('DIV');
+  const dummy = document.createElement('DIV');
   dummy.innerHTML = newIngredientHTML;
-  document
-    .getElementById('ingredient-container')
-    .appendChild(dummy.children[0]);
+  document.querySelector('#ingredient-container').append(dummy.children[0]);
 
   /*
     //jQuery version
@@ -52,7 +54,7 @@ function DrawIngredient(ingredient) {
 }
 
 function RenderAllIngredients() {
-  let container = document.getElementById('ingredient-container');
+  const container = document.querySelector('#ingredient-container');
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
@@ -61,21 +63,21 @@ function RenderAllIngredients() {
       $("ingredient-container").empty();
   */
 
-  for (let i = 0; i < ingredient.length; i++) {
-    DrawIngredient(ingredient[i]);
+  for (const element of ingredient) {
+    DrawIngredient(element);
   }
 }
 
 RenderAllIngredients();
 
 function DeleteIngredient(button) {
-  let deleteID = parseInt(button.getAttribute('ingredient-id'));
+  const deleteID = parseInt(button.getAttribute('ingredient-id'));
   /*
     //jQuery version
       let deleteID = parseInt($(button).attr("ingredient-id"));
   */
 
-  for (let i = 0; i < ingredient.length; i++) {
+  for (let i = 0; i < ingredient.length; i += 1) {
     if (ingredient[i].id === deleteID) {
       ingredient.splice(i, 1);
       RenderAllIngredients();

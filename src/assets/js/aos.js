@@ -3,15 +3,13 @@
 // Theme module
 //
 
-'use strict';
-
 (function() {
   //
   // Functions
   //
 
   function init() {
-    var options = {
+    const options = {
       duration: 700,
       easing: 'ease-out-quad',
       once: true,
