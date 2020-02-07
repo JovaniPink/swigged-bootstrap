@@ -20,10 +20,16 @@
         <input type="search" class="form-control form-control-sm" placeholder="Search">
       </form>
 
-      <!-- Avatar -->
-      <a href="#" class="avatar avatar-online ml-5" data-toggle="dropdown">
-        <img src="../assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-      </a>
+      <!-- Avatar Dropdown -->
+      <div class="dropdown">
+        <a href="#" class="avatar avatar-online ml-5" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="../assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="#">Log out</a>
+        </div>
+      </div>
 
     </div>
   </div>
