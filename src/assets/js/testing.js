@@ -1,7 +1,7 @@
 // #email-input could be "", null, undefined, OR a proper string email
 
-const emailInput = document.querySelector('#emailInput');
-const signUpButton = document.querySelector('#signUpButton');
+var emailInput = document.querySelector('#emailInput');
+var signUpButton = document.querySelector('#signUpButton');
 
 // function setAttributes(el, attrs) {
 //   Object.keys(attrs).forEach((key) => el.setAttribute(key, attrs[key]));

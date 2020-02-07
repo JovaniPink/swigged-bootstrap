@@ -3,9 +3,9 @@
 // Main Playground JavaScript
 //
 
-const ingredientTest = [{ id: 0, text: '2 Bacardi Rum', measurement: 'oz' }];
+var ingredientTest = [{ id: 0, text: '2 Bacardi Rum', measurement: 'oz' }];
 
-const currentIngredient = {
+var currentIngredient = {
   id: 0,
   text: '',
   measurement: 'oz',
@@ -27,7 +27,7 @@ $('#ingredient-input').on('input',function(e){
 */
 
 function DrawIngredient(ingredient) {
-  const newIngredientHTML = `
+  var newIngredientHTML = `
   <div class="col col-12 ingredient-item p-2" ingredient-id="${ingredient.id}">
     <div class="input-group">
       <div class="input-group-prepend">
@@ -42,7 +42,7 @@ function DrawIngredient(ingredient) {
   </div>
   `;
 
-  const dummy = document.createElement('DIV');
+  var dummy = document.createElement('DIV');
   dummy.innerHTML = newIngredientHTML;
   document.querySelector('#ingredient-container').append(dummy.children[0]);
 
@@ -54,7 +54,7 @@ function DrawIngredient(ingredient) {
 }
 
 function RenderAllIngredients() {
-  const container = document.querySelector('#ingredient-container');
+  var container = document.querySelector('#ingredient-container');
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
@@ -63,7 +63,7 @@ function RenderAllIngredients() {
       $("ingredient-container").empty();
   */
 
-  for (const element of ingredient) {
+  for (var element of ingredient) {
     DrawIngredient(element);
   }
 }
@@ -71,7 +71,7 @@ function RenderAllIngredients() {
 RenderAllIngredients();
 
 function DeleteIngredient(button) {
-  const deleteID = parseInt(button.getAttribute('ingredient-id'));
+  var deleteID = parseInt(button.getAttribute('ingredient-id'));
   /*
     //jQuery version
       let deleteID = parseInt($(button).attr("ingredient-id"));

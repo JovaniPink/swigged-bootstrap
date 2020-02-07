@@ -1,24 +1,24 @@
 // Load dependencies
-const gulp = require('gulp');
-const ts = require('gulp-typescript');
-const sass = require('gulp-sass');
-const browsersync = require('browser-sync').create();
-const cached = require('gulp-cached');
-const cleancss = require('gulp-clean-css');
-const del = require('del');
-const fileinclude = require('gulp-file-include');
-const useref = require('gulp-useref');
-const gulpif = require('gulp-if');
-const npmdist = require('gulp-npm-dist');
-const replace = require('gulp-replace');
-const autoprefixer = require('gulp-autoprefixer');
-const uglify = require('gulp-uglify');
+var gulp = require('gulp');
+var babel = require("gulp-babel");
+var sass = require('gulp-sass');
+var browsersync = require('browser-sync').create();
+var cached = require('gulp-cached');
+var cleancss = require('gulp-clean-css');
+var del = require('del');
+var fileinclude = require('gulp-file-include');
+var useref = require('gulp-useref');
+var gulpif = require('gulp-if');
+var npmdist = require('gulp-npm-dist');
+var replace = require('gulp-replace');
+var autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
 
 // Load config
-const config = require('./config');
+var config = require('./config');
 
 // Define paths
-const paths = {
+var paths = {
   base: {
     base: {
       dir: './',

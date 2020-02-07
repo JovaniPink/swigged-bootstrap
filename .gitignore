@@ -6,12 +6,21 @@
 # VS Code
 .vscode/
 
+# Logs
+logs
+*.log
+.idea
+.netlify/
+
 # Ignore node_modules
 node_modules/
 
 # Ignore Temps
 src/.tmp/
 dist/
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
 
 ### JavaScript ###
 npm-debug.log*
@@ -45,6 +54,47 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+### Elixir and Phoenix ###
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# If you run "mix test --cover", coverage assets end up here.
+/cover/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# Where 3rd-party dependencies like ExDoc output generated docs.
+/doc/
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+/.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+*-*.tar
+
+# The directory NPM downloads your dependencies sources to.
+/assets/node_modules/
+
+# Since we are building assets from assets/,
+# we ignore priv/static. You may want to comment
+# this depending on your deployment strategy.
+/priv/static/
+
+# Files matching config/*.secret.exs pattern contain sensitive
+# data and you should not commit them into version control.
+#
+# Alternatively, you may comment the line below and commit the
+# secrets files as long as you replace their contents by environment
+# variables.
+/config/*.secret.exs
+
 # Environments
 .env
 .venv
@@ -53,8 +103,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Logs
-logs
-*.log
-.netlify/
+ignore
+dist
+tests/VerifyExamples
+/public

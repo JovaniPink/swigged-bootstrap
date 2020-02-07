@@ -9,7 +9,7 @@
   //
 
   function init() {
-    const options = {
+    var options = {
       duration: 700,
       easing: 'ease-out-quad',
       once: true,
