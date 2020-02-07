@@ -17,28 +17,3 @@ function checkform() {
 
 window.addEventListener('load', checkform);
 
-//jQuery
-
-function deafaultSettingEmptyTrue(empty) {
-  if ($(this).val() == '') {
-    empty = true;
-  }
-}
-
-function checkIfEmailIsEntered() {
-  let empty = false;
-  $('form > input').each(deafaultSettingEmptyTrue(empty));
-
-  if (empty) {
-    $('#signUpButton').attr({
-      'data-toggle': 'modal',
-      href: '#modalSignupVertical',
-    }); // data-toggle="modal" href="#modalSignupVertical"
-  } else {
-    $('#signUpButton').removeAttr('disabled');
-  }
-}
-
-(function() {
-  $('form > input').keyup(checkIfEmailIsEntered());
-})();
