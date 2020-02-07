@@ -8,7 +8,7 @@ const signUpButton = document.querySelector('#signUpButton');
 // }
 
 function transferEmailToModal(email) {
-  document.querySelector('#registrationEmailModal').value = email;
+  document.querySelector('#modalSignupVerticalEmail').value = email;
 }
 
 emailInput.addEventListener('input', function(event) {

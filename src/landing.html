@@ -10,8 +10,7 @@
 
     <!-- NAVBAR
     ================================================== -->
-    @@include("partials/navbar-landing.html", { "classList": "navbar-light
-    bg-white", "type": "fluid" })
+    @@include("partials/navbar-landing.html", { "classList": "navbar-light bg-white", "type": "fluid" })
 
     <!-- WELCOME
     ================================================== -->
@@ -161,7 +160,7 @@
             </p>
 
             <!-- Button -->
-            <a href="#!" class="btn btn-primary">
+            <a href="@@webRoot/about-swigged.html" class="btn btn-primary">
               Learn more
             </a>
           </div>
@@ -299,5 +298,34 @@
     ================================================== -->
     @@include("partials/scripts.html")
 
+    <!-- CUSTOM JAVASCRIPT
+    ================================================== -->
+    <script>
+      // #email-input could be "", null, undefined, OR a proper string email
+
+      const emailInput = document.querySelector('#emailInput');
+      const signUpButton = document.querySelector('#signUpButton');
+
+      // function setAttributes(el, attrs) {
+      //   Object.keys(attrs).forEach((key) => el.setAttribute(key, attrs[key]));
+      // }
+
+      function transferEmailToModal(email) {
+        document.querySelector('#modalSignupVerticalEmail').value = email;
+      }
+
+      emailInput.addEventListener('input', function(event) {
+        if (emailInput.validity.typeMismatch) {
+          emailInput.setCustomValidity('I am expecting an e-mail address!');
+        } else {
+          signUpButton.removeAttribute('disabled');
+          // setAttributes(signUpButton, {
+          //   'data-toggle': 'modal',
+          //   href: '#modalSignupVertical',
+          // }); // data-toggle="modal" href="#modalSignupVertical"
+          transferEmailToModal(emailInput.value);
+        }
+      });
+    </script>
   </body>
 </html>

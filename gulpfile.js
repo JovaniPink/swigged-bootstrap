@@ -1,10 +1,3 @@
-//
-// Variables ===================================
-//
-
-// Load config
-const config = require('./config');
-
 // Load dependencies
 const gulp = require('gulp');
 const ts = require('gulp-typescript');
@@ -20,6 +13,9 @@ const npmdist = require('gulp-npm-dist');
 const replace = require('gulp-replace');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
+
+// Load config
+const config = require('./config');
 
 // Define paths
 const paths = {
@@ -203,12 +199,7 @@ gulp.task('html', function() {
 gulp.task(
   'build',
   gulp.series(
-    gulp.parallel(
-      'clean:tmp',
-      'clean:dist',
-      'copy:all',
-      'copy:libs'
-    ),
+    gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'),
     'scss',
     'html'
   )
