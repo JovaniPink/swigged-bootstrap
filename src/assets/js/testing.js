@@ -1,19 +1,25 @@
 // #email-input could be "", null, undefined, OR a proper string email
 
-document.querySelector('#email-input').value;
+const emailInput = document.querySelector('#emailInput');
+const signUpButton = document.querySelector('#signUpButton');
 
-// onkeyup="checkform()
+// function setAttributes(el, attrs) {
+//   Object.keys(attrs).forEach((key) => el.setAttribute(key, attrs[key]));
+// }
 
-function checkform() {
-  const form = document.forms['signup'].elements;
-  let cansubmit = true;
-
-  for (const element of form) {
-    if (element.value.length == 0) cansubmit = false;
-  }
-
-  document.querySelector('#signUpButton').disabled = !cansubmit;
+function transferEmailToModal(email) {
+  document.querySelector('#registrationEmailModal').value = email;
 }
 
-window.addEventListener('load', checkform);
-
+emailInput.addEventListener('input', function(event) {
+  if (emailInput.validity.typeMismatch) {
+    emailInput.setCustomValidity('I am expecting an e-mail address!');
+  } else {
+    signUpButton.removeAttribute('disabled');
+    // setAttributes(signUpButton, {
+    //   'data-toggle': 'modal',
+    //   href: '#modalSignupVertical',
+    // }); // data-toggle="modal" href="#modalSignupVertical"
+    transferEmailToModal(emailInput.value);
+  }
+});

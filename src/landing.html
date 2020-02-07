@@ -10,8 +10,8 @@
 
     <!-- NAVBAR
     ================================================== -->
-    @@include("partials/navbar-landing.html", { "classList": "navbar-light bg-white",
-    "type": "fluid" })
+    @@include("partials/navbar-landing.html", { "classList": "navbar-light
+    bg-white", "type": "fluid" })
 
     <!-- WELCOME
     ================================================== -->
@@ -74,11 +74,23 @@
               <div class="form-row">
                 <div class="col">
                   <!-- Inout -->
-                  <input type="email" id="email-input" class="form-control bg-light border-0" placeholder="Email" />
+                  <input
+                    type="email"
+                    id="emailInput"
+                    class="form-control bg-light border-0"
+                    placeholder="Email"
+                  />
                 </div>
                 <div class="col-auto">
                   <!-- Submit -->
-                  <button id="signUpButton" data-toggle="modal" href="#modalSignupVertical" class="btn btn-primary" disabled>
+                  <button
+                    type="button"
+                    id="signUpButton"
+                    data-toggle="modal"
+                    href="#modalSignupVertical"
+                    class="btn btn-primary"
+                    disabled
+                  >
                     Sign Up
                   </button>
                 </div>
@@ -179,7 +191,8 @@
           >
             <!-- Heading -->
             <h2 class="font-weight-bold">
-              Use your phone to easily share and get feedback on your craft cocktails.
+              Use your phone to easily share and get feedback on your craft
+              cocktails.
             </h2>
 
             <!-- Text -->
@@ -285,5 +298,6 @@
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("partials/scripts.html")
+
   </body>
 </html>
