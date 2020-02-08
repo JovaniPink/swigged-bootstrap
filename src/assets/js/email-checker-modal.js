@@ -1,3 +1,10 @@
+//
+// emailCheckerModal.js
+// Theme module
+//
+
+'use strict';
+
 // #email-input could be "", null, undefined, OR a proper string email
 
 var emailInput = document.querySelector('#emailInput');

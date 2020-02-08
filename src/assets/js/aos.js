@@ -3,7 +3,9 @@
 // Theme module
 //
 
-(function() {
+'use strict';
+
+(function () {
   //
   // Functions
   //

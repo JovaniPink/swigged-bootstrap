@@ -5,7 +5,7 @@
 
 'use strict';
 
-(function() {
+(function () {
   //
   // Variables
   //
@@ -66,8 +66,8 @@
   //
 
   if (navbar && isTogglable) {
-    'load scroll'.split(' ').forEach(function(e) {
-      window.addEventListener(e, function(e) {
+    'load scroll'.split(' ').forEach(function (e) {
+      window.addEventListener(e, function (e) {
         var type = e.type;
 
         toggleNavbar(type);

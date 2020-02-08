@@ -1,15 +1,17 @@
+//
+// create.js
+// Create Cocktail module
+//
 
-var ingredientTest = [{ id: 0, text: '2 Bacardi Rum', measurement: 'oz' }];
+'use strict';
+
+var ingredient = [{ id: 0, text: 'Bacardi Rum', measurement: '2 oz' }];
 
 var currentIngredient = {
   id: 0,
   text: '',
-  measurement: 'oz',
+  measurement: '2 oz',
 };
-
-function captureCurrentIngredient(event) {
-  currentIngredient.text = event.target.value;
-}
 
 document
   .querySelector('#ingredient-input')
@@ -17,10 +19,10 @@ document
 
 function drawIngredient(ingredient) {
   var newIngredientHTML = `
-  <div class="col col-12 ingredient-item p-2" ingredient-id="${ingredient.id}">
+  <div class="ingredient-item" ingredient-id="${ingredient.id}">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text">${ingredient.measurement[0]}</span>
+        <span class="input-group-text">${ingredient.measurement}</span>
       </div>
       <input type="text" readonly class="form-control" aria-label="Ingredient Text"
         value="${ingredient.text}">
@@ -49,6 +51,10 @@ function renderAllIngredients() {
 
 renderAllIngredients();
 
+function captureCurrentIngredient(event) {
+  currentIngredient.text = event.target.value;
+}
+
 function deleteIngredient(button) {
   var deleteID = parseInt(button.getAttribute('ingredient-id'));
 
@@ -62,7 +68,7 @@ function deleteIngredient(button) {
 }
 
 function createIngredient() {
-  newingredient = {
+  var newingredient = {
     id: ingredient.length,
     text: currentIngredient.text,
     measurement: ['oz', 'ml', 'part'],

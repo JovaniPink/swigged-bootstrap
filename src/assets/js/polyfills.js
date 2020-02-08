@@ -8,7 +8,7 @@
 // SVG
 // Polyfill to solve shortcomings of SVG scaling in IE. Inspired by http://nicolasgallagher.com/canvas-fix-svg-scaling-in-internet-explorer/.
 
-(function() {
+(function () {
   //
   // Variables
   //
@@ -50,7 +50,7 @@
 
   // Only has affect in IE
   if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-    [].forEach.call(svg, function(elem) {
+    [].forEach.call(svg, function (elem) {
       init(elem);
     });
   }

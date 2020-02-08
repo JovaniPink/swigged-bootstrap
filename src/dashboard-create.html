@@ -56,7 +56,7 @@
         </div>
       </div> <!-- / .row -->
       <div class="row">
-        <div class="col-12 col-md-8 pb-8">
+        <div class="col-12 pb-8">
           <!-- Card -->
           <div class="card card-border border-primary shadow-light-lg">
             <div class="card-body">
@@ -90,7 +90,7 @@
                     </div>
 
                     <div class="form-group flex-fill mb-5">
-                      <label for="ingredient-input">Add ingredients</label>
+                      <label for="ingredient-input">Add Products</label>
                       <div class="input-group">
                         <input type="text" class="form-control" id="ingredient-input" placeholder="Ingredient" value="">
                         <div class="input-group-append">
@@ -105,6 +105,25 @@
                   </div>
                 </div> <!-- / .row -->
                 <div class="row">
+                  <div class="col-12 col-md-6">
+
+                    <div class="form-group mb-5">
+                      <label for="cardGlass">Glass</label>
+                      <input type="text" class="form-control" id="cardGlass" placeholder="Cold winters">
+                    </div>
+
+                  </div>
+                  <div class="col-12 col-md-6">
+
+                    <div class="form-group mb-5">
+                      <label for="cardGarnishes">Garnishes</label>
+                      <input type="text" class="form-control" id="cardGarnishes" placeholder="Lemon peel">
+                    </div>
+
+                  </div>
+
+                </div> <!-- / .row -->
+                <div class="row">
                   <div class="col-12">
 
                     <div class="form-group mb-5">
@@ -116,92 +135,22 @@
 
                   </div>
                 </div> <!-- / .row -->
-                <div class="row">
-                  <div class="col-12">
 
-                    <div class="form-group mb-5">
-                      <label for="applyMessage">
-                        Glass:
-                      </label>
-                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-primary-desat-soft active">
-                          <input type="radio" name="options" id="option1" checked> Coupe
-                        </label>
-                        <label class="btn btn-primary-desat-soft">
-                          <input type="radio" name="options" id="option2"> Rocks
-                        </label>
-                        <label class="btn btn-primary-desat-soft">
-                          <input type="radio" name="options" id="option3"> Collins
-                        </label>
-                      </div>
-                    </div>
-
-                  </div>
-                </div> <!-- / .row -->
-                <div class="row">
-                  <div class="col-12 col-md-6">
-
-                    <div class="form-group mb-5">
-                      <label for="cardGarnishes">Garnishes</label>
-                      <input type="text" class="form-control" id="cardGarnishes" placeholder="Lemon peel">
-                    </div>
-
-                  </div>
-                  <div class="col-12 col-md-6">
-
-                    <div class="form-group mb-5">
-                      <label for="cardOccasion">Occasion</label>
-                      <input type="text" class="form-control" id="cardOccasion" placeholder="Cold winters">
-                    </div>
-
-                  </div>
-                </div> <!-- / .row -->
-                <div class="row">
-                  <div class="col-12 col-md-6">
-
-                    <div class="form-group mb-5">
-                      <p class="mb-2">
-                        Cover Picture
-                      </p>
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="applyCover">
-                        <label class="custom-file-label" for="applyCover">
-                          Choose file
-                        </label>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="col-12 col-md-6">
-
-                    <div class="form-group mb-5">
-                      <p class="mb-2">
-                        Profile Picture
-                      </p>
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="applyResume">
-                        <label class="custom-file-label" for="applyResume">
-                          Choose file
-                        </label>
-                      </div>
-                    </div>
-
-                  </div>
-                </div> <!-- / .row -->
                 <div class="row align-items-center">
+
                   <div class="col-12 col-md">
+
+                    <p class="font-size-sm text-muted mb-0">
+                      Beverages will be sent securely and remain private
+                    </p>
+
+                  </div>
+                  <div class="col-12 col-md-auto">
 
                     <!-- Submit -->
                     <button class="btn btn-primary mb-6 mb-md-0 lift">
                       Save <i class="fe fe-arrow-right ml-3"></i>
                     </button>
-
-                  </div>
-                  <div class="col-12 col-md-auto">
-
-                    <p class="font-size-sm text-muted mb-0">
-                      Beverages will be sent securely and remain private
-                    </p>
 
                   </div>
                 </div> <!-- / .row -->
@@ -224,7 +173,7 @@
 
   <!-- FOOTER
     ================================================== -->
-  @@include("partials/footer-full.html", {
+  @@include("partials/footer-min.html", {
   "classList": "bg-dark"
   })
 
@@ -234,35 +183,37 @@
 
   <!-- CUSTOM JAVASCRIPT
     ================================================== -->
-    <script>
-      
-var ingredientTest = [{ id: 0, text: '2 Bacardi Rum', measurement: 'oz' }];
+  <script>
+//
+// create.js
+// Create Cocktail module
+//
+
+'use strict';
+
+var ingredient = [{ id: 0, text: 'Bacardi Rum', measurement: '2 oz' }];
 
 var currentIngredient = {
   id: 0,
   text: '',
-  measurement: 'oz',
+  measurement: '2 oz',
 };
-
-function captureCurrentIngredient(event) {
-  currentIngredient.text = event.target.value;
-}
 
 document
   .querySelector('#ingredient-input')
   .addEventListener('input', captureCurrentIngredient);
 
-function DrawIngredient(ingredient) {
+function drawIngredient(ingredient) {
   var newIngredientHTML = `
   <div class="col col-12 ingredient-item p-2" ingredient-id="${ingredient.id}">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text">${ingredient.measurement[0]}</span>
+        <span class="input-group-text">${ingredient.measurement}</span>
       </div>
       <input type="text" readonly class="form-control" aria-label="Ingredient Text"
         value="${ingredient.text}">
       <div class="input-group-append">
-        <button type="button" class="btn btn-danger-soft" ingredient-id="${ingredient.id}" onclick="DeleteIngredient(this);">X</button>
+        <button type="button" class="btn btn-danger-soft" ingredient-id="${ingredient.id}" onclick="deleteIngredient(this);">X</button>
       </div>
     </div>
   </div>
@@ -273,43 +224,47 @@ function DrawIngredient(ingredient) {
   document.querySelector('#ingredient-container').append(dummy.children[0]);
 }
 
-function RenderAllIngredients() {
+function renderAllIngredients() {
   var container = document.querySelector('#ingredient-container');
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
 
   for (var element of ingredient) {
-    DrawIngredient(element);
+    drawIngredient(element);
   }
 }
 
-RenderAllIngredients();
+renderAllIngredients();
 
-function DeleteIngredient(button) {
+function captureCurrentIngredient(event) {
+  currentIngredient.text = event.target.value;
+}
+
+function deleteIngredient(button) {
   var deleteID = parseInt(button.getAttribute('ingredient-id'));
 
   for (let i = 0; i < ingredient.length; i += 1) {
     if (ingredient[i].id === deleteID) {
       ingredient.splice(i, 1);
-      RenderAllIngredients();
+      renderAllIngredients();
       break;
     }
   }
 }
 
-function CreateIngredient() {
-  newingredient = {
+function createIngredient() {
+  var newingredient = {
     id: ingredient.length,
     text: currentIngredient.text,
     measurement: ['oz', 'ml', 'part'],
   };
   ingredient.push(newingredient);
-  RenderAllIngredients();
+  renderAllIngredients();
 }
 
 
-    </script>
+  </script>
 
 </body>
 

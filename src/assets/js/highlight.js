@@ -4,7 +4,7 @@
 
 'use strict';
 
-(function() {
+(function () {
   //
   // Variables
   //
@@ -24,7 +24,7 @@
   //
 
   if (typeof hljs !== 'undefined' && toggle) {
-    [].forEach.call(toggle, function(el) {
+    [].forEach.call(toggle, function (el) {
       init(el);
     });
   }

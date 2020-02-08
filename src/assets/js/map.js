@@ -3,6 +3,8 @@
 // Theme module
 //
 
+'use strict';
+
 (function() {
   //
   // Variables

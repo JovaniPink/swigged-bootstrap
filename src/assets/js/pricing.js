@@ -3,7 +3,9 @@
 // Theme module
 //
 
-(function() {
+'use strict';
+
+(function () {
   //
   // Variables
   //
@@ -22,7 +24,7 @@
     var target = input.dataset.target;
     var targets = document.querySelectorAll(target);
 
-    [].forEach.call(targets, function(e) {
+    [].forEach.call(targets, function (e) {
       var annual = e.dataset.annual;
       var monthly = e.dataset.monthly;
       var decimals = e.dataset.decimals ? e.dataset.decimals : null;
@@ -46,7 +48,7 @@
   //
 
   if (typeof CountUp !== 'undefined' && toggle) {
-    toggle.addEventListener('change', function(e) {
+    toggle.addEventListener('change', function (e) {
       update(e);
     });
   }
