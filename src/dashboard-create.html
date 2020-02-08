@@ -1,210 +1,217 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    @@include("partials/head.html", { "pageTitle": "Swigged" })
+  </head>
 
-<head>
-  @@include("partials/head.html", {
-  "pageTitle": "Swigged"
-  })
-</head>
+  <body class="bg-light">
 
-<body class="bg-light">
-
-  <!-- MODALS
+    <!-- MODALS
     ================================================== -->
-  @@include("partials/modals.html")
+    @@include("partials/modalSignupVertical.html")
 
-  <!-- NAVBAR
+    <!-- NAVBAR
     ================================================== -->
-  @@include("partials/navbar-app.html", {
-  "classList": "navbar-light bg-white border-bottom",
-  "type": "fluid"
-  })
+    @@include("partials/navbar-app.html", {
+    "classList": "navbar-light fixed-top bg-white border-bottom",
+    "type": "boxed"
+    })
 
-  <!-- CONTENT
+    <!-- CONTENT
     ================================================== -->
-  <section class="pt-8 pt-md-11 pb-8 pb-md-14">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 col-md">
+    <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <!-- Heading -->
+            <h1 class="display-4 mb-2">
+              Create
+            </h1>
 
-          <!-- Heading -->
-          <h1 class="display-4 mb-2">
-            Create
-          </h1>
-
-          <!-- Text -->
-          <p class="font-size-lg text-gray-700 mb-md-0">
-            Updated 12/13/2019
-          </p>
-
-        </div>
-        <div class="col-auto">
-
-          <!-- Avatar -->
-          <div class="avatar avatar-xl">
-            <img src="./assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+            <!-- Text -->
+            <p class="font-size-lg text-gray-700 mb-md-0">
+              Updated 12/13/2019
+            </p>
           </div>
-
         </div>
-      </div> <!-- / .row -->
-      <div class="row">
-        <div class="col-12">
-
-          <!-- Divider -->
-          <hr class="my-6 my-md-8">
-
+        <!-- / .row -->
+        <div class="row">
+          <div class="col-12">
+            <!-- Divider -->
+            <hr class="my-6 my-md-8" />
+          </div>
         </div>
-      </div> <!-- / .row -->
-      <div class="row">
-        <div class="col-12 pb-8">
-          <!-- Card -->
-          <div class="card card-border border-primary shadow-light-lg">
-            <div class="card-body">
-
-              <!-- Form -->
-              <form>
-                <div class="row">
-                  <div class="col-12 col-md-6">
-
-                    <div class="form-group mb-5">
-                      <label for="cardTitle">Title</label>
-                      <input type="text" class="form-control" id="cardTitle" placeholder="Maui Maui">
+        <!-- / .row -->
+        <div class="row">
+          <div class="col-12 pb-8">
+            <!-- Card -->
+            <div class="card card-border border-primary shadow-light-lg">
+              <div class="card-body">
+                <!-- Form -->
+                <form>
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group mb-5">
+                        <label for="cardTitle">Title</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardTitle"
+                          placeholder="Maui Maui"
+                        />
+                      </div>
                     </div>
-
+                    <div class="col-12 col-md-6">
+                      <div class="form-group mb-5">
+                        <label for="cardDescription">Description</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardDescription"
+                          placeholder="A cocktail based off the classic Mai Tai"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12 col-md-6">
+                  <!-- / .row -->
 
-                    <div class="form-group mb-5">
-                      <label for="cardDescription">Description</label>
-                      <input type="text" class="form-control" id="cardDescription"
-                        placeholder="A cocktail based off the classic Mai Tai">
-                    </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div
+                        class="form-group flex-fill mb-2"
+                        id="ingredient-container"
+                      ></div>
 
-                  </div>
-                </div> <!-- / .row -->
-
-                <div class="row">
-                  <div class="col-12">
-
-                    <div class="form-group flex-fill mb-2" id="ingredient-container">
-                    </div>
-
-                    <div class="form-group flex-fill mb-5">
-                      <label for="ingredient-input">Add Products</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control" id="ingredient-input" placeholder="Ingredient" value="">
-                        <div class="input-group-append">
-                          <button type="button" onclick="createIngredient();" class="btn btn-success-soft btn-sm"><i
-                              class="fe fe-check"></i></button>
+                      <div class="form-group flex-fill mb-5">
+                        <label for="ingredient-input">Add Products</label>
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="ingredient-input"
+                            placeholder="Ingredient"
+                            value=""
+                          />
+                          <div class="input-group-append">
+                            <button
+                              type="button"
+                              onclick="createIngredient();"
+                              class="btn btn-success-soft btn-sm"
+                            >
+                              <i class="fe fe-check"></i>
+                            </button>
+                          </div>
                         </div>
                       </div>
-
                     </div>
-
-
                   </div>
-                </div> <!-- / .row -->
-                <div class="row">
-                  <div class="col-12 col-md-6">
-
-                    <div class="form-group mb-5">
-                      <label for="cardGlass">Glass</label>
-                      <input type="text" class="form-control" id="cardGlass" placeholder="Cold winters">
+                  <!-- / .row -->
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group mb-5">
+                        <label for="cardGlass">Glass</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardGlass"
+                          placeholder="Cold winters"
+                        />
+                      </div>
                     </div>
-
-                  </div>
-                  <div class="col-12 col-md-6">
-
-                    <div class="form-group mb-5">
-                      <label for="cardGarnishes">Garnishes</label>
-                      <input type="text" class="form-control" id="cardGarnishes" placeholder="Lemon peel">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group mb-5">
+                        <label for="cardGarnishes">Garnishes</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardGarnishes"
+                          placeholder="Lemon peel"
+                        />
+                      </div>
                     </div>
-
                   </div>
-
-                </div> <!-- / .row -->
-                <div class="row">
-                  <div class="col-12">
-
-                    <div class="form-group mb-5">
-                      <label for="applyMessage">
-                        How is this beverage made?
-                      </label>
-                      <textarea id="applyMessage" rows="5" class="form-control" placeholder="Directions!"></textarea>
+                  <!-- / .row -->
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-group mb-5">
+                        <label for="applyMessage">
+                          How is this beverage made?
+                        </label>
+                        <textarea
+                          id="applyMessage"
+                          rows="5"
+                          class="form-control"
+                          placeholder="Directions!"
+                        ></textarea>
+                      </div>
                     </div>
-
                   </div>
-                </div> <!-- / .row -->
+                  <!-- / .row -->
 
-                <div class="row align-items-center">
-
-                  <div class="col-12 col-md">
-
-                    <p class="font-size-sm text-muted mb-0">
-                      Beverages will be sent securely and remain private
-                    </p>
-
+                  <div class="row align-items-center">
+                    <div class="col-12 col-md">
+                      <p class="font-size-sm text-muted mb-0">
+                        Beverages will be sent securely and remain private
+                      </p>
+                    </div>
+                    <div class="col-12 col-md-auto">
+                      <!-- Submit -->
+                      <button class="btn btn-primary mb-6 mb-md-0 lift">
+                        Save <i class="fe fe-arrow-right ml-3"></i>
+                      </button>
+                    </div>
                   </div>
-                  <div class="col-12 col-md-auto">
-
-                    <!-- Submit -->
-                    <button class="btn btn-primary mb-6 mb-md-0 lift">
-                      Save <i class="fe fe-arrow-right ml-3"></i>
-                    </button>
-
-                  </div>
-                </div> <!-- / .row -->
-              </form>
+                  <!-- / .row -->
+                </form>
+              </div>
             </div>
           </div>
-
         </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
 
-  <!-- SHAPE
+    <!-- SHAPE
     ================================================== -->
-  <div class="position-relative">
-    <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
-      @@include("assets/img/shapes/curves/curve-1.svg")
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+        @@include("assets/img/shapes/curves/curve-1.svg")
+      </div>
     </div>
-  </div>
 
-  <!-- FOOTER
+    <!-- FOOTER
     ================================================== -->
-  @@include("partials/footer-min.html", {
-  "classList": "bg-dark"
-  })
+    @@include("partials/footer-min.html", { "classList": "bg-dark" })
 
-  <!-- JAVASCRIPT
+    <!-- JAVASCRIPT
     ================================================== -->
-  @@include("partials/scripts.html")
+    @@include("partials/scripts.html")
 
-  <!-- CUSTOM JAVASCRIPT
+    <!-- CUSTOM JAVASCRIPT
     ================================================== -->
-  <script>
-//
-// create.js
-// Create Cocktail module
-//
+    <script>
+      //
+      // create.js
+      // Create Cocktail module
+      //
 
-'use strict';
+      'use strict';
 
-var ingredient = [{ id: 0, text: 'Bacardi Rum', measurement: '2 oz' }];
+      var ingredient = [{ id: 0, text: 'Bacardi Rum', measurement: '2 oz' }];
 
-var currentIngredient = {
-  id: 0,
-  text: '',
-  measurement: '2 oz',
-};
+      var currentIngredient = {
+        id: 0,
+        text: '',
+        measurement: '2 oz',
+      };
 
-document
-  .querySelector('#ingredient-input')
-  .addEventListener('input', captureCurrentIngredient);
+      document
+        .querySelector('#ingredient-input')
+        .addEventListener('input', captureCurrentIngredient);
 
-function drawIngredient(ingredient) {
-  var newIngredientHTML = `
+      function drawIngredient(ingredient) {
+        var newIngredientHTML = `
   <div class="col col-12 ingredient-item p-2" ingredient-id="${ingredient.id}">
     <div class="input-group">
       <div class="input-group-prepend">
@@ -219,53 +226,51 @@ function drawIngredient(ingredient) {
   </div>
   `;
 
-  var dummy = document.createElement('DIV');
-  dummy.innerHTML = newIngredientHTML;
-  document.querySelector('#ingredient-container').append(dummy.children[0]);
-}
+        var dummy = document.createElement('DIV');
+        dummy.innerHTML = newIngredientHTML;
+        document
+          .querySelector('#ingredient-container')
+          .append(dummy.children[0]);
+      }
 
-function renderAllIngredients() {
-  var container = document.querySelector('#ingredient-container');
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
+      function renderAllIngredients() {
+        var container = document.querySelector('#ingredient-container');
+        while (container.firstChild) {
+          container.removeChild(container.firstChild);
+        }
 
-  for (var element of ingredient) {
-    drawIngredient(element);
-  }
-}
+        for (var element of ingredient) {
+          drawIngredient(element);
+        }
+      }
 
-renderAllIngredients();
-
-function captureCurrentIngredient(event) {
-  currentIngredient.text = event.target.value;
-}
-
-function deleteIngredient(button) {
-  var deleteID = parseInt(button.getAttribute('ingredient-id'));
-
-  for (let i = 0; i < ingredient.length; i += 1) {
-    if (ingredient[i].id === deleteID) {
-      ingredient.splice(i, 1);
       renderAllIngredients();
-      break;
-    }
-  }
-}
 
-function createIngredient() {
-  var newingredient = {
-    id: ingredient.length,
-    text: currentIngredient.text,
-    measurement: ['oz', 'ml', 'part'],
-  };
-  ingredient.push(newingredient);
-  renderAllIngredients();
-}
+      function captureCurrentIngredient(event) {
+        currentIngredient.text = event.target.value;
+      }
 
+      function deleteIngredient(button) {
+        var deleteID = parseInt(button.getAttribute('ingredient-id'));
 
-  </script>
+        for (let i = 0; i < ingredient.length; i += 1) {
+          if (ingredient[i].id === deleteID) {
+            ingredient.splice(i, 1);
+            renderAllIngredients();
+            break;
+          }
+        }
+      }
 
-</body>
-
+      function createIngredient() {
+        var newingredient = {
+          id: ingredient.length,
+          text: currentIngredient.text,
+          measurement: ['oz', 'ml', 'part'],
+        };
+        ingredient.push(newingredient);
+        renderAllIngredients();
+      }
+    </script>
+  </body>
 </html>
