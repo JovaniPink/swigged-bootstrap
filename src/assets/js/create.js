@@ -26,8 +26,8 @@ function drawIngredient(ingredient) {
   var newIngredientHTML = `
   <div class="ingredient-item mb-2" ingredient-id="${ingredient.id}">
     <div class="input-group">
-      <div class="input-group-prepend" onclick="editMeasurement(this)">
-        <span class="input-group-text">${ingredient.measurement}</span>
+      <div class="input-group-prepend">
+        <span class="input-group-text" ingredient-id="${ingredient.id}" onclick="editMeasurement(this)">${ingredient.measurement}</span>
       </div>
       <input type="text" readonly class="form-control" aria-label="Ingredient Text"
         value="${ingredient.product}">
@@ -60,8 +60,8 @@ function captureCurrentIngredient(event) {
   currentIngredient.product = event.target.value;
 }
 
-function deleteIngredient(button) {
-  var deleteID = parseInt(button.getAttribute('ingredient-id'));
+function deleteIngredient(span) {
+  var deleteID = parseInt(span.getAttribute('ingredient-id'));
 
   for (let i = 0; i < ingredient.length; i += 1) {
     if (ingredient[i].id === deleteID) {
@@ -87,11 +87,18 @@ function editMeasurement(button) {
 
   for (let i = 0; i < ingredient.length; i += 1) {
     if (ingredient[i].id === measurementID) {
-      console.log("So far its good");
+      $('#modalMeasurement').modal('toggle')
       renderAllIngredients();
       break;
     }
   }
+}
+
+function update() {
+  var saveAmount = document.querySelector('#amount').value;
+  console.log(saveAmount);
+  var saveUnit = document.querySelector('.btn:not(.disabled).active').innerText;
+  console.log(saveUnit);
 }
 
 // formElem.onsubmit = async (e) => {
