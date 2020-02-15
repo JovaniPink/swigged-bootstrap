@@ -13,15 +13,20 @@ var currentIngredient = {
   measurement: '2 oz',
 };
 
-document
-  .querySelector('#ingredient-input')
-  .addEventListener('input', captureCurrentIngredient);
+var inputElem = document.querySelector('#ingredient-input');
+
+inputElem.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    createIngredient();
+  }
+});
+inputElem.addEventListener('input', captureCurrentIngredient);
 
 function drawIngredient(ingredient) {
   var newIngredientHTML = `
-  <div class="ingredient-item" ingredient-id="${ingredient.id}">
+  <div class="ingredient-item mb-2" ingredient-id="${ingredient.id}">
     <div class="input-group">
-      <div class="input-group-prepend">
+      <div class="input-group-prepend" onclick="editMeasurement(this)">
         <span class="input-group-text">${ingredient.measurement}</span>
       </div>
       <input type="text" readonly class="form-control" aria-label="Ingredient Text"
@@ -76,3 +81,28 @@ function createIngredient() {
   ingredient.push(newingredient);
   renderAllIngredients();
 }
+
+function editMeasurement(button) {
+  var measurementID = parseInt(button.getAttribute('ingredient-id'));
+
+  for (let i = 0; i < ingredient.length; i += 1) {
+    if (ingredient[i].id === measurementID) {
+      console.log("So far its good");
+      renderAllIngredients();
+      break;
+    }
+  }
+}
+
+// formElem.onsubmit = async (e) => {
+//   e.preventDefault();
+
+//   let response = await fetch('/article/formdata/post/user', {
+//     method: 'POST',
+//     body: new FormData(formElem)
+//   });
+
+//   let result = await response.json();
+
+//   alert(result.message);
+// }
