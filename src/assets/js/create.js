@@ -5,11 +5,11 @@
 
 'use strict';
 
-var ingredient = [{ id: 0, text: 'Bacardi Rum', measurement: '2 oz' }];
+var ingredient = [{ id: 0, product: 'Bacardi Rum', measurement: '2 oz' }];
 
 var currentIngredient = {
   id: 0,
-  text: '',
+  product: '',
   measurement: '2 oz',
 };
 
@@ -30,7 +30,7 @@ function drawIngredient(ingredient) {
         <span class="input-group-text" ingredient-id="${ingredient.id}" onclick="editMeasurement(this)">${ingredient.measurement}</span>
       </div>
       <input type="text" readonly class="form-control" aria-label="Ingredient Text"
-        value="${ingredient.text}">
+        value="${ingredient.product}">
       <div class="input-group-append">
         <button type="button" class="btn btn-danger-soft" ingredient-id="${ingredient.id}" onclick="deleteIngredient(this);">X</button>
       </div>
@@ -57,7 +57,7 @@ function renderAllIngredients() {
 renderAllIngredients();
 
 function captureCurrentIngredient(event) {
-  currentIngredient.text = event.target.value;
+  currentIngredient.product = event.target.value;
 }
 
 function deleteIngredient(span) {
@@ -75,7 +75,7 @@ function deleteIngredient(span) {
 function createIngredient() {
   var newingredient = {
     id: ingredient.length,
-    text: currentIngredient.text,
+    product: currentIngredient.product,
     measurement: ['oz', 'ml', 'part'],
   };
   ingredient.push(newingredient);
