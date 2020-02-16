@@ -5,6 +5,20 @@
 
 'use strict';
 
+// Data Models and Sturctures
+
+var cocktail = {
+  id: 0,
+  title: '',
+  description: '',
+  ingredient: [],
+  glass: '',
+  garnish: '',
+  directions: '',
+  creator: '',
+  date: '',
+};
+
 var ingredient = [{ id: 0, product: 'Bacardi Rum', measurement: '2 oz' }];
 
 var currentIngredient = {
@@ -12,6 +26,12 @@ var currentIngredient = {
   product: '',
   measurement: '2 oz',
 };
+
+// Setting Up Variables
+
+// HTML Templates and Views
+
+// Update Flow and Helper Functions (Messages) (Updates)
 
 var inputElem = document.querySelector('#ingredient-input');
 
@@ -27,7 +47,7 @@ function drawIngredient(ingredient) {
   <div class="ingredient-item mb-2" ingredient-id="${ingredient.id}">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" ingredient-id="${ingredient.id}" onclick="editMeasurement(this)">${ingredient.measurement}</span>
+        <span class="input-group-text" ingredient-id="${ingredient.id}" onclick="editMeasurement(this, ingredient)">${ingredient.measurement}</span>
       </div>
       <input type="text" readonly class="form-control" aria-label="Ingredient Text"
         value="${ingredient.product}">
@@ -76,29 +96,34 @@ function createIngredient() {
   var newingredient = {
     id: ingredient.length,
     product: currentIngredient.product,
-    measurement: ['oz', 'ml', 'part'],
+    measurement: '2 oz',
   };
   ingredient.push(newingredient);
   renderAllIngredients();
 }
 
-function editMeasurement(button) {
+function editMeasurement(button, ingredientList) {
   var measurementID = parseInt(button.getAttribute('ingredient-id'));
-
+  console.log(measurementID);
+  console.log(ingredientList);
   for (let i = 0; i < ingredient.length; i += 1) {
     if (ingredient[i].id === measurementID) {
-      $('#modalMeasurement').modal('toggle')
+      $('#modalMeasurement').modal('toggle');
+      console.log(ingredient[i].measurement);
+      update(i, ingredient[i].measurement);
+      $('#modalMeasurement').modal('toggle');
       renderAllIngredients();
       break;
     }
   }
 }
 
-function update() {
+function update(index, measurement) {
   var saveAmount = document.querySelector('#amount').value;
-  console.log(saveAmount);
   var saveUnit = document.querySelector('.btn:not(.disabled).active').innerText;
-  console.log(saveUnit);
+  var measurement = saveAmount + " " + saveUnit;
+  console.log(measurement);
+  return(ingredient[index].measurement = measurement);
 }
 
 // formElem.onsubmit = async (e) => {
