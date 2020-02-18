@@ -5,7 +5,7 @@
 
 'use strict';
 
-// Data Models and Sturctures
+// Data Models and Structures
 
 var cocktail = {
   id: 0,
@@ -102,28 +102,33 @@ function createIngredient() {
   renderAllIngredients();
 }
 
+function update() {
+  $('#modalMeasurement').modal('toggle');
+}
+
+// function update(index, measurementUpdated) {
+//   var saveAmount = document.querySelector('#amount').value;
+//   var saveUnit = document.querySelector('.btn:not(.disabled).active').innerText;
+//   var temp = saveAmount + ' ' + saveUnit;
+//   console.log(temp);
+//   var updateReturn = measurementUpdated[index].measurement = temp;
+//   return updateReturn;
+// }
+
 function editMeasurement(button, ingredientList) {
   var measurementID = parseInt(button.getAttribute('ingredient-id'));
-  console.log(measurementID);
-  console.log(ingredientList);
-  for (let i = 0; i < ingredient.length; i += 1) {
-    if (ingredient[i].id === measurementID) {
+  for (let i = 0; i < ingredientList.length; i += 1) {
+    if (ingredientList[i].id === measurementID) {
+      var str = ingredientList[i].measurement;
+      var patt = /\d+|\d+\.\d+|\.\d+/g;
+      var result = str.match(patt);
+      document.querySelector('#amount').value = parseInt(result);
       $('#modalMeasurement').modal('toggle');
-      console.log(ingredient[i].measurement);
-      update(i, ingredient[i].measurement);
-      $('#modalMeasurement').modal('toggle');
+      // update(i, ingredientList);
       renderAllIngredients();
       break;
     }
   }
-}
-
-function update(index, measurement) {
-  var saveAmount = document.querySelector('#amount').value;
-  var saveUnit = document.querySelector('.btn:not(.disabled).active').innerText;
-  var measurement = saveAmount + " " + saveUnit;
-  console.log(measurement);
-  return(ingredient[index].measurement = measurement);
 }
 
 // formElem.onsubmit = async (e) => {
