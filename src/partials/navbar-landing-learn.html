@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg @@classList">
+  <div
+    class="@@if(type=='boxed'){container}@@if(type!=='boxed'){container-fluid}"
+  >
+    <!-- Brand -->
+    <a class="navbar-brand" href="@@webRoot/index.html">
+      <img
+        src="@@webRoot/assets/img/brand.svg"
+        class="navbar-brand-img"
+        alt="Swigged App"
+      />
+    </a>
+
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!-- Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fe fe-x"></i>
+      </button>
+
+      <!-- Navigation -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a
+            href="https://www.instagram.com/swiggedapp/"
+            class="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://www.facebook.com/pg/SwiggedApp/about/"
+            class="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://twitter.com/SwiggedApp"
+            class="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </a>
+        </li>
+      </ul>
+
+      <!-- Button -->
+      <div class="dropdown ml-auto">
+        <button class="navbar-btn btn btn-block btn-primary lift dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+          Request
+        </button>
+        <div class="dropdown-menu dropdown-menu-lg-right mb-auto">
+          <form class="px-4 py-3">
+            <div class="form-group">
+              <label for="exampleDropdownFormEmail1">Name</label>
+              <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="exampleDropdownFormEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="exampleDropdownFormPassword1">Request</label>
+              <textarea type="text" class="form-control" id="exampleDropdownFormPassword1" placeholder="Requested training material" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Please</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
