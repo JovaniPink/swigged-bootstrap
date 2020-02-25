@@ -35,8 +35,8 @@ var currentIngredient = {
 
 var inputElem = document.querySelector('#ingredient-input');
 
-inputElem.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
+inputElem.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
     createIngredient();
   }
 });
