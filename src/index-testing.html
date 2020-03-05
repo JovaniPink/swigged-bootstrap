@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", { "pageTitle": "Swigged" })
+  </head>
+  <body>
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modalSignupVertical.html")
+
+    <!-- NAVBAR
+    ================================================== -->
+    @@include("partials/navbar-landing.html", { "classList": "navbar-light bg-white", "type": "fluid" })
+
+    <style>
+      header.masthead {
+        margin-bottom: 50px;
+        background: no-repeat center center;
+        background-color: #868e96;
+        background-attachment: scroll;
+        position: relative;
+        background-size: cover;
+      }
+
+      header.masthead .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #212529;
+        opacity: 0.5;
+      }
+
+      header.masthead .page-heading,
+      header.masthead .post-heading,
+      header.masthead .site-heading {
+        padding: 200px 0 150px;
+        color: white;
+      }
+
+      @media only screen and (min-width: 768px) {
+        header.masthead .page-heading,
+        header.masthead .post-heading,
+        header.masthead .site-heading {
+          padding: 200px 0;
+        }
+      }
+
+      header.masthead .page-heading,
+      header.masthead .site-heading {
+        text-align: center;
+      }
+
+      header.masthead .page-heading h1,
+      header.masthead .site-heading h1 {
+        font-size: 50px;
+        margin-top: 0;
+      }
+
+      header.masthead .page-heading .subheading,
+      header.masthead .site-heading .subheading {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.1;
+        display: block;
+        margin: 10px 0 0;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+
+      @media only screen and (min-width: 768px) {
+        header.masthead .page-heading h1,
+        header.masthead .site-heading h1 {
+          font-size: 80px;
+        }
+      }
+
+      header.masthead .post-heading h1 {
+        font-size: 35px;
+      }
+
+      header.masthead .post-heading .meta,
+      header.masthead .post-heading .subheading {
+        line-height: 1.1;
+        display: block;
+      }
+
+      header.masthead .post-heading .subheading {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px 0 30px;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+
+      header.masthead .post-heading .meta {
+        font-size: 20px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'Lora', 'Times New Roman', serif;
+      }
+
+      header.masthead .post-heading .meta a {
+        color: #fff;
+      }
+
+      @media only screen and (min-width: 768px) {
+        header.masthead .post-heading h1 {
+          font-size: 55px;
+        }
+        header.masthead .post-heading .subheading {
+          font-size: 30px;
+        }
+      }
+
+      .post-preview > a {
+        color: #212529;
+      }
+
+      .post-preview > a:focus,
+      .post-preview > a:hover {
+        text-decoration: none;
+        color: #0085a1;
+      }
+
+      .post-preview > a > .post-title {
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      .post-preview > a > .post-subtitle {
+        font-weight: 300;
+        margin: 0 0 10px;
+      }
+
+      .post-preview > .post-meta {
+        font-size: 18px;
+        font-style: italic;
+        margin-top: 0;
+        color: #868e96;
+      }
+
+      .post-preview > .post-meta > a {
+        text-decoration: none;
+        color: #212529;
+      }
+
+      .post-preview > .post-meta > a:focus,
+      .post-preview > .post-meta > a:hover {
+        text-decoration: underline;
+        color: #0085a1;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .post-preview > a > .post-title {
+          font-size: 36px;
+        }
+      }
+    </style>
+
+    <!-- Page Header -->
+    <header
+      class="masthead"
+      style="background-image: url(assets/img/covers/cover-19.jpg);"
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Clean Blog</h1>
+              <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                Man must explore, and this is exploration at its greatest
+              </h2>
+              <h3 class="post-subtitle">
+                Problems look mighty small from 150 miles up
+              </h3>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <a href="#">Start Bootstrap</a>
+              on September 24, 2019
+            </p>
+          </div>
+          <hr />
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                I believe every human has a finite number of heartbeats. I don't
+                intend to waste any of mine.
+              </h2>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <a href="#">Start Bootstrap</a>
+              on September 18, 2019
+            </p>
+          </div>
+          <hr />
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                Science has not yet mastered prophecy
+              </h2>
+              <h3 class="post-subtitle">
+                We predict too much for the next year and yet far too little for
+                the next ten.
+              </h3>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <a href="#">Start Bootstrap</a>
+              on August 24, 2019
+            </p>
+          </div>
+          <hr />
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                Failure is not an option
+              </h2>
+              <h3 class="post-subtitle">
+                Many say exploration is part of our destiny, but it’s actually
+                our duty to future generations.
+              </h3>
+            </a>
+            <p class="post-meta">
+              Posted by
+              <a href="#">Start Bootstrap</a>
+              on July 8, 2019
+            </p>
+          </div>
+          <hr />
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#"
+              >Older Posts &rarr;</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">
+              Copyright &copy; Your Website 2019
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+    <!-- CUSTOM JAVASCRIPT
+    ================================================== -->
+    <script>
+      // #email-input could be "", null, undefined, OR a proper string email
+
+      var emailInput = document.querySelector('#emailInput');
+      var signUpButton = document.querySelector('#signUpButton');
+
+      // function setAttributes(el, attrs) {
+      //   Object.keys(attrs).forEach((key) => el.setAttribute(key, attrs[key]));
+      // }
+
+      function transferEmailToModal(email) {
+        document.querySelector('#modalSignupVerticalEmail').value = email;
+      }
+
+      emailInput.addEventListener('input', function(event) {
+        if (emailInput.validity.typeMismatch) {
+          emailInput.setCustomValidity('I am expecting an e-mail address!');
+        } else {
+          signUpButton.removeAttribute('disabled');
+          // setAttributes(signUpButton, {
+          //   'data-toggle': 'modal',
+          //   href: '#modalSignupVertical',
+          // }); // data-toggle="modal" href="#modalSignupVertical"
+          transferEmailToModal(emailInput.value);
+        }
+      });
+    </script>
+  </body>
+</html>
