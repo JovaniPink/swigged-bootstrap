@@ -5,7 +5,7 @@
 
 'use strict';
 
-(function () {
+(function() {
   //
   // Variables
   //
@@ -46,21 +46,21 @@
   //
 
   if (typeof CountUp !== 'undefined' && toggle) {
-    [].forEach.call(toggle, function (el) {
+    [].forEach.call(toggle, function(el) {
       if (el.getAttribute('data-aos-id') !== 'countup:in') {
         init(el);
       }
     });
   }
 
-  document.addEventListener('aos:in:countup:in', function (e) {
+  document.addEventListener('aos:in:countup:in', function(e) {
     if (e.detail instanceof Element) {
       init(e.detail);
     } else {
       var toCount = document.querySelectorAll(
         '.aos-animate[data-aos-id="countup:in"]:not(.counted)'
       );
-      [].forEach.call(toCount, function (el) {
+      [].forEach.call(toCount, function(el) {
         init(el);
       });
     }

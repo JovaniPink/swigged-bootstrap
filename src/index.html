@@ -6,7 +6,7 @@
   <body>
     <!-- MODALS
     ================================================== -->
-    @@include("partials/modalSignupVertical.html")
+    @@include("partials/modalSignUpVertical.html")
 
     <!-- NAVBAR
     ================================================== -->
@@ -69,15 +69,16 @@
             </p>
 
             <!-- Form -->
-            <form name="signup" class="mb-6 mb-md-8 mb-md-0 order-md-1">
+            <form class="mb-6 mb-md-8 mb-md-0 order-md-1" name="signUp" id="signUpForm" data-state="needingEmail">
               <div class="form-row">
                 <div class="col">
-                  <!-- Inout -->
+                  <!-- Input -->
                   <input
                     type="email"
-                    id="emailInput"
+                    id="signUpInput"
                     class="form-control bg-light border-0"
                     placeholder="Email"
+                    required
                   />
                 </div>
                 <div class="col-auto">
@@ -86,7 +87,7 @@
                     type="button"
                     id="signUpButton"
                     data-toggle="modal"
-                    href="#modalSignupVertical"
+                    href="#modalSignUpVertical"
                     class="btn btn-primary"
                     disabled
                   >
@@ -300,32 +301,8 @@
 
     <!-- CUSTOM JAVASCRIPT
     ================================================== -->
-    <script>
-      // #email-input could be "", null, undefined, OR a proper string email
-
-      var emailInput = document.querySelector('#emailInput');
-      var signUpButton = document.querySelector('#signUpButton');
-
-      // function setAttributes(el, attrs) {
-      //   Object.keys(attrs).forEach((key) => el.setAttribute(key, attrs[key]));
-      // }
-
-      function transferEmailToModal(email) {
-        document.querySelector('#modalSignupVerticalEmail').value = email;
-      }
-
-      emailInput.addEventListener('input', function(event) {
-        if (emailInput.validity.typeMismatch) {
-          emailInput.setCustomValidity('I am expecting an e-mail address!');
-        } else {
-          signUpButton.removeAttribute('disabled');
-          // setAttributes(signUpButton, {
-          //   'data-toggle': 'modal',
-          //   href: '#modalSignupVertical',
-          // }); // data-toggle="modal" href="#modalSignupVertical"
-          transferEmailToModal(emailInput.value);
-        }
-      });
+    <script src="./assets/js/account.js">
     </script>
+
   </body>
 </html>

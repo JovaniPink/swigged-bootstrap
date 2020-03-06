@@ -11,13 +11,12 @@
 
   <!-- MODALS
     ================================================== -->
-  @@include("partials/modalSignupVertical.html")
+  @@include("partials/modalSignUpVertical.html")
 
   <!-- NAVBAR
     ================================================== -->
   @@include("partials/navbar-app.html", {
-  "classList": "navbar-light fixed-top bg-white border-bottom",
-  "type": "boxed"
+  "classList": "navbar-light fixed-top bg-white border-bottom", "type": "boxed"
   })
 
 
@@ -43,46 +42,82 @@
         <!-- / .row -->
         <div class="row">
           <div class="col-12 pb-8">
-            <!-- Table Test -->
-            <div class="card">
-              <div class="card-body">
 
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <!-- Card UI -->
+            <div class="card shadow-light-lg">
+
+              <!-- Body -->
+              <div class="card-body my-auto">
+
+                <div class="d-flex align-content-center justify-content-start">
+
+                  <!-- Heading -->
+                  <h2 class="mr-auto">
+                    Cocktail Title.
+                  </h2>
+
+                  <!-- Edit Icon -->
+                  <div class="icon-circle bg-primary text-white">
+                    <i class="fe fe-edit"></i>
+                  </div>
+
                 </div>
 
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Description.
+                </p>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Products.
+                </p>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Glass.
+                </p>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Garnishes.
+                </p>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Directions.
+                </p>
+
               </div>
+
+              <!-- Meta -->
+              <a class="card-meta" href="#!">
+
+                <!-- Divider -->
+                <hr class="card-meta-divider">
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Jovani Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-05-02">Feb 20</time>
+                </p>
+
+              </a>
+
             </div>
+            <!-- / .card -->
+
           </div>
+
         </div>
         <!-- / .row -->
       </div>

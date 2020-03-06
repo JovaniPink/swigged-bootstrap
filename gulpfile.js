@@ -1,6 +1,8 @@
 // Load dependencies
 var gulp = require('gulp');
-var babel = require("gulp-babel");
+var babel = require('gulp-babel');
+var ts = require('gulp-typescript');
+var tsProject = ts.createProject('tsconfig.json');
 var sass = require('gulp-sass');
 var browsersync = require('browser-sync').create();
 var cached = require('gulp-cached');
@@ -111,6 +113,13 @@ gulp.task('scss', function() {
     .pipe(browsersync.stream());
 });
 
+gulp.task('typescript', function() {
+  return tsProject
+    .src()
+    .pipe(tsProject())
+    .js.pipe(gulp.dest(paths.src.js.dir));
+});
+
 gulp.task('fileinclude', function(callback) {
   return gulp
     .src([
@@ -208,7 +217,7 @@ gulp.task(
 gulp.task(
   'default',
   gulp.series(
-    gulp.parallel('fileinclude', 'scss'),
+    gulp.parallel('fileinclude', 'scss', 'typescript'),
     gulp.parallel('browsersync', 'watch')
   )
 );

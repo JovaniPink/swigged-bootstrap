@@ -34,7 +34,7 @@ Use of this theme is governed by the license terms of the Bootstrap Themes plat
 
 ### Good Themes Questions
 
-Don't hesitate to hit us up with questions – support@goodthemes.co.
+Don't hesitate to hit up Good Themes with questions – support@goodthemes.co.
 
 ### Font License
 

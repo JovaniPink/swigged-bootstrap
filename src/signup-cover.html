@@ -38,22 +38,66 @@
           </p>
 
           <!-- Form -->
-          <form class="mb-6">
+          <form class="mb-6" name="modalSignUp" method="POST" data-netlify="true">
+
+            <!-- First name -->
+            <div class="form-group">
+              <label for="registrationFirstNameModal">
+                First name
+              </label>
+              <input
+                type="text"
+                name="firstName"
+                class="form-control"
+                id="registrationFirstNameModal"
+                placeholder="First name"
+                required
+              />
+            </div>
+
+            <!-- Last name -->
+            <div class="form-group">
+              <label for="registrationLastNameModal">
+                Last name
+              </label>
+              <input
+                type="text"
+                name="lastName"
+                class="form-control"
+                id="registrationLastNameModal"
+                placeholder="Last name"
+                required
+              />
+            </div>
 
             <!-- Email -->
             <div class="form-group">
-              <label for="email">
-                Email Address
+              <label for="modalSignUpVerticalEmail">
+                Your email
               </label>
-              <input type="email" class="form-control" id="email" placeholder="name@address.com">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="modalSignUpVerticalEmail"
+                placeholder="Your email"
+                required
+              />
             </div>
 
-            <!-- Password -->
+            <!-- Username -->
             <div class="form-group mb-5">
-              <label for="password">
-                Password
+              <label for="modalSignUpVerticalUsername">
+                Create a Username
               </label>
-              <input type="password" class="form-control" id="password" placeholder="Enter your password">
+              <input
+                type="username"
+                name="username"
+                class="form-control"
+                id="modalSignUpVerticalUsername"
+                placeholder="Create a username"
+                required
+              />
             </div>
 
             <!-- Submit -->

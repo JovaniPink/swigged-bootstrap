@@ -5,11 +5,11 @@
 
 'use strict';
 
-(function () {
+(function() {
   var $isotope = $('[data-isotope]');
   var $filter = $('[data-filter]');
 
-  $filter.on('click', function () {
+  $filter.on('click', function() {
     var $this = $(this);
     var filter = $this.data('filter');
     var target = $this.data('target');
@@ -19,7 +19,7 @@
     });
   });
 
-  $isotope.imagesLoaded().progress(function () {
+  $isotope.imagesLoaded().progress(function() {
     $isotope.isotope('layout');
   });
 })();

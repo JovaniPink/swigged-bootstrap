@@ -5,7 +5,7 @@
 
 'use strict';
 
-(function () {
+(function() {
   //
   // Variables
   //
@@ -36,7 +36,7 @@
   //
 
   if (typeof Typed !== 'undefined' && toggle) {
-    [].forEach.call(toggle, function (el) {
+    [].forEach.call(toggle, function(el) {
       init(el);
     });
   }

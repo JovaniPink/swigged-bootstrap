@@ -27,8 +27,8 @@ function transferEmailToModal(email) {
 //       signUpButton.removeAttribute('disabled');
 //       // setAttributes(signUpButton, {
 //       //   'data-toggle': 'modal',
-//       //   href: '#modalSignupVertical',
-//       // }); // data-toggle="modal" href="#modalSignupVertical"
+//       //   href: '#modalSignUpVertical',
+//       // }); // data-toggle="modal" href="#modalSignUpVertical"
 //       transferEmailToModal(emailInput.value);
 //     }
 //   },
@@ -44,8 +44,8 @@ var eventHandler = {
         signUpButton.removeAttribute('disabled');
         // setAttributes(signUpButton, {
         //   'data-toggle': 'modal',
-        //   href: '#modalSignupVertical',
-        // }); // data-toggle="modal" href="#modalSignupVertical"
+        //   href: '#modalSignUpVertical',
+        // }); // data-toggle="modal" href="#modalSignUpVertical"
         transferEmailToModal(emailInput.value);
       }
     },
@@ -56,8 +56,8 @@ var eventHandler = {
         signUpButton.removeAttribute('disabled');
         // setAttributes(signUpButton, {
         //   'data-toggle': 'modal',
-        //   href: '#modalSignupVertical',
-        // }); // data-toggle="modal" href="#modalSignupVertical"
+        //   href: '#modalSignUpVertical',
+        // }); // data-toggle="modal" href="#modalSignUpVertical"
         transferEmailToModal(emailInput.value);
       }
     },

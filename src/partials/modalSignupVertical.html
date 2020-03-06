@@ -1,7 +1,7 @@
 <!-- Signup: Vertical  -->
 <div
   class="modal fade"
-  id="modalSignupVertical"
+  id="modalSignUpVertical"
   tabindex="-1"
   role="dialog"
   aria-labelledby="modalSignupVerticalTitle"
@@ -50,7 +50,8 @@
           </p>
 
           <!-- Form -->
-          <form class="mb-6" name="signUp" method="POST" data-netlify="true">
+          <form class="mb-6" name="modalSignUp" method="POST" data-netlify="true">
+
             <!-- First name -->
             <div class="form-group">
               <label class="sr-only" for="registrationFirstNameModal"
@@ -62,6 +63,7 @@
                 class="form-control"
                 id="registrationFirstNameModal"
                 placeholder="First name"
+                required
               />
             </div>
 
@@ -76,34 +78,37 @@
                 class="form-control"
                 id="registrationLastNameModal"
                 placeholder="Last name"
+                required
               />
             </div>
 
             <!-- Email -->
             <div class="form-group">
-              <label class="sr-only" for="modalSignupVerticalEmail">
+              <label class="sr-only" for="modalSignUpVerticalEmail">
                 Your email
               </label>
               <input
                 type="email"
                 name="email"
                 class="form-control"
-                id="modalSignupVerticalEmail"
+                id="modalSignUpVerticalEmail"
                 placeholder="Your email"
+                required
               />
             </div>
 
             <!-- Username -->
             <div class="form-group mb-5">
-              <label class="sr-only" for="modalSignupVerticalUsername">
+              <label class="sr-only" for="modalSignUpVerticalUsername">
                 Create a Username
               </label>
               <input
                 type="username"
                 name="username"
                 class="form-control"
-                id="modalSignupVerticalUsername"
+                id="modalSignUpVerticalUsername"
                 placeholder="Create a username"
+                required
               />
             </div>
 
