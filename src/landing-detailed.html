@@ -1,1201 +1,1252 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    @@include("partials/head.html", { "pageTitle": "Swigged" })
 
-<head>
-  @@include("partials/head.html", {
-  "pageTitle": "Swigged"
-  })
+    <style>
+      .btn-group-fab {
+        position: fixed;
+        width: 50px;
+        height: auto;
+        right: 20px;
+        bottom: 20px;
+      }
 
-  <style>
-    .btn-group-fab {
-      position: fixed;
-      width: 50px;
-      height: auto;
-      right: 20px;
-      bottom: 20px;
-    }
+      .btn-group-fab div {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
 
-    .btn-group-fab div {
-      position: relative;
-      width: 100%;
-      height: auto;
-    }
+      .btn-group-fab .btn {
+        position: absolute;
+        bottom: 0;
+        border-radius: 50%;
+        display: block;
+        margin-bottom: 4px;
+        width: 40px;
+        height: 40px;
+        margin: 4px auto;
+      }
 
-    .btn-group-fab .btn {
-      position: absolute;
-      bottom: 0;
-      border-radius: 50%;
-      display: block;
-      margin-bottom: 4px;
-      width: 40px;
-      height: 40px;
-      margin: 4px auto;
-    }
+      .btn-group-fab .btn-main {
+        width: 50px;
+        height: 50px;
+        right: 50%;
+        margin-right: -25px;
+        z-index: 9;
+      }
 
-    .btn-group-fab .btn-main {
-      width: 50px;
-      height: 50px;
-      right: 50%;
-      margin-right: -25px;
-      z-index: 9;
-    }
+      .btn-group-fab .btn-sub {
+        bottom: 0;
+        z-index: 8;
+        right: 50%;
+        margin-right: -20px;
+        -webkit-transition: all 2s;
+        transition: all 0.5s;
+      }
 
-    .btn-group-fab .btn-sub {
-      bottom: 0;
-      z-index: 8;
-      right: 50%;
-      margin-right: -20px;
-      -webkit-transition: all 2s;
-      transition: all 0.5s;
-    }
+      .btn-group-fab.active .btn-sub:nth-child(2) {
+        bottom: 60px;
+      }
 
-    .btn-group-fab.active .btn-sub:nth-child(2) {
-      bottom: 60px;
-    }
+      .btn-group-fab.active .btn-sub:nth-child(3) {
+        bottom: 110px;
+      }
 
-    .btn-group-fab.active .btn-sub:nth-child(3) {
-      bottom: 110px;
-    }
+      .btn-group-fab.active .btn-sub:nth-child(4) {
+        bottom: 160px;
+      }
 
-    .btn-group-fab.active .btn-sub:nth-child(4) {
-      bottom: 160px;
-    }
+      .btn-group-fab .btn-sub:nth-child(5) {
+        bottom: 210px;
+      }
+    </style>
+  </head>
 
-    .btn-group-fab .btn-sub:nth-child(5) {
-      bottom: 210px;
-    }
-  </style>
-</head>
-
-<body class="bg-light">
-
-  <!-- MODALS
+  <body class="bg-light">
+    <!-- MODALS
     ================================================== -->
-  @@include("partials/modalSignUpVertical.html")
+    @@include("partials/modalSignUpVertical.html")
 
-  <!-- NAVBAR
+    <!-- NAVBAR
     ================================================== -->
-  @@include("partials/navbar.html", {
-  "classList": "navbar-light bg-white",
-  "type": "boxed"
-  })
+    @@include("partials/navbar.html", { "classList": "navbar-light bg-white", "type": "boxed" })
 
-  <!-- WELCOME
+    <!-- WELCOME
     ================================================== -->
-  <section data-jarallax data-speed=".8" class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover jarallax"
-    style="background-image: url(assets/img/covers/cover-13.jpg);">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-7 text-center">
+    <section
+      data-jarallax
+      data-speed=".8"
+      class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover jarallax"
+      style="background-image: url(assets/img/covers/cover-13.jpg);"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-7 text-center">
+            <!-- Heading -->
+            <h1 class="display-2 font-weight-bold text-white">
+              Create, Store, Find
+            </h1>
 
-          <!-- Heading -->
-          <h1 class="display-2 font-weight-bold text-white">
-            Create, Store, Find
-          </h1>
-
-          <!-- Text -->
-          <p class="lead mb-0 text-white-75">
-            Welcome to Swigged, the simplest way to build cocktails socially...
-          </p>
-
+            <!-- Text -->
+            <p class="lead mb-0 text-white-75">
+              Welcome to Swigged, the simplest way to build cocktails
+              socially...
+            </p>
+          </div>
         </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
 
-  <!-- SHAPE
+    <!-- SHAPE
     ================================================== -->
-  <div class="position-relative">
-    <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
-      @@include("assets/img/shapes/curves/curve-1.svg")
-    </div>
-  </div>
-
-  <!-- SEARCH
-    ================================================== -->
-  <section class="mt-n6">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-
-          <!-- Form -->
-          <form class="rounded shadow mb-4">
-            <div class="input-group input-group-lg">
-
-              <!-- Prepend -->
-              <div class="input-group-prepend">
-                <span class="input-group-text border-0 pr-1">
-                  <i class="fe fe-search"></i>
-                </span>
-              </div>
-
-              <!-- Input -->
-              <input type="text" class="form-control border-0 px-1" aria-label="Search the beverages..."
-                placeholder="Search the beverages...">
-
-              <!-- Append -->
-              <div class="input-group-append">
-                <span class="input-group-text border-0 py-0 pl-1 pr-3">
-                  <a class="btn btn-sm btn-primary" href="#">
-                    Search
-                  </a>
-                </span>
-              </div>
-
-            </div>
-          </form>
-
-          <!-- Badges -->
-          <div class="row align-items-center">
-            <div class="col-auto">
-
-              <!-- Heading -->
-              <h6 class="font-weight-bold text-uppercase text-muted mb-0">
-                Tags:
-              </h6>
-
-            </div>
-            <div class="col ml-n5">
-
-              <!-- Badges -->
-              <a class="badge badge-pill badge-secondary-soft" href="#">
-                <span class="h6 text-uppercase">Rum</span>
-              </a>
-              <a class="badge badge-pill badge-secondary-soft" href="#">
-                <span class="h6 text-uppercase">Bitter</span>
-              </a>
-              <a class="badge badge-pill badge-secondary-soft" href="#">
-                <span class="h6 text-uppercase">Vodka</span>
-              </a>
-              <a class="badge badge-pill badge-secondary-soft" href="#">
-                <span class="h6 text-uppercase">Lime</span>
-              </a>
-
-            </div>
-          </div> <!-- / .row -->
-
-        </div>
-      </div> <!-- / .row -->
-    </div>
-  </section>
-
-  <!-- ARTICLES
-    ================================================== -->
-  <section class="pt-7 pt-md-10">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-
-          <!-- Card -->
-          <div class="card card-row shadow-light-lg mb-6 lift lift-lg">
-            <div class="row no-gutters">
-              <div class="col-12">
-
-                <!-- Badge -->
-                <span class="badge badge-pill badge-light badge-float badge-float-inside">
-                  <span class="h6 text-uppercase">Featured</span>
-                </span>
-
-              </div>
-              <a class="col-12 col-md-6 order-md-2 bg-cover card-img-right"
-                style="background-image: url(assets/img/photos/photo-27.jpg);" href="#!">
-
-                <!-- Image (placeholder) -->
-                <img src="assets/img/photos/photo-27.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-                <!-- Shape -->
-                <div class="shape shape-left shape-fluid-y svg-shim text-white d-none d-md-block">
-                  @@include("assets/img/shapes/curves/curve-5.svg")
-                </div>
-
-              </a>
-              <div class="col-12 col-md-6 order-md-1">
-
-                <!-- Body -->
-                <a class="card-body" href="#!">
-
-                  <!-- Heading -->
-                  <h3>
-                    Nice cocktail name and possible description.
-                  </h3>
-
-                  <!-- Text -->
-                  <p class="mb-0 text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce
-                    pellentesque faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin
-                    erat purus.
-                  </p>
-
-                </a>
-
-                <!-- Meta -->
-                <a class="card-meta" href="#!">
-
-                  <!-- Divider -->
-                  <hr class="card-meta-divider">
-
-                  <!-- Avatar -->
-                  <div class="avatar avatar-sm mr-2">
-                    <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-                  </div>
-
-                  <!-- Author -->
-                  <h6 class="text-uppercase text-muted mr-2 mb-0">
-                    Christine Pink
-                  </h6>
-
-                  <!-- Date -->
-                  <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                    <time datetime="2019-12-17">Dec 17</time>
-                  </p>
-
-                </a>
-
-              </div>
-
-            </div> <!-- / .row -->
-          </div>
-
-        </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
-
-  <!-- ARTICLES
-    ================================================== -->
-  <section class="pt-7 pt-md-10">
-    <div class="container">
-      <div class="row align-items-center mb-5">
-        <div class="col-12 col-md">
-
-          <!-- Heading -->
-          <h3 class="mb-0">
-            Latest Cocktails
-          </h3>
-
-          <!-- Text -->
-          <p class="mb-0 text-muted">
-            Here’s what you've been up to recently...
-          </p>
-
-        </div>
-        <div class="col-12 col-md-auto">
-
-          <!-- Button -->
-          <a href="#!" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
-            View all
-          </a>
-
-        </div>
-      </div> <!-- / .row -->
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-
-          <!-- Card -->
-          <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-15.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Christine Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-
-          <!-- Card -->
-          <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-14.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Jovani Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-
-          <!-- Card -->
-          <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-7.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Christine Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-
-          <!-- Card -->
-          <div class="card d-lg-none shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-5.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Christine Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
-
-  <!-- ARTICLES
-    ================================================== -->
-  <section class="pt-7 pt-md-10">
-    <div class="container">
-      <div class="row align-items-center mb-5">
-        <div class="col-12 col-md">
-
-          <!-- Heading -->
-          <h3 class="mb-0">
-            Top Trending
-          </h3>
-
-          <!-- Text -->
-          <p class="mb-0 text-muted">
-            In-depth looks at the most voted...
-          </p>
-
-        </div>
-        <div class="col-12 col-md-auto">
-
-          <!-- Button -->
-          <a href="#!" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
-            View all
-          </a>
-
-        </div>
-      </div> <!-- / .row -->
-      <div class="row">
-        <div class="col-12">
-
-          <!-- Card -->
-          <div class="card card-row shadow-light-lg mb-6">
-            <div class="row no-gutters">
-              <div class="col-12 col-md-6">
-
-                <!-- Slider -->
-                <div class="card-img-slider"
-                  data-flickity='{"fade": true, "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "asNavFor": "#blogSlider", "draggable": false}'>
-                  <a class="card-img-left bg-cover" style="background-image: url(assets/img/photos/photo-1.jpg);"
-                    href="#!">
-
-                    <!-- Image (placeholder) -->
-                    <img src="assets/img/photos/photo-1.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-                  </a>
-                  <a class="card-img-left bg-cover" style="background-image: url(assets/img/photos/photo-26.jpg);"
-                    href="#!">
-
-                    <!-- Image (placeholder) -->
-                    <img src="assets/img/photos/photo-26.jpg" alt="..." class="img-fluid d-md-none invisible">
-
-                  </a>
-                </div>
-
-                <!-- Shape -->
-                <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-                  @@include("assets/img/shapes/curves/curve-4.svg")
-                </div>
-
-              </div>
-              <div class="col-12 col-md-6 position-static">
-
-                <!-- Slider -->
-                <div class="position-static"
-                  data-flickity='{"wrapAround": true, "pageDots": false, "imagesLoaded": true, "adaptiveHeight": true}'
-                  id="blogSlider">
-                  <div class="w-100">
-
-                    <!-- Body -->
-                    <a class="card-body" href="#!">
-
-                      <!-- Heading -->
-                      <h3>
-                        Nice cocktail name and possible description.
-                      </h3>
-
-                      <!-- Text -->
-                      <p class="mb-0 text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce
-                        pellentesque faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin
-                        erat purus.
-                      </p>
-
-                    </a>
-
-                    <!-- Meta -->
-                    <a class="card-meta mt-auto" href="#!">
-
-                      <!-- Divider -->
-                      <hr class="card-meta-divider">
-
-                      <!-- Avatar -->
-                      <div class="avatar avatar-sm mr-2">
-                        <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                      </div>
-
-                      <!-- Author -->
-                      <h6 class="text-uppercase text-muted mr-2 mb-0">
-                        Jovani Pink
-                      </h6>
-
-                      <!-- Date -->
-                      <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                        <time datetime="2019-12-17">Dec 17</time>
-                      </p>
-
-                    </a>
-
-                  </div>
-                  <div class="w-100">
-
-                    <!-- Body -->
-                    <a class="card-body" href="#!">
-
-                      <!-- Heading -->
-                      <h3>
-                        Nice cocktail name and possible description.
-                      </h3>
-
-                      <!-- Text -->
-                      <p class="mb-0 text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce
-                        pellentesque faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin
-                        erat purus.
-                      </p>
-
-                    </a>
-
-                    <!-- Meta -->
-                    <a class="card-meta mt-auto" href="#!">
-
-                      <!-- Divider -->
-                      <hr class="card-meta-divider">
-
-                      <!-- Avatar -->
-                      <div class="avatar avatar-sm mr-2">
-                        <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-                      </div>
-
-                      <!-- Author -->
-                      <h6 class="text-uppercase text-muted mr-2 mb-0">
-                        Christine Pink
-                      </h6>
-
-                      <!-- Date -->
-                      <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                        <time datetime="2019-12-17">Dec 17</time>
-                      </p>
-
-                    </a>
-
-                  </div>
-                </div>
-
-              </div>
-            </div> <!-- / .row -->
-          </div>
-
-        </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
-
-  <!-- ARTICLES
-    ================================================== -->
-  <section class="pt-7 pt-md-10">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-
-          <!-- Heading -->
-          <h3 class="mb-0">
-            Popular Cocktails
-          </h3>
-
-          <!-- Text -->
-          <p class="mb-5 text-muted">
-            Here’s what’s big in the past Quarter!
-          </p>
-
-        </div>
-      </div> <!-- / .row -->
-      <div class="row">
-        <div class="col-12 col-md-6 d-flex">
-
-          <!-- Card -->
-          <div class="card mb-6 shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-28.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce pellentesque
-                faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin erat purus.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Christine Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-        <div class="col-12 col-md-6 d-flex">
-
-          <!-- Card -->
-          <div class="card mb-6 shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-29.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam. Fusce pellentesque
-                faucibus lorem at viverra. Integer at feugiat odio. In placerat euismod risus proin erat purus.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Jovani Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-
-          <!-- Card -->
-          <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-6.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Christine Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-
-          <!-- Card -->
-          <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-4.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Jovani Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-
-          <!-- Card -->
-          <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-5.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Christine Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-
-          <!-- Card -->
-          <div class="card d-lg-none shadow-light-lg lift lift-lg">
-
-            <!-- Image -->
-            <a class="card-img-top" href="#!">
-
-              <!-- Image -->
-              <img src="assets/img/photos/photo-27.jpg" alt="..." class="card-img-top">
-
-              <!-- Shape -->
-              <div class="position-relative">
-                <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  @@include("assets/img/shapes/curves/curve-3.svg")
-                </div>
-              </div>
-
-            </a>
-
-            <!-- Body -->
-            <a class="card-body" href="#!">
-
-              <!-- Heading -->
-              <h3>
-                Nice cocktail name and possible description.
-              </h3>
-
-              <!-- Text -->
-              <p class="mb-0 text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
-              </p>
-
-            </a>
-
-            <!-- Meta -->
-            <a class="card-meta mt-auto" href="#!">
-
-              <!-- Divider -->
-              <hr class="card-meta-divider">
-
-              <!-- Avatar -->
-              <div class="avatar avatar-sm mr-2">
-                <img src="./assets/img/avatars/avatar-1.jpeg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-              <!-- Author -->
-              <h6 class="text-uppercase text-muted mr-2 mb-0">
-                Christine Pink
-              </h6>
-
-              <!-- Date -->
-              <p class="h6 text-uppercase text-muted mb-0 ml-auto">
-                <time datetime="2019-12-17">Dec 17</time>
-              </p>
-
-            </a>
-
-          </div>
-
-        </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
-
-  <aside>
-    <div class="btn-group-fab" role="group" aria-label="FAB Menu">
-      <div>
-        <button type="button" class="btn btn-main btn-primary has-tooltip" data-placement="left" title="Menu"> <i
-            class="fa fa-bars"></i> </button>
-        <button type="button" class="btn btn-sub btn-info has-tooltip" data-placement="left" title="Fullscreen"> <i
-            class="fa fa-arrows-alt"></i> </button>
-        <button type="button" class="btn btn-sub btn-danger has-tooltip" data-placement="left" title="Save"> <i
-            class="fa fa-floppy-o"></i> </button>
-        <button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="Download"> <i
-            class="fa fa-download"></i> </button>
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+        @@include("assets/img/shapes/curves/curve-1.svg")
       </div>
     </div>
-  </aside>
 
-  <!-- MORE
+    <!-- SEARCH
     ================================================== -->
-  <section class="py-7 py-md-10">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-9 col-lg-8 col-xl-7">
-
-          <!-- Button -->
-          <a href="#!" class="btn btn-block btn-outline-gray-300 d-flex align-items-center">
-            <span class="mx-auto">Load more</span> <i class="fe fe-arrow-right"></i>
-          </a>
-
-        </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
-
-  <!-- SHAPE
-    ================================================== -->
-  <div class="position-relative">
-    <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
-      @@include("assets/img/shapes/curves/curve-1.svg")
-    </div>
-  </div>
-
-  <!-- CTA
-    ================================================== -->
-  <section class="pt-6 pt-md-8 bg-gray-200">
-    <div class="container pb-6 pb-md-8 border-bottom border-gray-300">
-      <div class="row align-items-center">
-        <div class="col-12 col-md">
-
-          <!-- Heading -->
-          <h3 class="mb-1 font-weight-bold">
-            Get the latest Beverages
-          </h3>
-
-          <!-- Text -->
-          <p class="font-size-lg text-muted mb-6 mb-md-0">
-            From us to your inbox weekly.
-          </p>
-
-        </div>
-        <div class="col-12 col-md-5">
-
-          <!-- Form -->
-          <form>
-            <div class="row">
-              <div class="col">
+    <section class="mt-n6">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Form -->
+            <form class="rounded shadow mb-4">
+              <div class="input-group input-group-lg">
+                <!-- Prepend -->
+                <div class="input-group-prepend">
+                  <span class="input-group-text border-0 pr-1">
+                    <i class="fe fe-search"></i>
+                  </span>
+                </div>
 
                 <!-- Input -->
-                <input type="email" class="form-control" placeholder="Enter your email">
+                <input
+                  type="text"
+                  class="form-control border-0 px-1"
+                  aria-label="Search the beverages..."
+                  placeholder="Search the beverages..."
+                />
 
+                <!-- Append -->
+                <div class="input-group-append">
+                  <span class="input-group-text border-0 py-0 pl-1 pr-3">
+                    <a class="btn btn-sm btn-primary" href="#">
+                      Search
+                    </a>
+                  </span>
+                </div>
               </div>
-              <div class="col-auto ml-n5">
+            </form>
 
-                <!-- Button -->
-                <button class="btn btn-primary" type="submit">
-                  Subscribe
-                </button>
-
+            <!-- Badges -->
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <!-- Heading -->
+                <h6 class="font-weight-bold text-uppercase text-muted mb-0">
+                  Tags:
+                </h6>
               </div>
-            </div> <!-- / .row -->
-          </form>
-
+              <div class="col ml-n5">
+                <!-- Badges -->
+                <a class="badge badge-pill badge-secondary-soft" href="#">
+                  <span class="h6 text-uppercase">Rum</span>
+                </a>
+                <a class="badge badge-pill badge-secondary-soft" href="#">
+                  <span class="h6 text-uppercase">Bitter</span>
+                </a>
+                <a class="badge badge-pill badge-secondary-soft" href="#">
+                  <span class="h6 text-uppercase">Vodka</span>
+                </a>
+                <a class="badge badge-pill badge-secondary-soft" href="#">
+                  <span class="h6 text-uppercase">Lime</span>
+                </a>
+              </div>
+            </div>
+            <!-- / .row -->
+          </div>
         </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
+        <!-- / .row -->
+      </div>
+    </section>
 
-  <!-- FOOTER
+    <!-- ARTICLES
     ================================================== -->
-  @@include("partials/footer-full.html", {
-  "classList": "bg-gray-200"
-  })
+    <section class="pt-7 pt-md-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Card -->
+            <div class="card card-row shadow-light-lg mb-6 lift lift-lg">
+              <div class="row no-gutters">
+                <div class="col-12">
+                  <!-- Badge -->
+                  <span
+                    class="badge badge-pill badge-light badge-float badge-float-inside"
+                  >
+                    <span class="h6 text-uppercase">Featured</span>
+                  </span>
+                </div>
+                <a
+                  class="col-12 col-md-6 order-md-2 bg-cover card-img-right"
+                  style="background-image: url(assets/img/photos/photo-27.jpg);"
+                  href="#!"
+                >
+                  <!-- Image (placeholder) -->
+                  <img
+                    src="assets/img/photos/photo-27.jpg"
+                    alt="..."
+                    class="img-fluid d-md-none invisible"
+                  />
 
-  <!-- JAVASCRIPT
+                  <!-- Shape -->
+                  <div
+                    class="shape shape-left shape-fluid-y svg-shim text-white d-none d-md-block"
+                  >
+                    @@include("assets/img/shapes/curves/curve-5.svg")
+                  </div>
+                </a>
+                <div class="col-12 col-md-6 order-md-1">
+                  <!-- Body -->
+                  <a class="card-body" href="#!">
+                    <!-- Heading -->
+                    <h3>
+                      Nice cocktail name and possible description.
+                    </h3>
+
+                    <!-- Text -->
+                    <p class="mb-0 text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Duis nec condimentum quam. Fusce pellentesque faucibus
+                      lorem at viverra. Integer at feugiat odio. In placerat
+                      euismod risus proin erat purus.
+                    </p>
+                  </a>
+
+                  <!-- Meta -->
+                  <a class="card-meta" href="#!">
+                    <!-- Divider -->
+                    <hr class="card-meta-divider" />
+
+                    <!-- Avatar -->
+                    <div class="avatar avatar-sm mr-2">
+                      <img
+                        src="./assets/img/avatars/avatar-1.jpeg"
+                        alt="..."
+                        class="avatar-img rounded-circle"
+                      />
+                    </div>
+
+                    <!-- Author -->
+                    <h6 class="text-uppercase text-muted mr-2 mb-0">
+                      Christine Pink
+                    </h6>
+
+                    <!-- Date -->
+                    <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                      <time datetime="2019-12-17">Dec 17</time>
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <!-- / .row -->
+            </div>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- ARTICLES
     ================================================== -->
-  @@include("partials/scripts.html")
+    <section class="pt-7 pt-md-10">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-12 col-md">
+            <!-- Heading -->
+            <h3 class="mb-0">
+              Latest Cocktails
+            </h3>
 
-  <script>
-    $(function () {
-      $('.btn-group-fab').on('click', '.btn', function () {
-        $('.btn-group-fab').toggleClass('active');
+            <!-- Text -->
+            <p class="mb-0 text-muted">
+              Here’s what you've been up to recently...
+            </p>
+          </div>
+          <div class="col-12 col-md-auto">
+            <!-- Button -->
+            <a
+              href="#!"
+              class="btn btn-sm btn-outline-gray-300 d-none d-md-inline"
+            >
+              View all
+            </a>
+          </div>
+        </div>
+        <!-- / .row -->
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <!-- Card -->
+            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-15.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="./assets/img/avatars/avatar-1.jpeg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Christine Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <!-- Card -->
+            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-14.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="assets/img/avatars/avatar-2.jpg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Jovani Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <!-- Card -->
+            <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-7.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="./assets/img/avatars/avatar-1.jpeg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Christine Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <!-- Card -->
+            <div class="card d-lg-none shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-5.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="./assets/img/avatars/avatar-1.jpeg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Christine Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- ARTICLES
+    ================================================== -->
+    <section class="pt-7 pt-md-10">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-12 col-md">
+            <!-- Heading -->
+            <h3 class="mb-0">
+              Top Trending
+            </h3>
+
+            <!-- Text -->
+            <p class="mb-0 text-muted">
+              In-depth looks at the most voted...
+            </p>
+          </div>
+          <div class="col-12 col-md-auto">
+            <!-- Button -->
+            <a
+              href="#!"
+              class="btn btn-sm btn-outline-gray-300 d-none d-md-inline"
+            >
+              View all
+            </a>
+          </div>
+        </div>
+        <!-- / .row -->
+        <div class="row">
+          <div class="col-12">
+            <!-- Card -->
+            <div class="card card-row shadow-light-lg mb-6">
+              <div class="row no-gutters">
+                <div class="col-12 col-md-6">
+                  <!-- Slider -->
+                  <div
+                    class="card-img-slider"
+                    data-flickity='{"fade": true, "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "asNavFor": "#blogSlider", "draggable": false}'
+                  >
+                    <a
+                      class="card-img-left bg-cover"
+                      style="background-image: url(assets/img/photos/photo-1.jpg);"
+                      href="#!"
+                    >
+                      <!-- Image (placeholder) -->
+                      <img
+                        src="assets/img/photos/photo-1.jpg"
+                        alt="..."
+                        class="img-fluid d-md-none invisible"
+                      />
+                    </a>
+                    <a
+                      class="card-img-left bg-cover"
+                      style="background-image: url(assets/img/photos/photo-26.jpg);"
+                      href="#!"
+                    >
+                      <!-- Image (placeholder) -->
+                      <img
+                        src="assets/img/photos/photo-26.jpg"
+                        alt="..."
+                        class="img-fluid d-md-none invisible"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Shape -->
+                  <div
+                    class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block"
+                  >
+                    @@include("assets/img/shapes/curves/curve-4.svg")
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 position-static">
+                  <!-- Slider -->
+                  <div
+                    class="position-static"
+                    data-flickity='{"wrapAround": true, "pageDots": false, "imagesLoaded": true, "adaptiveHeight": true}'
+                    id="blogSlider"
+                  >
+                    <div class="w-100">
+                      <!-- Body -->
+                      <a class="card-body" href="#!">
+                        <!-- Heading -->
+                        <h3>
+                          Nice cocktail name and possible description.
+                        </h3>
+
+                        <!-- Text -->
+                        <p class="mb-0 text-muted">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Duis nec condimentum quam. Fusce pellentesque
+                          faucibus lorem at viverra. Integer at feugiat odio. In
+                          placerat euismod risus proin erat purus.
+                        </p>
+                      </a>
+
+                      <!-- Meta -->
+                      <a class="card-meta mt-auto" href="#!">
+                        <!-- Divider -->
+                        <hr class="card-meta-divider" />
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm mr-2">
+                          <img
+                            src="assets/img/avatars/avatar-2.jpg"
+                            alt="..."
+                            class="avatar-img rounded-circle"
+                          />
+                        </div>
+
+                        <!-- Author -->
+                        <h6 class="text-uppercase text-muted mr-2 mb-0">
+                          Jovani Pink
+                        </h6>
+
+                        <!-- Date -->
+                        <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                          <time datetime="2019-12-17">Dec 17</time>
+                        </p>
+                      </a>
+                    </div>
+                    <div class="w-100">
+                      <!-- Body -->
+                      <a class="card-body" href="#!">
+                        <!-- Heading -->
+                        <h3>
+                          Nice cocktail name and possible description.
+                        </h3>
+
+                        <!-- Text -->
+                        <p class="mb-0 text-muted">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Duis nec condimentum quam. Fusce pellentesque
+                          faucibus lorem at viverra. Integer at feugiat odio. In
+                          placerat euismod risus proin erat purus.
+                        </p>
+                      </a>
+
+                      <!-- Meta -->
+                      <a class="card-meta mt-auto" href="#!">
+                        <!-- Divider -->
+                        <hr class="card-meta-divider" />
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm mr-2">
+                          <img
+                            src="./assets/img/avatars/avatar-1.jpeg"
+                            alt="..."
+                            class="avatar-img rounded-circle"
+                          />
+                        </div>
+
+                        <!-- Author -->
+                        <h6 class="text-uppercase text-muted mr-2 mb-0">
+                          Christine Pink
+                        </h6>
+
+                        <!-- Date -->
+                        <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                          <time datetime="2019-12-17">Dec 17</time>
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- / .row -->
+            </div>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- ARTICLES
+    ================================================== -->
+    <section class="pt-7 pt-md-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Heading -->
+            <h3 class="mb-0">
+              Popular Cocktails
+            </h3>
+
+            <!-- Text -->
+            <p class="mb-5 text-muted">
+              Here’s what’s big in the past Quarter!
+            </p>
+          </div>
+        </div>
+        <!-- / .row -->
+        <div class="row">
+          <div class="col-12 col-md-6 d-flex">
+            <!-- Card -->
+            <div class="card mb-6 shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-28.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam. Fusce pellentesque faucibus lorem at
+                  viverra. Integer at feugiat odio. In placerat euismod risus
+                  proin erat purus.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="./assets/img/avatars/avatar-1.jpeg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Christine Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 d-flex">
+            <!-- Card -->
+            <div class="card mb-6 shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-29.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam. Fusce pellentesque faucibus lorem at
+                  viverra. Integer at feugiat odio. In placerat euismod risus
+                  proin erat purus.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="assets/img/avatars/avatar-2.jpg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Jovani Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <!-- Card -->
+            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-6.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="./assets/img/avatars/avatar-1.jpeg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Christine Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <!-- Card -->
+            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-4.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="assets/img/avatars/avatar-2.jpg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Jovani Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <!-- Card -->
+            <div class="card mb-6 mb-md-0 shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-5.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="./assets/img/avatars/avatar-1.jpeg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Christine Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <!-- Card -->
+            <div class="card d-lg-none shadow-light-lg lift lift-lg">
+              <!-- Image -->
+              <a class="card-img-top" href="#!">
+                <!-- Image -->
+                <img
+                  src="assets/img/photos/photo-27.jpg"
+                  alt="..."
+                  class="card-img-top"
+                />
+
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div
+                    class="shape shape-bottom shape-fluid-x svg-shim text-white"
+                  >
+                    @@include("assets/img/shapes/curves/curve-3.svg")
+                  </div>
+                </div>
+              </a>
+
+              <!-- Body -->
+              <a class="card-body" href="#!">
+                <!-- Heading -->
+                <h3>
+                  Nice cocktail name and possible description.
+                </h3>
+
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  nec condimentum quam.
+                </p>
+              </a>
+
+              <!-- Meta -->
+              <a class="card-meta mt-auto" href="#!">
+                <!-- Divider -->
+                <hr class="card-meta-divider" />
+
+                <!-- Avatar -->
+                <div class="avatar avatar-sm mr-2">
+                  <img
+                    src="./assets/img/avatars/avatar-1.jpeg"
+                    alt="..."
+                    class="avatar-img rounded-circle"
+                  />
+                </div>
+
+                <!-- Author -->
+                <h6 class="text-uppercase text-muted mr-2 mb-0">
+                  Christine Pink
+                </h6>
+
+                <!-- Date -->
+                <p class="h6 text-uppercase text-muted mb-0 ml-auto">
+                  <time datetime="2019-12-17">Dec 17</time>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <aside>
+      <div class="btn-group-fab" role="group" aria-label="FAB Menu">
+        <div>
+          <button
+            type="button"
+            class="btn btn-main btn-primary has-tooltip"
+            data-placement="left"
+            title="Menu"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-sub btn-info has-tooltip"
+            data-placement="left"
+            title="Fullscreen"
+          >
+            <i class="fa fa-arrows-alt"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-sub btn-danger has-tooltip"
+            data-placement="left"
+            title="Save"
+          >
+            <i class="fa fa-floppy-o"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-sub btn-warning has-tooltip"
+            data-placement="left"
+            title="Download"
+          >
+            <i class="fa fa-download"></i>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MORE
+    ================================================== -->
+    <section class="py-7 py-md-10">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-9 col-lg-8 col-xl-7">
+            <!-- Button -->
+            <a
+              href="#!"
+              class="btn btn-block btn-outline-gray-300 d-flex align-items-center"
+            >
+              <span class="mx-auto">Load more</span>
+              <i class="fe fe-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
+        @@include("assets/img/shapes/curves/curve-1.svg")
+      </div>
+    </div>
+
+    <!-- CTA
+    ================================================== -->
+    <section class="pt-6 pt-md-8 bg-gray-200">
+      <div class="container pb-6 pb-md-8 border-bottom border-gray-300">
+        <div class="row align-items-center">
+          <div class="col-12 col-md">
+            <!-- Heading -->
+            <h3 class="mb-1 font-weight-bold">
+              Get the latest Beverages
+            </h3>
+
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-6 mb-md-0">
+              From us to your inbox weekly.
+            </p>
+          </div>
+          <div class="col-12 col-md-5">
+            <!-- Form -->
+            <form>
+              <div class="row">
+                <div class="col">
+                  <!-- Input -->
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div class="col-auto ml-n5">
+                  <!-- Button -->
+                  <button class="btn btn-primary" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+              <!-- / .row -->
+            </form>
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- FOOTER
+    ================================================== -->
+    @@include("partials/footer-full.html", { "classList": "bg-gray-200" })
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+    <script>
+      $(function() {
+        $('.btn-group-fab').on('click', '.btn', function() {
+          $('.btn-group-fab').toggleClass('active');
+        });
+        $('has-tooltip').tooltip();
       });
-      $('has-tooltip').tooltip();
-    });
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>

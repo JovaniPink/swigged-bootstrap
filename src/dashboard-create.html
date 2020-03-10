@@ -5,17 +5,13 @@
   </head>
 
   <body class="bg-light" style="padding-top: 84px;">
-
     <!-- MODALS
     ================================================== -->
     @@include("partials/modalMeasurement.html")
 
     <!-- NAVBAR
     ================================================== -->
-    @@include("partials/navbar-app.html", {
-    "classList": "navbar-light fixed-top bg-white border-bottom",
-    "type": "boxed"
-    })
+    @@include("partials/navbar-app.html", { "classList": "navbar-light fixed-top bg-white border-bottom", "type": "boxed" })
 
     <!-- CONTENT
     ================================================== -->
@@ -156,7 +152,11 @@
                     </div>
                     <div class="col-12 col-md-auto">
                       <!-- Submit -->
-                      <button type="submit" class="btn btn-primary mb-md-0 lift" disabled>
+                      <button
+                        type="submit"
+                        class="btn btn-primary mb-md-0 lift"
+                        disabled
+                      >
                         Save <i class="fe fe-arrow-right ml-3"></i>
                       </button>
                     </div>
@@ -182,15 +182,14 @@
 
     <!-- FOOTER
     ================================================== -->
-    @@include("partials/footer-min.html", { "classList": "bg-dark" })
+    @@include("partials/footer-min.html", { "classList": "bg-dark", "fontColor": "text-white" })
 
     <!-- JAVASCRIPT
     ================================================== -->
-    @@include("partials/scripts.html")>
+    @@include("partials/scripts.html")
 
     <!-- CUSTOM JAVASCRIPT
     ================================================== -->
-    <script src="./assets/js/create.js">
-    </script>
+    <script src="./assets/js/create.js"></script>
   </body>
 </html>

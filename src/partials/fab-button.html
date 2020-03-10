@@ -61,21 +61,45 @@
 <aside>
   <div class="btn-group-fab" role="group" aria-label="FAB Menu">
     <div>
-      <button type="button" class="btn btn-main btn-primary has-tooltip" data-placement="left" title="Menu"> <i
-          class="fa fa-bars"></i> </button>
-      <button type="button" class="btn btn-sub btn-info has-tooltip" data-placement="left" title="Fullscreen"> <i
-          class="fa fa-arrows-alt"></i> </button>
-      <button type="button" class="btn btn-sub btn-danger has-tooltip" data-placement="left" title="Save"> <i
-          class="fa fa-floppy-o"></i> </button>
-      <button type="button" class="btn btn-sub btn-warning has-tooltip" data-placement="left" title="Download"> <i
-          class="fa fa-download"></i> </button>
+      <button
+        type="button"
+        class="btn btn-main btn-primary has-tooltip"
+        data-placement="left"
+        title="Menu"
+      >
+        <i class="fa fa-bars"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-sub btn-info has-tooltip"
+        data-placement="left"
+        title="Fullscreen"
+      >
+        <i class="fa fa-arrows-alt"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-sub btn-danger has-tooltip"
+        data-placement="left"
+        title="Save"
+      >
+        <i class="fa fa-floppy-o"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-sub btn-warning has-tooltip"
+        data-placement="left"
+        title="Download"
+      >
+        <i class="fa fa-download"></i>
+      </button>
     </div>
   </div>
 </aside>
 
 <script>
-  $(function () {
-    $('.btn-group-fab').on('click', '.btn', function () {
+  $(function() {
+    $('.btn-group-fab').on('click', '.btn', function() {
       $('.btn-group-fab').toggleClass('active');
     });
     $('has-tooltip').tooltip();

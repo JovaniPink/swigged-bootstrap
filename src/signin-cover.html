@@ -1,93 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    @@include("partials/head.html", { "pageTitle": "Swigged" })
+  </head>
 
-<head>
-  @@include("partials/head.html", {
-  "pageTitle": "Swigged"
-  })
-</head>
-
-<body>
-
-  <!-- NAVBAR
+  <body>
+    <!-- NAVBAR
     ================================================== -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" href="@@webRoot/index.html">
+          <img
+            src="./assets/img/brand.svg"
+            class="navbar-brand-img"
+            alt="..."
+          />
+        </a>
+      </div>
+    </nav>
 
-      <!-- Brand -->
-      <a class="navbar-brand" href="@@webRoot/index.html">
-        <img src="./assets/img/brand.svg" class="navbar-brand-img" alt="...">
-      </a>
-    </div>
-  </nav>
-
-  <!-- CONTENT
+    <!-- CONTENT
     ================================================== -->
-  <section>
-    <div class="container d-flex flex-column">
-      <div class="row align-items-center justify-content-center no-gutters min-vh-100">
-        <div class="col-12 col-md-6 col-lg-4 py-8 py-md-11">
-
-          <!-- Heading -->
-          <h1 class="mb-0 font-weight-bold">
-            Sign in
-          </h1>
-
-          <!-- Text -->
-          <p class="mb-6 text-muted">
-            Keep track of your beverages in minutes.
-          </p>
-
-          <!-- Form -->
-          <form class="mb-6">
-
-            <!-- Email -->
-            <div class="form-group">
-              <label for="email">
-                Email Address
-              </label>
-              <input type="email" class="form-control" id="email" placeholder="name@address.com">
-            </div>
-
-            <!-- Password -->
-            <div class="form-group mb-5">
-              <label for="password">
-                Password
-              </label>
-              <input type="password" class="form-control" id="password" placeholder="Enter your password">
-            </div>
-
-            <button class="btn btn-block btn-primary" type="submit">
+    <section>
+      <div class="container d-flex flex-column">
+        <div
+          class="row align-items-center justify-content-center no-gutters min-vh-100"
+        >
+          <div class="col-12 col-md-6 col-lg-4 py-8 py-md-11">
+            <!-- Heading -->
+            <h1 class="mb-0 font-weight-bold">
               Sign in
-            </button>
+            </h1>
 
-          </form>
+            <!-- Text -->
+            <p class="mb-6 text-muted">
+              Keep track of your beverages in minutes.
+            </p>
 
-          <!-- Text -->
-          <p class="mb-0 font-size-sm text-muted">
-            Don't have an account yet? <a href="signup-cover.html">Sign up</a>.
-          </p>
+            <!-- Form -->
+            <form class="mb-6">
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@address.com"
+                />
+              </div>
 
-        </div>
-        <div class="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block">
+              <!-- Password -->
+              <div class="form-group mb-5">
+                <label for="password">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                />
+              </div>
 
-          <!-- Image -->
-          <div class="h-100 w-cover bg-cover" style="background-image: url(assets/img/covers/cover-14.jpg);"></div>
+              <button class="btn btn-block btn-primary" type="submit">
+                Sign in
+              </button>
+            </form>
 
-          <!-- Shape -->
-          <div class="shape shape-left shape-fluid-y svg-shim text-white">
-            @@include("assets/img/shapes/angles/angle-left.svg")
+            <!-- Text -->
+            <p class="mb-0 font-size-sm text-muted">
+              Don't have an account yet?
+              <a href="signup-cover.html">Sign up</a>.
+            </p>
           </div>
+          <div
+            class="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block"
+          >
+            <!-- Image -->
+            <div
+              class="h-100 w-cover bg-cover"
+              style="background-image: url(assets/img/covers/cover-14.jpg);"
+            ></div>
 
+            <!-- Shape -->
+            <div class="shape shape-left shape-fluid-y svg-shim text-white">
+              @@include("assets/img/shapes/angles/angle-left.svg")
+            </div>
+          </div>
         </div>
-      </div> <!-- / .row -->
-    </div> <!-- / .container -->
-  </section>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
 
-  <!-- JAVASCRIPT
+    <!-- JAVASCRIPT
     ================================================== -->
-  @@include("partials/scripts.html")
-
-</body>
-
+    @@include("partials/scripts.html")
+  </body>
 </html>

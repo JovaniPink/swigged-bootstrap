@@ -1,445 +1,309 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    @@include("partials/head.html", { "pageTitle": "Swigged" })
+  </head>
 
-<head>
-  @@include("partials/head.html", {
-  "pageTitle": "Swigged"
-  })
-</head>
-
-<body>
-
-  <!-- MODALS
+  <body>
+    <!-- MODALS
     ================================================== -->
-  @@include("partials/modalSignUpVertical.html")
+    @@include("partials/modalSignUpVertical.html")
 
-  <!-- NAVBAR
+    <!-- NAVBAR
     ================================================== -->
-  @@include("partials/navbar.html", {
-  "classList": "navbar-light bg-white",
-  "type": "boxed"
-  })
+    @@include("partials/navbar-landing.html", { "classList": "navbar-light bg-white", "type": "boxed" })
 
-
-
-
-  <section class="pt-12 pt-md-14 pb-12 pb-md-15" style="margin-top: -83px;">
-    <div class="container">
-      <div class="card">
-        <div class="card-body">
-          <nav class="mb-3 bg-gray-200" aria-label="breadcrumb">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-12">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                      <a class="text-gray-700" href="#">
-                        Help Center
-                      </a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      Account
-                    </li>
-                  </ol>
+    <section class="pt-12 pt-md-14 pb-12 pb-md-15" style="margin-top: -83px;">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <nav class="mb-3 bg-gray-200" aria-label="breadcrumb">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a class="text-gray-700" href="#">
+                          Classic Cocktails
+                        </a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Margarita
+                      </li>
+                    </ol>
+                  </div>
                 </div>
               </div>
-            </div>
-          </nav>
+            </nav>
+          </div>
         </div>
+        <!-- Preheading -->
+        <h6 class="text-uppercase text-primary font-weight-bold">
+          Classic Cocktail
+        </h6>
+
+        <!-- Heading -->
+        <h1 class="font-weight-bold">
+          Margarita / Title
+        </h1>
+        <img
+          src="./assets/img/covers/cover-18.jpg"
+          class="img-fluid md-6"
+          alt="Responsive image"
+        />
+        <div class="row p-4">
+          <div class="col-md-8">
+            <!-- Heading -->
+            <h3>
+              DESCRIPTION
+            </h3>
+
+            <!-- Text -->
+            <p class="text-muted mb-6 mb-md-0">
+              Swigged is built to make your life easier. Knowledge Base,
+              tooling, and operations.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <!-- Heading -->
+            <h3>
+              SHARE
+            </h3>
+
+            <!-- Avatars -->
+            <div class="avatar avatar-lg d-inline-flex">
+              <span class="fe fe-facebook"></span>
+              <span class="fe fe-twitter"></span>
+              <span class="fe fe-instagram"></span>
+            </div>
+          </div>
+        </div>
+        <!-- / .row -->
+        <div class="row p-4">
+          <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up">
+            <!-- Icon -->
+            <div class="icon text-primary mb-3">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+                <title>Stockholm-icons / Food / Glass-martini</title>
+                <desc>Created with Sketch.</desc>
+                <g
+                  id="Stockholm-icons-/-Food-/-Glass-martini"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                  <path
+                    d="M13,19.4 L16.6856953,20.8742781 C16.8755245,20.9502098 17,21.1340642 17,21.3385165 L17,21.5 C17,21.7761424 16.7761424,22 16.5,22 L7.5,22 C7.22385763,22 7,21.7761424 7,21.5 L7,21.3385165 C7,21.1340642 7.12447547,20.9502098 7.31430466,20.8742781 L11,19.4 L11,13.5 L13,13.5 L13,19.4 Z"
+                    id="Combined-Shape"
+                    fill="#335EEA"
+                    opacity="0.3"
+                  ></path>
+                  <path
+                    d="M13.2493901,13.9609566 C12.3868662,14.6509757 11.1282815,14.5111329 10.4382624,13.648609 L3.86900921,5.43704257 C3.65623355,5.171073 3.54031242,4.84060724 3.54031242,4.5 C3.54031242,3.67157288 4.2118853,3 5.04031242,3 L18.9596876,3 C19.3002948,3 19.6307606,3.11592113 19.8967301,3.32869679 C20.5436231,3.84621111 20.6485051,4.79014967 20.1309908,5.43704257 L13.5617376,13.648609 C13.4694741,13.7639384 13.3647195,13.868693 13.2493901,13.9609566 Z M6.08062485,5 L8.5,8.01229084 L15.5,8.01229084 L17.9193752,5 L6.08062485,5 Z"
+                    id="Path-58"
+                    fill="#335EEA"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Heading -->
+            <h3 class="border-bottom">
+              GLASS
+            </h3>
+
+            <!-- Text -->
+            <p class="text-muted mb-6 mb-md-0">
+              Landkit is built to make your life easier. Variables, build
+              tooling, documentation, and reusable components.
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-4 aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            <!-- Icon -->
+            <div class="icon text-primary mb-3">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+                <title>Stockholm-icons / Food / Orange</title>
+                <desc>Created with Sketch.</desc>
+                <g
+                  id="Stockholm-icons-/-Food-/-Orange"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                  <path
+                    d="M12,19 C15.8659932,19 19,15.8659932 19,12 C19,8.13400675 15.8659932,5 12,5 C8.13400675,5 5,8.13400675 5,12 C5,15.8659932 8.13400675,19 12,19 Z M12,21 C7.02943725,21 3,16.9705627 3,12 C3,7.02943725 7.02943725,3 12,3 C16.9705627,3 21,7.02943725 21,12 C21,16.9705627 16.9705627,21 12,21 Z"
+                    id="Oval-68"
+                    fill="#335EEA"
+                  ></path>
+                  <path
+                    d="M12,9.66666667 C11.3333333,8.64514991 11,7.88126102 11,7.375 C11,6.61560847 11.4477153,6 12,6 C12.5522847,6 13,6.61560847 13,7.375 C13,7.88126102 12.6666667,8.64514991 12,9.66666667 Z M12,14 C12.6666667,15.0215168 13,15.7854056 13,16.2916667 C13,17.0510582 12.5522847,17.6666667 12,17.6666667 C11.4477153,17.6666667 11,17.0510582 11,16.2916667 C11,15.7854056 11.3333333,15.0215168 12,14 Z M14.3333333,12 C15.3548501,11.3333333 16.118739,11 16.625,11 C17.3843915,11 18,11.4477153 18,12 C18,12.5522847 17.3843915,13 16.625,13 C16.118739,13 15.3548501,12.6666667 14.3333333,12 Z M10,12 C8.97848324,12.6666667 8.21459435,13 7.70833333,13 C6.9489418,13 6.33333333,12.5522847 6.33333333,12 C6.33333333,11.4477153 6.9489418,11 7.70833333,11 C8.21459435,11 8.97848324,11.3333333 10,12 Z M13.6499158,10.3500842 C13.9008327,9.15635823 14.2052815,8.38050496 14.5632621,8.02252436 C15.100233,7.48555345 15.8521164,7.36683502 16.2426407,7.75735931 C16.633165,8.1478836 16.5144465,8.89976702 15.9774756,9.43673792 C15.619495,9.79471852 14.8436418,10.0991673 13.6499158,10.3500842 Z M10.5857864,13.4142136 C10.3348695,14.6079395 10.0304208,15.3837928 9.67244018,15.7417734 C9.13546928,16.2787443 8.38358587,16.3974627 7.99306157,16.0069384 C7.60253728,15.6164141 7.72125572,14.8645307 8.25822662,14.3275598 C8.61620722,13.9695792 9.39206049,13.6651305 10.5857864,13.4142136 Z M13.6499158,13.6499158 C14.8436418,13.9008327 15.619495,14.2052815 15.9774756,14.5632621 C16.5144465,15.100233 16.633165,15.8521164 16.2426407,16.2426407 C15.8521164,16.633165 15.100233,16.5144465 14.5632621,15.9774756 C14.2052815,15.619495 13.9008327,14.8436418 13.6499158,13.6499158 Z M10.5857864,10.5857864 C9.39206049,10.3348695 8.61620722,10.0304208 8.25822662,9.67244018 C7.72125572,9.13546928 7.60253728,8.38358587 7.99306157,7.99306157 C8.38358587,7.60253728 9.13546928,7.72125572 9.67244018,8.25822662 C10.0304208,8.61620722 10.3348695,9.39206049 10.5857864,10.5857864 Z"
+                    id="Combined-Shape"
+                    fill="#335EEA"
+                    opacity="0.3"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Heading -->
+            <h3 class="border-bottom">
+              GARNISH
+            </h3>
+
+            <!-- Text -->
+            <p class="text-muted mb-6 mb-md-0">
+              Designed with the latest design trends in mind. Landkit feels
+              modern, minimal, and beautiful.
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-4 aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <!-- Icon -->
+            <div class="icon text-primary mb-3">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+                <title>Stockholm-icons / Clothes / Shirt</title>
+                <desc>Created with Sketch.</desc>
+                <g
+                  id="Stockholm-icons-/-Clothes-/-Shirt"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <rect id="bound" x="0" y="0" width="24" height="24"></rect>
+                  <path
+                    d="M6.182345,4.09500888 C6.73256296,3.42637697 7.56648864,3 8.5,3 L15.5,3 C16.4330994,3 17.266701,3.42600075 17.8169264,4.09412386 C17.8385143,4.10460774 17.8598828,4.11593789 17.8809917,4.1281251 L22.5900048,6.8468751 C23.0682974,7.12301748 23.2321726,7.73460788 22.9560302,8.21290051 L21.2997802,11.0816097 C21.0236378,11.5599023 20.4120474,11.7237774 19.9337548,11.4476351 L18.5,10.6198563 L18.5,19 C18.5,19.5522847 18.0522847,20 17.5,20 L6.5,20 C5.94771525,20 5.5,19.5522847 5.5,19 L5.5,10.6204852 L4.0673344,11.4476351 C3.58904177,11.7237774 2.97745137,11.5599023 2.70130899,11.0816097 L1.04505899,8.21290051 C0.768916618,7.73460788 0.932791773,7.12301748 1.4110844,6.8468751 L6.12009753,4.1281251 C6.14061376,4.11628005 6.16137525,4.10524462 6.182345,4.09500888 Z"
+                    id="Combined-Shape"
+                    fill="#335EEA"
+                    opacity="0.3"
+                  ></path>
+                  <path
+                    d="M9.85156673,3.2226499 L9.26236944,4.10644584 C9.11517039,4.32724441 9.1661011,4.62457583 9.37839459,4.78379594 L11,6 L10.0353553,12.7525126 C10.0130986,12.9083095 10.0654932,13.0654932 10.1767767,13.1767767 L11.6464466,14.6464466 C11.8417088,14.8417088 12.1582912,14.8417088 12.3535534,14.6464466 L13.8232233,13.1767767 C13.9345068,13.0654932 13.9869014,12.9083095 13.9646447,12.7525126 L13,6 L14.6216054,4.78379594 C14.8338989,4.62457583 14.8848296,4.32724441 14.7376306,4.10644584 L14.1484333,3.2226499 C14.0557004,3.08355057 13.8995847,3 13.7324081,3 L10.2675919,3 C10.1004153,3 9.94429962,3.08355057 9.85156673,3.2226499 Z"
+                    id="Path-86"
+                    fill="#335EEA"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Heading -->
+            <h3 class="border-bottom">
+              BY
+            </h3>
+
+            <!-- Text -->
+            <p class="text-muted mb-0">
+              <img
+                src="./assets/img/avatars/avatar-2.jpg"
+                alt="..."
+                class="avatar-xl avatar-img rounded-circle"
+              />
+            </p>
+          </div>
+        </div>
+        <!-- / .row -->
+        <div class="row p-4">
+          <div class="col-md-6">
+            <!-- Heading -->
+            <h3>
+              INGREDIENTS:
+            </h3>
+
+            <!-- List -->
+            <ul class="list mb-0">
+              <li class="list-item">
+                <a class="list-link" href="#">Background</a>
+              </li>
+              <li class="list-item">
+                <a class="list-link" href="#">Borders</a>
+              </li>
+              <li class="list-item">
+                <a class="list-link" href="#">Images</a>
+              </li>
+              <li class="list-item">
+                <a class="list-link" href="#">Lift</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <!-- Heading -->
+            <h3>
+              DIRECTIONS:
+            </h3>
+
+            <!-- Directions List -->
+            <ul class="list mb-0">
+              <li class="list-item">
+                <a class="list-link" href="#">Background</a>
+              </li>
+              <li class="list-item">
+                <a class="list-link" href="#">Borders</a>
+              </li>
+              <li class="list-item">
+                <a class="list-link" href="#">Images</a>
+              </li>
+              <li class="list-item">
+                <a class="list-link" href="#">Lift</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- / .row -->
       </div>
-      <!-- Preheading -->
-      <h6 class="text-uppercase text-primary font-weight-bold">
-        Classic Cocktail
-      </h6>
+    </section>
 
-      <!-- Heading -->
-      <h1 class="font-weight-bold">
-        Margarita
-      </h1>
-      <img src="./assets/img/covers/cover-18.jpg" class="img-fluid md-6" alt="Responsive image">
-      <div class="row p-4">
-        <div class="col-md-8">
-          <!-- Heading -->
-          <h3>
-            DESCRIPTION
-          </h3>
-
-          <!-- Text -->
-          <p class="text-muted mb-6 mb-md-0">
-            Swigged is built to make your life easier. Knowledge Base, tooling, and operations.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <!-- Heading -->
-          <h3>
-            SHARE
-          </h3>
-
-          <!-- Avatars -->
-          <div class="avatar avatar-lg d-inline-flex">
-            <img src="./assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-            <img src="./assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-            <img src="./assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-            <img src="./assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-          </div>
-        </div>
-      </div> <!-- / .row -->
-      <div class="row p-4">
-        <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-up">
-
-          <!-- Icon -->
-          <div class="icon text-primary mb-3">
-            <!--?xml version="1.0" encoding="UTF-8"?-->
-            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-              <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-              <title>Stockholm-icons / General / Settings-1</title>
-              <desc>Created with Sketch.</desc>
-              <g id="Stockholm-icons-/-General-/-Settings-1" stroke="none" stroke-width="1" fill="none"
-                fill-rule="evenodd">
-                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-                <path
-                  d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z"
-                  id="Combined-Shape" fill="#335EEA"></path>
-                <path
-                  d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z"
-                  id="Combined-Shape" fill="#335EEA" opacity="0.3"></path>
-              </g>
-            </svg>
-          </div>
-
-          <!-- Heading -->
-          <h3 class="border-bottom">
-            GLASS
-          </h3>
-
-          <!-- Text -->
-          <p class="text-muted mb-6 mb-md-0">
-            Landkit is built to make your life easier. Variables, build tooling, documentation, and reusable components.
-          </p>
-
-        </div>
-        <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
-
-          <!-- Icon -->
-          <div class="icon text-primary mb-3">
-            <!--?xml version="1.0" encoding="UTF-8"?-->
-            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-              <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-              <title>Stockholm-icons / Layout / Layout-arrange</title>
-              <desc>Created with Sketch.</desc>
-              <g id="Stockholm-icons-/-Layout-/-Layout-arrange" stroke="none" stroke-width="1" fill="none"
-                fill-rule="evenodd">
-                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-                <path
-                  d="M5.5,4 L9.5,4 C10.3284271,4 11,4.67157288 11,5.5 L11,6.5 C11,7.32842712 10.3284271,8 9.5,8 L5.5,8 C4.67157288,8 4,7.32842712 4,6.5 L4,5.5 C4,4.67157288 4.67157288,4 5.5,4 Z M14.5,16 L18.5,16 C19.3284271,16 20,16.6715729 20,17.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,17.5 C13,16.6715729 13.6715729,16 14.5,16 Z"
-                  id="Combined-Shape" fill="#335EEA"></path>
-                <path
-                  d="M5.5,10 L9.5,10 C10.3284271,10 11,10.6715729 11,11.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,11.5 C4,10.6715729 4.67157288,10 5.5,10 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,12.5 C20,13.3284271 19.3284271,14 18.5,14 L14.5,14 C13.6715729,14 13,13.3284271 13,12.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z"
-                  id="Combined-Shape" fill="#335EEA" opacity="0.3"></path>
-              </g>
-            </svg>
-          </div>
-
-          <!-- Heading -->
-          <h3 class="border-bottom">
-            GARNISH
-          </h3>
-
-          <!-- Text -->
-          <p class="text-muted mb-6 mb-md-0">
-            Designed with the latest design trends in mind. Landkit feels modern, minimal, and beautiful.
-          </p>
-
-        </div>
-        <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
-          <!-- Icon -->
-          <div class="icon text-primary mb-3">
-            <!--?xml version="1.0" encoding="UTF-8"?-->
-            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-              <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-              <title>Stockholm-icons / Code / Code</title>
-              <desc>Created with Sketch.</desc>
-              <g id="Stockholm-icons-/-Code-/-Code" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-                <path
-                  d="M17.2718029,8.68536757 C16.8932864,8.28319382 16.9124644,7.65031935 17.3146382,7.27180288 C17.7168119,6.89328641 18.3496864,6.91246442 18.7282029,7.31463817 L22.7282029,11.5646382 C23.0906029,11.9496882 23.0906029,12.5503176 22.7282029,12.9353676 L18.7282029,17.1853676 C18.3496864,17.5875413 17.7168119,17.6067193 17.3146382,17.2282029 C16.9124644,16.8496864 16.8932864,16.2168119 17.2718029,15.8146382 L20.6267538,12.2500029 L17.2718029,8.68536757 Z M6.72819712,8.6853647 L3.37324625,12.25 L6.72819712,15.8146353 C7.10671359,16.2168091 7.08753558,16.8496835 6.68536183,17.2282 C6.28318808,17.6067165 5.65031361,17.5875384 5.27179713,17.1853647 L1.27179713,12.9353647 C0.909397125,12.5503147 0.909397125,11.9496853 1.27179713,11.5646353 L5.27179713,7.3146353 C5.65031361,6.91246155 6.28318808,6.89328354 6.68536183,7.27180001 C7.08753558,7.65031648 7.10671359,8.28319095 6.72819712,8.6853647 Z"
-                  id="Combined-Shape" fill="#335EEA"></path>
-                <rect id="Rectangle-28" fill="#335EEA" opacity="0.3"
-                  transform="translate(12.000000, 12.000000) rotate(-345.000000) translate(-12.000000, -12.000000) "
-                  x="11" y="4" width="2" height="16" rx="1"></rect>
-              </g>
-            </svg>
-          </div>
-
-          <!-- Heading -->
-          <h3 class="border-bottom">
-            OCCASION
-          </h3>
-
-          <!-- Text -->
-          <p class="text-muted mb-0">
-            We've written extensive documentation for components and tools, so you never have to reverse engineer
-            anything.
-          </p>
-
-        </div>
-        <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-
-          <!-- Icon -->
-          <div class="icon text-primary mb-3">
-            <!--?xml version="1.0" encoding="UTF-8"?-->
-            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-              <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-              <title>Stockholm-icons / Code / Code</title>
-              <desc>Created with Sketch.</desc>
-              <g id="Stockholm-icons-/-Code-/-Code" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-                <path
-                  d="M17.2718029,8.68536757 C16.8932864,8.28319382 16.9124644,7.65031935 17.3146382,7.27180288 C17.7168119,6.89328641 18.3496864,6.91246442 18.7282029,7.31463817 L22.7282029,11.5646382 C23.0906029,11.9496882 23.0906029,12.5503176 22.7282029,12.9353676 L18.7282029,17.1853676 C18.3496864,17.5875413 17.7168119,17.6067193 17.3146382,17.2282029 C16.9124644,16.8496864 16.8932864,16.2168119 17.2718029,15.8146382 L20.6267538,12.2500029 L17.2718029,8.68536757 Z M6.72819712,8.6853647 L3.37324625,12.25 L6.72819712,15.8146353 C7.10671359,16.2168091 7.08753558,16.8496835 6.68536183,17.2282 C6.28318808,17.6067165 5.65031361,17.5875384 5.27179713,17.1853647 L1.27179713,12.9353647 C0.909397125,12.5503147 0.909397125,11.9496853 1.27179713,11.5646353 L5.27179713,7.3146353 C5.65031361,6.91246155 6.28318808,6.89328354 6.68536183,7.27180001 C7.08753558,7.65031648 7.10671359,8.28319095 6.72819712,8.6853647 Z"
-                  id="Combined-Shape" fill="#335EEA"></path>
-                <rect id="Rectangle-28" fill="#335EEA" opacity="0.3"
-                  transform="translate(12.000000, 12.000000) rotate(-345.000000) translate(-12.000000, -12.000000) "
-                  x="11" y="4" width="2" height="16" rx="1"></rect>
-              </g>
-            </svg>
-          </div>
-
-          <!-- Heading -->
-          <h3 class="border-bottom">
-            BY
-          </h3>
-
-          <!-- Text -->
-          <p class="text-muted mb-0">
-            Text.
-          </p>
-
-        </div>
-      </div> <!-- / .row -->
-      <div class="row p-4">
-        <div class="col-md-8">
-          <!-- Heading -->
-          <h3>
-            INGREDIENTS:
-          </h3>
-
-          <!-- List -->
-          <ul class="list mb-0">
-            <li class="list-item">
-              <a class="list-link" href="#">Background</a>
-            </li>
-            <li class="list-item">
-              <a class="list-link" href="#">Borders</a>
-            </li>
-            <li class="list-item">
-              <a class="list-link" href="#">Images</a>
-            </li>
-            <li class="list-item">
-              <a class="list-link" href="#">Lift</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <!-- Heading -->
-          <h3>
-            METHOD:
-          </h3>
-
-          <!-- Method List -->
-          <ul class="list mb-0">
-            <li class="list-item">
-              <a class="list-link" href="#">Background</a>
-            </li>
-            <li class="list-item">
-              <a class="list-link" href="#">Borders</a>
-            </li>
-            <li class="list-item">
-              <a class="list-link" href="#">Images</a>
-            </li>
-            <li class="list-item">
-              <a class="list-link" href="#">Lift</a>
-            </li>
-          </ul>
-        </div>
-      </div> <!-- / .row -->
-    </div>
-    <div class="container">
-      <!-- Heading -->
-      <h2 class="mb-1">CLASSIC COCKTAILS</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <!-- Card -->
-          <div class="card shadow-light-lg mb-5">
-            <div class="card-body">
-
-              <!-- Heading -->
-              <h4>
-                Morimotini
-              </h4>
-
-              <!-- Text -->
-              <p class="font-size-sm text-gray-800 mb-3">
-                Chef Morimoto's take on a Saketini. Well balanced, with Haku, Suntory's premium Japanese rice vodka and
-                Chef's private label Junmai Sake. Clean, bold, and easy drinking - our pan asian take on a Classic
-                Martini and Saketini.
-              </p>
-
-              <!-- Heading -->
-              <h6 class="font-weight-bold text-uppercase text-gray-700 mb-2">
-                Ingredients
-              </h6>
-
-              <!-- List -->
-              <ul class="list mb-2">
-                <li class="list-item">
-                  1 oz Haku Japanese rice-based Vodka
-                </li>
-                <li class="list-item">
-                  1 oz Morimoto Junmai Sake
-                </li>
-                <li class="list-item">
-                  Cucumber (sliced, garnish)
-                </li>
-              </ul>
-
-              <!-- Heading -->
-              <h6 class="font-weight-bold text-uppercase text-gray-700 mb-2">
-                Procedure
-              </h6>
-
-              <!-- Text -->
-              <p class="font-size-sm mb-2">
-                Build drink on ice and stir, served up. - Garnish with cucumber
-              </p>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <!-- Card -->
-          <div class="card shadow-light-lg mb-5">
-            <div class="card-body">
-
-              <!-- Heading -->
-              <h4>
-                Morimotini
-              </h4>
-
-              <!-- Text -->
-              <p class="font-size-sm text-gray-800 mb-3">
-                Chef Morimoto's take on a Saketini. Well balanced, with Haku, Suntory's premium Japanese rice vodka
-                and
-                Chef's private label Junmai Sake. Clean, bold, and easy drinking - our pan asian take on a Classic
-                Martini and Saketini.
-              </p>
-
-              <!-- Heading -->
-              <h6 class="font-weight-bold text-uppercase text-gray-700 mb-2">
-                Ingredients
-              </h6>
-
-              <!-- List -->
-              <ul class="list mb-2">
-                <li class="list-item">
-                  1 oz Haku Japanese rice-based Vodka
-                </li>
-                <li class="list-item">
-                  1 oz Morimoto Junmai Sake
-                </li>
-                <li class="list-item">
-                  Cucumber (sliced, garnish)
-                </li>
-              </ul>
-
-              <!-- Heading -->
-              <h6 class="font-weight-bold text-uppercase text-gray-700 mb-2">
-                Procedure
-              </h6>
-
-              <!-- Text -->
-              <p class="font-size-sm mb-2">
-                Build drink on ice and stir, served up. - Garnish with cucumber
-              </p>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <!-- Card -->
-          <div class="card shadow-light-lg mb-5">
-            <div class="card-body">
-
-              <!-- Heading -->
-              <h4>
-                Morimotini
-              </h4>
-
-              <!-- Text -->
-              <p class="font-size-sm text-gray-800 mb-3">
-                Chef Morimoto's take on a Saketini. Well balanced, with Haku, Suntory's premium Japanese rice vodka
-                and
-                Chef's private label Junmai Sake. Clean, bold, and easy drinking - our pan asian take on a Classic
-                Martini and Saketini.
-              </p>
-
-              <!-- Heading -->
-              <h6 class="font-weight-bold text-uppercase text-gray-700 mb-2">
-                Ingredients
-              </h6>
-
-              <!-- List -->
-              <ul class="list mb-2">
-                <li class="list-item">
-                  1 oz Haku Japanese rice-based Vodka
-                </li>
-                <li class="list-item">
-                  1 oz Morimoto Junmai Sake
-                </li>
-                <li class="list-item">
-                  Cucumber (sliced, garnish)
-                </li>
-              </ul>
-
-              <!-- Heading -->
-              <h6 class="font-weight-bold text-uppercase text-gray-700 mb-2">
-                Procedure
-              </h6>
-
-              <!-- Text -->
-              <p class="font-size-sm mb-2">
-                Build drink on ice and stir, served up. - Garnish with cucumber
-              </p>
-
-            </div>
-          </div>
-        </div>
-      </div> <!-- / .row -->
-    </div>
-  </section>
-
-  <!-- SHAPE
+    <!-- SHAPE
     ================================================== -->
-  <div class="position-relative">
-    <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
-      @@include("assets/img/shapes/curves/curve-1.svg")
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-gray-200">
+        @@include("assets/img/shapes/curves/curve-1.svg")
+      </div>
     </div>
-  </div>
 
-  <!-- FOOTER
+    <!-- FOOTER
     ================================================== -->
-  @@include("partials/footer-full.html", {
-  "classList": "bg-gray-200"
-  })
+    @@include("partials/footer-min.html", { "classList": "bg-gray-200" })
 
-  <!-- JAVASCRIPT
+    <!-- JAVASCRIPT
     ================================================== -->
-  @@include("partials/scripts.html")
-
-</body>
-
+    @@include("partials/scripts.html")
+  </body>
 </html>
