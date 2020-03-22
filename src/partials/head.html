@@ -1,16 +1,34 @@
-<!-- Required meta tags -->
 <meta charset="utf-8" />
-<meta http-equiv="x-ua-compatible" content="ie=edge" />
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 />
+<!--
+    The above 2 meta tags *must* come first in the <head>
+    to consistently ensure proper document rendering.
+    Any other head element should come *after* these tags.
+  -->
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
+<!-- Title -->
 <title>@@pageTitle</title>
+
 <!-- Short description of the document (limit to 150 characters) -->
 <!-- This content *may* be used as a part of search engine results. -->
 <meta name="description" content="Create beverages with friends" />
+<meta name="swigged-app" content="Swigged" />
 <meta name="theme-color" content="#211a23" />
+
+<!-- Verify website ownership -->
+<meta
+  name="google-site-verification"
+  content="verification_token"
+/><!-- Google Search Console -->
+<meta
+  name="msvalidate.01"
+  content="verification_token"
+/><!-- Bing Webmaster Center -->
+
 <link
   rel="apple-touch-icon"
   sizes="57x57"
@@ -88,8 +106,40 @@
 />
 <meta name="theme-color" content="#ffffff" />
 
+<!-- Facebook -->
+<meta property="fb:app_id" content="" />
+<meta property="og:url" content="https://www.swigged.app" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Swigged" />
+<meta property="og:image" content="https://www.swigged.app/ogimage.png" />
+<meta
+  property="og:image:alt"
+  content="Image of a cocktail with Swigged overlayed on it"
+/>
+<meta property="og:description" content="Create beverages with friends" />
+<meta property="og:site_name" content="Swigged" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:author" content="https://www.facebook.com/JOVANIPINK" />
+
+<!-- Twitter -->
+<meta
+  name="twitter:card"
+  content="Welcome to Swigged, the simplest way to build cocktails socially... Cheers!"
+/>
+<meta name="twitter:site" content="@SwiggedApp" />
+<meta name="twitter:creator" content="@JovaniPink" />
+<meta name="twitter:url" content="https://example.com/page.html" />
+<meta name="twitter:title" content="Swigged" />
+<meta name="twitter:description" content="Create beverages with friends" />
+<meta name="twitter:image" content="https://www.swigged.app/ogimage.png" />
+<meta
+  name="twitter:image:alt"
+  content="Image of a cocktail with Swigged overlayed on it"
+/>
+
 <!-- Libs CSS -->
 <link rel="stylesheet" href="@@webRoot/assets/fonts/Feather/feather.css" />
+<link rel="stylesheet" href="@@webRoot/node_modules/aos/dist/aos.css" />
 <link
   rel="stylesheet"
   href="@@webRoot/node_modules/flickity/dist/flickity.min.css"
@@ -98,25 +148,17 @@
   rel="stylesheet"
   href="@@webRoot/node_modules/flickity-fade/flickity-fade.css"
 />
-<link rel="stylesheet" href="@@webRoot/node_modules/aos/dist/aos.css" />
 <link
   rel="stylesheet"
   href="@@webRoot/node_modules/jarallax/dist/jarallax.css"
 />
 <link
   rel="stylesheet"
-  href="@@webRoot/node_modules/highlight.js/styles/vs2015.css"
+  href="@@webRoot/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
 />
 <link
   rel="stylesheet"
-  href="@@webRoot/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
-/>
-
-<!-- Map -->
-<link
-rel="stylesheet"
-  href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css"
-
+  href="@@webRoot/node_modules/highlight.js/styles/vs2015.css"
 />
 
 <!-- Theme CSS -->
