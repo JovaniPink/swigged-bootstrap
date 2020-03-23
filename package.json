@@ -59,7 +59,7 @@
     "@types/jquery": "3.3.33",
     "@types/node": "12.12.30",
     "@types/node-sass": "4.11.0",
-    "@types/prettier": "1.19.0",
+    "@types/prettier": "1.19.1",
     "@types/smooth-scroll": "16.1.0",
     "@babel/core": "7.9.0",
     "babel-loader": "8.1.0",
