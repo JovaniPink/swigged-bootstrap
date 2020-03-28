@@ -1,12 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    @@include("partials/head.html", {
-    "pageTitle": "Swigged"
-    })
+    @@include("partials/head.html", { "pageTitle": "Swigged" })
   </head>
   <body class="bg-light">
-
     <!-- NAVBAR
     ================================================== -->
     @@include("partials/navbar-landing-learn.html", { "classList": "navbar-light bg-white", "type": "fluid" })
@@ -17,7 +14,6 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-8 text-center">
-
             <!-- Heading -->
             <h1 class="display-2 font-weight-bold">
               Swig & Learn.
@@ -37,7 +33,7 @@
                 data-filter="*"
                 data-target="#portfolio"
               >
-                <span class="h6 text-uppercase">Primary</span>
+                <span class="h6 text-uppercase">All</span>
               </a>
               <a
                 class="badge badge-secondary-soft mr-1 mb-1"
@@ -46,7 +42,7 @@
                 data-filter=".product"
                 data-target="#portfolio"
               >
-                <span class="h6 text-uppercase">Product</span>
+                <span class="h6 text-uppercase">Wine</span>
               </a>
               <a
                 class="badge badge-secondary-soft mr-1 mb-1"
@@ -55,7 +51,7 @@
                 data-filter=".ux"
                 data-target="#portfolio"
               >
-                <span class="h6 text-uppercase">UX</span>
+                <span class="h6 text-uppercase">Sake</span>
               </a>
               <a
                 class="badge badge-secondary-soft mr-1 mb-1"
@@ -64,7 +60,16 @@
                 data-filter=".resources"
                 data-target="#portfolio"
               >
-                <span class="h6 text-uppercase">Resources</span>
+                <span class="h6 text-uppercase">Beer</span>
+              </a>
+              <a
+                class="badge badge-secondary-soft mr-1 mb-1"
+                href="#"
+                data-toggle="pill"
+                data-filter=".spirits"
+                data-target="#portfolio"
+              >
+                <span class="h6 text-uppercase">Spirits</span>
               </a>
             </nav>
           </div>
@@ -78,22 +83,34 @@
     ================================================== -->
     <section class="py-8 py-md-11 mt-n10 mt-md-n14">
       <div class="container">
-        <div class="row" id="portfolio" data-isotope='{"layoutMode": "fitRows"}'>
+        <div
+          class="row"
+          id="portfolio"
+          data-isotope='{"layoutMode": "fitRows"}'
+        >
           <div class="col-12 ux">
             <!-- Card -->
             <a class="card lift lift-lg shadow-light-lg mb-7" href="#!">
               <!-- Image -->
-              <img class="card-img-top" src="assets/img/portfolio/portfolio-26.jpg" alt="..." />
+              <img
+                class="card-img-top"
+                src="assets/img/portfolio/portfolio-26.jpg"
+                alt="..."
+              />
 
               <!-- Body -->
               <div class="card-body">
                 <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                <div
+                  class="shape shape-bottom-100 shape-fluid-x svg-shim text-white"
+                >
                   @@include("assets/img/shapes/curves/curve-1.svg")
                 </div>
 
                 <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Lifestyle Branding</h6>
+                <h6 class="text-uppercase mb-1 text-muted">
+                  Lifestyle Branding
+                </h6>
 
                 <!-- Heading -->
                 <h4 class="mb-0">Larq Bright Campaign</h4>
@@ -104,17 +121,25 @@
             <!-- Card -->
             <a class="card lift lift-lg shadow-light-lg mb-7" href="#!">
               <!-- Image -->
-              <img class="card-img-top" src="assets/img/portfolio/portfolio-17.jpg" alt="..." />
+              <img
+                class="card-img-top"
+                src="assets/img/portfolio/portfolio-17.jpg"
+                alt="..."
+              />
 
               <!-- Body -->
               <div class="card-body">
                 <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                <div
+                  class="shape shape-bottom-100 shape-fluid-x svg-shim text-white"
+                >
                   @@include("assets/img/shapes/curves/curve-1.svg")
                 </div>
 
                 <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Branding Exploration</h6>
+                <h6 class="text-uppercase mb-1 text-muted">
+                  Branding Exploration
+                </h6>
 
                 <!-- Heading -->
                 <h4 class="mb-0">Curology "Any Face" Campaign</h4>
@@ -125,17 +150,25 @@
             <!-- Card -->
             <a class="card lift lift-lg shadow-light-lg mb-7" href="#!">
               <!-- Image -->
-              <img class="card-img-top" src="assets/img/portfolio/portfolio-18.jpg" alt="..." />
+              <img
+                class="card-img-top"
+                src="assets/img/portfolio/portfolio-18.jpg"
+                alt="..."
+              />
 
               <!-- Body -->
               <div class="card-body">
                 <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                <div
+                  class="shape shape-bottom-100 shape-fluid-x svg-shim text-white"
+                >
                   @@include("assets/img/shapes/curves/curve-1.svg")
                 </div>
 
                 <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Product Exploration</h6>
+                <h6 class="text-uppercase mb-1 text-muted">
+                  Product Exploration
+                </h6>
 
                 <!-- Heading -->
                 <h4 class="mb-0">Goby Brush Prototype</h4>
@@ -146,12 +179,18 @@
             <!-- Card -->
             <a class="card lift lift-lg shadow-light-lg mb-7" href="#!">
               <!-- Image -->
-              <img class="card-img-top" src="assets/img/portfolio/portfolio-19.jpg" alt="..." />
+              <img
+                class="card-img-top"
+                src="assets/img/portfolio/portfolio-19.jpg"
+                alt="..."
+              />
 
               <!-- Body -->
               <div class="card-body">
                 <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                <div
+                  class="shape shape-bottom-100 shape-fluid-x svg-shim text-white"
+                >
                   @@include("assets/img/shapes/curves/curve-1.svg")
                 </div>
 
@@ -159,7 +198,7 @@
                 <h6 class="text-uppercase mb-1 text-muted">Product Design</h6>
 
                 <!-- Heading -->
-                <h4 class="mb-0">Goby Packaging </h4>
+                <h4 class="mb-0">Goby Packaging</h4>
               </div>
             </a>
           </div>
@@ -167,17 +206,25 @@
             <!-- Card -->
             <a class="card lift lift-lg shadow-light-lg mb-7" href="#!">
               <!-- Image -->
-              <img class="card-img-top" src="assets/img/portfolio/portfolio-20.jpg" alt="..." />
+              <img
+                class="card-img-top"
+                src="assets/img/portfolio/portfolio-20.jpg"
+                alt="..."
+              />
 
               <!-- Body -->
               <div class="card-body">
                 <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                <div
+                  class="shape shape-bottom-100 shape-fluid-x svg-shim text-white"
+                >
                   @@include("assets/img/shapes/curves/curve-1.svg")
                 </div>
 
                 <!-- Preheading -->
-                <h6 class="text-uppercase mb-1 text-muted">Lifestyle Branding</h6>
+                <h6 class="text-uppercase mb-1 text-muted">
+                  Lifestyle Branding
+                </h6>
 
                 <!-- Heading -->
                 <h4 class="mb-0">Larq Earthtones Collection</h4>
@@ -188,12 +235,18 @@
             <!-- Card -->
             <a class="card lift lift-lg shadow-light-lg mb-7" href="#!">
               <!-- Image -->
-              <img class="card-img-top" src="assets/img/portfolio/portfolio-4.jpg" alt="..." />
+              <img
+                class="card-img-top"
+                src="assets/img/portfolio/portfolio-4.jpg"
+                alt="..."
+              />
 
               <!-- Body -->
               <div class="card-body">
                 <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                <div
+                  class="shape shape-bottom-100 shape-fluid-x svg-shim text-white"
+                >
                   @@include("assets/img/shapes/curves/curve-1.svg")
                 </div>
 
@@ -209,12 +262,18 @@
             <!-- Card -->
             <a class="card lift lift-lg shadow-light-lg mb-7" href="#!">
               <!-- Image -->
-              <img class="card-img-top" src="assets/img/portfolio/portfolio-2.jpg" alt="..." />
+              <img
+                class="card-img-top"
+                src="assets/img/portfolio/portfolio-2.jpg"
+                alt="..."
+              />
 
               <!-- Body -->
               <div class="card-body">
                 <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                <div
+                  class="shape shape-bottom-100 shape-fluid-x svg-shim text-white"
+                >
                   @@include("assets/img/shapes/curves/curve-1.svg")
                 </div>
 
@@ -230,12 +289,18 @@
             <!-- Card -->
             <a class="card lift lift-lg shadow-light-lg mb-7" href="#!">
               <!-- Image -->
-              <img class="card-img-top" src="assets/img/portfolio/portfolio-7.jpg" alt="..." />
+              <img
+                class="card-img-top"
+                src="assets/img/portfolio/portfolio-7.jpg"
+                alt="..."
+              />
 
               <!-- Body -->
               <div class="card-body">
                 <!-- Shape -->
-                <div class="shape shape-bottom-100 shape-fluid-x svg-shim text-white">
+                <div
+                  class="shape shape-bottom-100 shape-fluid-x svg-shim text-white"
+                >
                   @@include("assets/img/shapes/curves/curve-1.svg")
                 </div>
 

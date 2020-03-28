@@ -1,50 +1,72 @@
 <!-- Modal Messages -->
-<div class="modal fade" id="modalMeasurement" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="modalMessagesTitle" aria-hidden="true">
+<div
+  class="modal fade"
+  id="modalMeasurement"
+  data-backdrop="static"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalMessagesTitle"
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">Measurement</h5>
         <!-- Close -->
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
           <span aria-hidden="true">×</span>
         </button>
       </div>
       <div class="modal-body">
-
         <!-- Form -->
 
         <div class="form-group mb-5">
           <label for="applyMessage">
-           Amount:
+            Amount:
           </label>
-          <input type="number" step="any" min="0" class="form-control" id="amount" placeholder="0">
+          <input
+            type="number"
+            step="any"
+            min="0"
+            class="form-control"
+            id="amount"
+            placeholder="0"
+          />
         </div>
 
         <div class="form-group mb-5">
           <label for="applyMessage">
-           Unit:
+            Unit:
           </label>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-primary-desat-soft active">
-              <input type="radio" name="options" id="option1" checked> oz
+              <input type="radio" name="options" id="option1" checked /> oz
             </label>
             <label class="btn btn-primary-desat-soft">
-              <input type="radio" name="options" id="option2"> dash
+              <input type="radio" name="options" id="option2" /> dash
             </label>
             <label class="btn btn-primary-desat-soft">
-              <input type="radio" name="options" id="option3"> splash
+              <input type="radio" name="options" id="option3" /> splash
             </label>
             <label class="btn btn-primary-desat-soft">
-              <input type="radio" name="options" id="option4"> top off
+              <input type="radio" name="options" id="option4" /> top off
             </label>
           </div>
         </div>
 
         <!-- Submit -->
-        <button type="button" class="btn btn-block btn-primary mt-3 lift" onclick="update();">
+        <button
+          type="button"
+          class="btn btn-block btn-primary mt-3 lift"
+          onclick="update();"
+        >
           Save Changes
         </button>
-
       </div>
     </div>
   </div>

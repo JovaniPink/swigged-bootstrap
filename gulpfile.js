@@ -50,9 +50,9 @@ var paths = {
       dir: './src',
       files: './src/**/*.html',
     },
-    img: {
-      dir: './src/assets/img',
-      files: './src/assets/img/**/*',
+    images: {
+      dir: './src/assets/images',
+      files: './src/assets/images/**/*',
     },
     js: {
       dir: './src/assets/js',
@@ -95,7 +95,7 @@ gulp.task('browsersyncReload', function(callback) {
 gulp.task('watch', function() {
   gulp.watch(paths.src.scss.files, gulp.series('scss'));
   gulp.watch(
-    [paths.src.js.files, paths.src.img.files],
+    [paths.src.js.files, paths.src.images.files],
     gulp.series('browsersyncReload')
   );
   gulp.watch(
