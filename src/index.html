@@ -4,21 +4,24 @@
     @@include("partials/head.html", { "pageTitle": "Swigged" })
   </head>
   <body>
-    <!-- MODALS
+    <!-- Modal.tsx
     ================================================== -->
     @@include("partials/modalSignUpVertical.html")
 
-    <!-- NAVBAR
+    <!-- NavBar.tsx
     ================================================== -->
     @@include("partials/navbar-landing.html", { "classList": "navbar-light bg-white", "type": "fluid" })
 
-    <!-- WELCOME
+    <!-- layout/Welcome.tsx
     ================================================== -->
     <section class="pt-8 pt-md-11">
+      <!-- Container -->
       <div class="container">
+        <!-- Row -->
         <div
           class="row align-items-center justify-content-center justify-content-md-between"
         >
+          <!-- Col -->
           <div class="col-10 col-sm-8 col-md-6 order-md-2">
             <!-- iPhone + iPhone -->
             <div class="device-combo device-combo-iphonex-iphonex mb-6 mb-md-0">
@@ -27,12 +30,12 @@
                 <img
                   src="assets/img/screenshots/mobile/home.png"
                   class="device-screen"
-                  alt="..."
+                  alt="Screenshot of the home page on a mobile device"
                 />
                 <img
                   src="assets/img/devices/iphonex.svg"
                   class="img-fluid"
-                  alt="..."
+                  alt="SVG outline of an iPhone X"
                 />
               </div>
 
@@ -45,16 +48,17 @@
                 <img
                   src="assets/img/screenshots/mobile/rental.png"
                   class="device-screen"
-                  alt="..."
+                  alt="A second screenshot of the home page on a mobile device"
                 />
                 <img
                   src="assets/img/devices/iphonex.svg"
                   class="img-fluid"
-                  alt="..."
+                  alt="SVG outline of an iPhone X"
                 />
               </div>
             </div>
           </div>
+          <!-- Col -->
           <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right">
             <!-- Heading -->
             <h1 class="font-weight-bold">
@@ -89,11 +93,11 @@
                 <div class="col-auto">
                   <!-- Submit -->
                   <button
-                    type="button"
                     id="signUpButton"
-                    data-toggle="modal"
-                    href="#modalSignUpVertical"
                     class="btn btn-primary"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#modalSignUpVertical"
                     disabled
                   >
                     Sign Up

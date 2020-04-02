@@ -1,19 +1,22 @@
-<!-- Signup: Vertical  -->
+<!-- SignUpModalV.tsx -->
+<!-- Modal -->
 <div
-  class="modal fade"
   id="modalSignUpVertical"
+  class="modal fade"
   tabindex="-1"
   role="dialog"
-  aria-labelledby="modalSignupVerticalTitle"
+  aria-labelledby="modalSignUpVerticalTitle"
   aria-hidden="true"
 >
+  <!-- ModalDialog -->
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
+      <!-- Card -->
       <div class="card">
-        <!-- Close -->
+        <!-- Button Close -->
         <button
-          type="button"
           class="modal-close close text-white"
+          type="button"
           data-dismiss="modal"
           aria-label="Close"
         >
@@ -34,12 +37,12 @@
           </div>
         </div>
 
-        <!-- Body -->
+        <!-- Card.Body -->
         <div class="card-body">
           <!-- Heading -->
           <h2
             class="mb-0 font-weight-bold text-center"
-            id="modalSignupVerticalTitle"
+            id="modalSignUpVerticalTitle"
           >
             Sign Up
           </h2>
@@ -50,13 +53,19 @@
           </p>
 
           <!-- Form -->
-          <form class="mb-6" name="modalSignUp" method="POST" data-netlify="true">
-
-            <!-- First name -->
+          <form
+            class="mb-6"
+            name="modalSignUp"
+            method="POST"
+            data-netlify="true"
+          >
+            <!-- Form.Group -->
             <div class="form-group">
+              <!-- Form.Label -->
               <label class="sr-only" for="registrationFirstNameModal"
                 >First name</label
               >
+              <!-- Form.Control -->
               <input
                 type="text"
                 name="firstName"
@@ -67,11 +76,13 @@
               />
             </div>
 
-            <!-- Last name -->
+            <!-- Form.Group -->
             <div class="form-group">
+              <!-- Form.Label -->
               <label class="sr-only" for="registrationLastNameModal"
                 >Last name</label
               >
+              <!-- Form.Control -->
               <input
                 type="text"
                 name="lastName"
@@ -82,11 +93,13 @@
               />
             </div>
 
-            <!-- Email -->
+            <!-- Form.Group -->
             <div class="form-group">
+              <!-- Form.Label -->
               <label class="sr-only" for="modalSignUpVerticalEmail">
                 Your email
               </label>
+              <!-- Form.Control -->
               <input
                 type="email"
                 name="email"
@@ -97,11 +110,13 @@
               />
             </div>
 
-            <!-- Username -->
+            <!-- Form.Group -->
             <div class="form-group mb-5">
+              <!-- Form.Label -->
               <label class="sr-only" for="modalSignUpVerticalUsername">
                 Create a Username
               </label>
+              <!-- Form.Control -->
               <input
                 type="username"
                 name="username"
@@ -112,7 +127,7 @@
               />
             </div>
 
-            <!-- Submit -->
+            <!-- Button Submit -->
             <button class="btn btn-block btn-primary" type="submit">
               Sign up
             </button>
