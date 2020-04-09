@@ -6,6 +6,7 @@
 'use strict';
 
 (function() {
+
   //
   // Variables
   //
@@ -31,9 +32,7 @@
       var duration = e.dataset.duration ? e.dataset.duration : DURATION;
       var options = e.dataset.options ? JSON.parse(e.dataset.options) : null;
 
-      var countUp = !checked
-        ? new CountUp(e, monthly, annual, decimals, duration, options)
-        : new CountUp(e, annual, monthly, decimals, duration, options);
+      var countUp = (!checked) ? new CountUp(e, monthly, annual, decimals, duration, options) : new CountUp(e, annual, monthly, decimals, duration, options);
 
       if (!countUp.error) {
         countUp.start();
@@ -52,4 +51,5 @@
       update(e);
     });
   }
+
 })();

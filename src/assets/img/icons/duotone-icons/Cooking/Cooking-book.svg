@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Stockholm-icons / Cooking / Cooking-book</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M20,18 L8,18 C7.44771525,18 7,18.4477153 7,19 C7,19.5522847 7.44771525,20 8,20 L20,20 L20,21 C20,21.626904 19.6418278,22 19,22 L7,22 C5.2536027,22 4,20.6941639 4,19 L4,5 C4,3.30583615 5.2536027,2 7,2 L19,2 C19.6418278,2 20,2.37309604 20,3 L20,18 Z" id="path-1"></path>
-    </defs>
-    <g id="Stockholm-icons-/-Cooking-/-Cooking-book" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-        <mask id="mask-2" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-        <use id="Combined-Shape" fill="#335EEA" opacity="0.3" xlink:href="#path-1"></use>
-        <path d="M9.35,11.5877565 C8.57364775,11.3787952 8,10.6418068 8,9.76470588 C8,8.72511106 8.80588745,7.88235294 9.8,7.88235294 C9.85099799,7.88235294 9.90150064,7.88457082 9.95142455,7.88891938 C10.3202986,6.78883902 11.322058,6 12.5,6 C13.677942,6 14.6797014,6.78883902 15.0485755,7.88891938 C15.0984994,7.88457082 15.149002,7.88235294 15.2,7.88235294 C16.1941125,7.88235294 17,8.72511106 17,9.76470588 C17,10.6418068 16.4263522,11.3787952 15.65,11.5877565 L15.65,13.5294118 C15.65,13.7893105 15.4485281,14 15.2,14 L9.8,14 C9.55147186,14 9.35,13.7893105 9.35,13.5294118 L9.35,11.5877565 Z" id="Combined-Shape" fill="#335EEA" opacity="0.3" mask="url(#mask-2)"></path>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M20 18H8a1 1 0 000 2h12v1c0 .627-.358 1-1 1H7c-1.746 0-3-1.306-3-3V5c0-1.694 1.254-3 3-3h12c.642 0 1 .373 1 1v15z" id="a"/></defs><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><use fill="#335EEA" opacity=".3" xlink:href="#a"/><path d="M9.35 11.588C8.574 11.378 8 10.642 8 9.765c0-1.04.806-1.883 1.8-1.883.051 0 .102.003.151.007C10.321 6.789 11.322 6 12.5 6s2.18.789 2.549 1.889c.05-.004.1-.007.151-.007.994 0 1.8.843 1.8 1.883 0 .877-.574 1.614-1.35 1.823v1.941a.46.46 0 01-.45.471H9.8a.46.46 0 01-.45-.47v-1.942z" fill="#335EEA" opacity=".3" mask="url(#b)"/></g></svg>

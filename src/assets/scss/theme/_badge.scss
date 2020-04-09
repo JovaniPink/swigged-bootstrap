@@ -3,6 +3,7 @@
 // Extended from Bootstrap
 //
 
+
 // Soft variants
 
 @each $color, $value in $theme-colors {
@@ -15,6 +16,7 @@
   @include badge-variant-soft($gray-700, $badge-soft-bg-opacity);
 }
 
+
 // Color options
 
 .badge-gray-600 {
@@ -22,11 +24,13 @@
   color: $white;
 }
 
+
 // Sizing
 
 .badge-lg {
   padding: $badge-padding-y-lg $badge-padding-x-lg;
 }
+
 
 // Rounded circle
 
@@ -41,12 +45,14 @@
     width: 1em;
   }
 
+
   &.badge-lg {
     height: calc(1em + #{$badge-padding-y-lg * 2});
     padding-left: $badge-padding-y-lg;
     padding-right: $badge-padding-y-lg;
   }
 }
+
 
 // Positioning
 
@@ -56,14 +62,15 @@
 }
 
 .badge-float-outside {
-  top: -0.5rem;
-  right: -0.5rem;
+  top: -.5rem;
+  right: -.5rem;
 }
 
 .badge-float-inside {
   top: 1rem;
   right: 1rem;
 }
+
 
 // Active
 

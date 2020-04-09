@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Stockholm-icons / Navigation / Up-left</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Stockholm-icons-/-Navigation-/-Up-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-        <rect id="Rectangle" fill="#335EEA" opacity="0.3" transform="translate(12.353553, 12.853553) rotate(-45.000000) translate(-12.353553, -12.853553) " x="11.3535534" y="5.85355339" width="2" height="14" rx="1"></rect>
-        <path d="M8.40380592,16.3890873 C8.40380592,16.941372 7.95609067,17.3890873 7.40380592,17.3890873 C6.85152117,17.3890873 6.40380592,16.941372 6.40380592,16.3890873 L6.40380592,7.90380592 C6.40380592,7.36841446 6.82548256,6.92800568 7.3603687,6.90474976 L15.4920967,6.55119637 C16.0438602,6.52720666 16.5106003,6.95505183 16.5345901,7.50681531 C16.5585798,8.05857879 16.1307346,8.52531897 15.5789711,8.54930869 L8.40380592,8.86127239 L8.40380592,16.3890873 Z" id="Path-94" fill="#335EEA"></path>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><rect fill="#335EEA" opacity=".3" transform="rotate(-45 12.354 12.854)" x="11.354" y="5.854" width="2" height="14" rx="1"/><path d="M8.404 16.39a1 1 0 01-2 0V7.903a1 1 0 01.956-1l8.132-.353a1 1 0 01.087 1.998l-7.175.312v7.528z" fill="#335EEA"/></g></svg>

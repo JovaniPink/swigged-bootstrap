@@ -1,6 +1,5 @@
 //
 // isotope.js
-// Theme module
 //
 
 'use strict';
@@ -15,7 +14,7 @@
     var target = $this.data('target');
 
     $(target).isotope({
-      filter: filter,
+      filter: filter
     });
   });
 

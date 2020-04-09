@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Stockholm-icons / Food / Cookie</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Stockholm-icons-/-Food-/-Cookie" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-        <polygon id="Star-3" fill="#335EEA" opacity="0.3" points="12 20.6599888 9.46440699 20.6354368 7.31805655 19.2852462 5.19825383 17.8937466 4.12259707 15.5974894 3.09160702 13.2808335 3.42815736 10.7675551 3.81331204 8.26126488 5.45521712 6.32891335 7.13423264 4.4287182 9.5601992 3.69080156 12 3 14.4398008 3.69080156 16.8657674 4.4287182 18.5447829 6.32891335 20.186688 8.26126488 20.5718426 10.7675551 20.908393 13.2808335 19.8774029 15.5974894 18.8017462 17.8937466 16.6819434 19.2852462 14.535593 20.6354368"></polygon>
-        <circle id="Oval" fill="#335EEA" opacity="0.3" cx="8.5" cy="13.5" r="1.5"></circle>
-        <circle id="Oval-Copy" fill="#335EEA" opacity="0.3" cx="13.5" cy="7.5" r="1.5"></circle>
-        <circle id="Oval-Copy-2" fill="#335EEA" opacity="0.3" cx="14.5" cy="15.5" r="1.5"></circle>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path fill="#335EEA" opacity=".3" d="M12 20.66l-2.536-.025-2.146-1.35-2.12-1.391-1.075-2.297-1.031-2.316.336-2.513.385-2.507L5.455 6.33l1.68-1.9L9.56 3.69 12 3l2.44.69 2.426.739 1.679 1.9 1.642 1.932.385 2.507.336 2.513-1.03 2.316-1.076 2.297-2.12 1.391-2.146 1.35z"/><circle fill="#335EEA" opacity=".3" cx="8.5" cy="13.5" r="1.5"/><circle fill="#335EEA" opacity=".3" cx="13.5" cy="7.5" r="1.5"/><circle fill="#335EEA" opacity=".3" cx="14.5" cy="15.5" r="1.5"/></g></svg>

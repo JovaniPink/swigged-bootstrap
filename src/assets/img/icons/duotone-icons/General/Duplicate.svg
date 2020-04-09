@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Stockholm-icons / General / Duplicate</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Stockholm-icons-/-General-/-Duplicate" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="bound" x="0" y="0" width="24" height="24"></rect>
-        <path d="M15.9956071,6 L9,6 C7.34314575,6 6,7.34314575 6,9 L6,15.9956071 C4.70185442,15.9316381 4,15.1706419 4,13.8181818 L4,6.18181818 C4,4.76751186 4.76751186,4 6.18181818,4 L13.8181818,4 C15.1706419,4 15.9316381,4.70185442 15.9956071,6 Z" id="Combined-Shape" fill="#335EEA" opacity="0.3"></path>
-        <path d="M10.1818182,8 L17.8181818,8 C19.2324881,8 20,8.76751186 20,10.1818182 L20,17.8181818 C20,19.2324881 19.2324881,20 17.8181818,20 L10.1818182,20 C8.76751186,20 8,19.2324881 8,17.8181818 L8,10.1818182 C8,8.76751186 8.76751186,8 10.1818182,8 Z" id="Rectangle-19-Copy-3" fill="#335EEA"></path>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"/><path d="M15.996 6H9a3 3 0 00-3 3v6.996c-1.298-.064-2-.825-2-2.178V6.182C4 4.768 4.768 4 6.182 4h7.636c1.353 0 2.114.702 2.178 2z" fill="#335EEA" opacity=".3"/><path d="M10.182 8h7.636C19.232 8 20 8.768 20 10.182v7.636C20 19.232 19.232 20 17.818 20h-7.636C8.768 20 8 19.232 8 17.818v-7.636C8 8.768 8.768 8 10.182 8z" fill="#335EEA"/></g></svg>

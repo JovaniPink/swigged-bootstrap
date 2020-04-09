@@ -6,6 +6,7 @@
 'use strict';
 
 (function() {
+
   //
   // Variables
   //
@@ -23,8 +24,8 @@
       typeSpeed: 40,
       backSpeed: 40,
       backDelay: 1000,
-      loop: true,
-    };
+      loop: true
+    }
     var options = Object.assign(defaultOptions, elementOptions);
 
     // Init
@@ -40,4 +41,5 @@
       init(el);
     });
   }
+
 })();

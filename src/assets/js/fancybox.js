@@ -6,6 +6,7 @@
 'use strict';
 
 (function() {
+
   //
   // Functions
   //
@@ -23,4 +24,5 @@
   if (jQuery().fancybox) {
     globalOptions();
   }
+
 })();

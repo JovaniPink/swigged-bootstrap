@@ -6,6 +6,7 @@
 'use strict';
 
 (function() {
+
   //
   // Functions
   //
@@ -15,10 +16,11 @@
       duration: 700,
       easing: 'ease-out-quad',
       once: true,
-      startEvent: 'load',
-    };
+      startEvent: 'load'
+    }
     AOS.init(options);
   }
+
 
   //
   // Events
@@ -27,4 +29,5 @@
   if (typeof AOS !== 'undefined') {
     init();
   }
+
 })();

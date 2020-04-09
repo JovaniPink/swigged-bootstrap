@@ -9,6 +9,7 @@
 // Polyfill to solve shortcomings of SVG scaling in IE. Inspired by http://nicolasgallagher.com/canvas-fix-svg-scaling-in-internet-explorer/.
 
 (function() {
+
   //
   // Variables
   //

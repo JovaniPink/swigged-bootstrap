@@ -3,12 +3,8 @@
 // Extended from Bootstrap
 //
 
-.modal-open {
-  padding-right: 0 !important; // additional padding is not required as we have overflow-x: hidden on the root element
-}
-
-.modal-open .navbar {
-  padding-right: $navbar-padding-x !important;
+.modal-open .navbar.fixed-top {
+  padding-right: inherit;
 }
 
 
@@ -16,6 +12,7 @@
 
 .modal-close {
   position: absolute;
-  top: 1.5rem; right: 1.5rem;
+  top: $spacer * 1.5;
+  right: $spacer * 1.5;
   z-index: $zindex-dropdown;
 }

@@ -6,6 +6,7 @@
 'use strict';
 
 (function() {
+
   //
   // Variables
   //
@@ -21,7 +22,7 @@
       header: '.navbar.fixed-top',
       offset: function(anchor, toggle) {
         return toggle.dataset.offset ? toggle.dataset.offset : 24;
-      },
+      }
     };
 
     // Init
@@ -35,4 +36,5 @@
   if (typeof SmoothScroll !== 'undefined' && toggle) {
     init(toggle);
   }
+
 })();

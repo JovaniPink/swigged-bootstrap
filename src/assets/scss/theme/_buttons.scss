@@ -8,9 +8,10 @@
   width: auto;
 }
 
-.btn:not([class*='btn-outline']) {
+.btn:not([class*="btn-outline"]) {
   border-color: transparent !important;
 }
+
 
 // Custom colors
 
@@ -72,6 +73,7 @@
   }
 }
 
+
 // Soft variants
 
 @each $color, $value in $theme-colors {
@@ -80,11 +82,13 @@
   }
 }
 
+
 // Pill
 
 .btn-pill {
   border-radius: $rounded-pill;
 }
+
 
 // Rounded circle
 

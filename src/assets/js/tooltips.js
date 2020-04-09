@@ -6,11 +6,13 @@
 'use strict';
 
 (function() {
+
   //
   // Variables
   //
 
   var toggle = document.querySelectorAll('[data-toggle="tooltip"]');
+
 
   //
   // Functions
@@ -20,6 +22,7 @@
     $(toggle).tooltip();
   }
 
+
   //
   // Events
   //
@@ -27,4 +30,5 @@
   if (toggle) {
     init(toggle);
   }
+  
 })();

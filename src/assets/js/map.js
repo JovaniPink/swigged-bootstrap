@@ -6,13 +6,13 @@
 'use strict';
 
 (function() {
+
   //
   // Variables
   //
 
   var map = document.querySelectorAll('[data-toggle="map"]');
-  var accessToken =
-    'pk.eyJ1IjoiZ29vZHRoZW1lcyIsImEiOiJjanU5eHR4N2cybDU5NGVwOHZwNGprb3E0In0.msdw9q16dh8v4azJXUdiXg';
+  var accessToken = 'pk.eyJ1IjoiZ29vZHRoZW1lcyIsImEiOiJjanU5eHR4N2cybDU5NGVwOHZwNGprb3E0In0.msdw9q16dh8v4azJXUdiXg';
 
   //
   // Methods
@@ -25,8 +25,8 @@
       container: el,
       style: 'mapbox://styles/mapbox/light-v9',
       scrollZoom: false,
-      interactive: false,
-    };
+      interactive: false
+    }
     var options = Object.assign(defaultOptions, elementOptions);
 
     // Get access token
@@ -45,4 +45,5 @@
       init(el);
     });
   }
+
 })();
