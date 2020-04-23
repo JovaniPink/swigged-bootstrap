@@ -73,7 +73,7 @@
     "gulp-if": "3.0.0",
     "gulp-npm-dist": "1.0.3",
     "gulp-replace": "1.0.0",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "4.1.0",
     "gulp-typescript": "6.0.0-alpha.1",
     "gulp-uglify": "3.0.2",
     "gulp-useref": "4.0.1",
