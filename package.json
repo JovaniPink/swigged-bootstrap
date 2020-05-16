@@ -50,7 +50,7 @@
     "@types/gulp": "4.0.6",
     "@types/gulp-autoprefixer": "0.0.32",
     "@types/gulp-cached": "0.0.31",
-    "@types/gulp-file-include": "0.14.3",
+    "@types/gulp-file-include": "0.14.4",
     "@types/gulp-sass": "4.0.0",
     "@types/gulp-uglify": "3.0.6",
     "@types/highlight.js": "9.12.3",
