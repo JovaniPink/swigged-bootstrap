@@ -92,7 +92,7 @@
     "jest": "26.0.1",
     "ts-jest": "26.0.0",
     "husky": "4.2.5",
-    "lint-staged": "10.2.4"
+    "lint-staged": "10.2.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
