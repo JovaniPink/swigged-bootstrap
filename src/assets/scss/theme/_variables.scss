@@ -130,6 +130,7 @@ $grid-gutter-width: 40px !default;
 $line-height-lg: 1.3 !default;
 $line-height-sm: 1.3 !default;
 
+$border-width: 1px !default;
 $border-color: $gray-200 !default;
 
 $border-radius: 0.375rem !default;
@@ -148,7 +149,7 @@ $box-shadow-lift: 0 1rem 2.5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-
 $box-shadow-lift-lg: 0 2rem 5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .95) !default;
 
 
-// Fonts
+// Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
@@ -220,6 +221,8 @@ $table-head-color: $body-color !default;
 
 $input-btn-padding-y: .8125rem !default;
 $input-btn-padding-x: 1.25rem !default;
+$inut-btn-font-size: $font-size-base !default;
+$input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: 0 !default;
 $input-btn-focus-color: transparent !default;
@@ -228,10 +231,12 @@ $input-btn-focus-box-shadow: none !default;
 $input-btn-padding-y-sm: .5625rem !default;
 $input-btn-padding-x-sm: 1rem !default;
 $input-btn-font-size-sm: $font-size-base !default;
+$input-btn-line-height-sm: $line-height-base !default;
 
 $input-btn-padding-y-lg: 1.122rem !default;
 $input-btn-padding-x-lg: 1.5rem !default;
 $input-btn-font-size-lg: $font-size-base !default;
+$input-btn-line-height-lg: $line-height-base !default;
 
 
 // Buttons
@@ -251,6 +256,7 @@ $btn-border-radius-lg: $border-radius !default;
 $input-bg: $white !default;
 
 $input-color: $body-color !default;
+$input-border-width: $border-width !default;
 $input-border-color: $border-color !default;
 $input-box-shadow: none !default;
 
@@ -265,9 +271,10 @@ $form-group-margin-bottom: 1rem !default;
 $custom-control-indicator-bg: $gray-300 !default;
 $custom-control-indicator-border-width: 0px !default;
 
-$custom-select-bg-size: 24px 24px !default;
+$custom-select-indicator-padding: 2rem !default;
+$custom-select-bg-size: auto 50% !default;
 $custom-select-indicator-color: $gray-400 !default;
-$custom-select-indicator: str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpolyline fill='none' stroke='#{$custom-select-indicator-color}' stroke-width='2' stroke-linecap='round' points='6 9 12 15 18 9'/%3e%3c/svg%3e"), "#", "%23") !default;
+$custom-select-indicator: str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpolyline fill='none' stroke='#{$custom-select-indicator-color}' stroke-width='2' stroke-linecap='round' points='6 9 12 15 18 9'/%3e%3c/svg%3e"), "#", "%23") !default;
 $custom-select-box-shadow: none !default;
 
 $custom-select-focus-box-shadow: none !default;
@@ -341,7 +348,7 @@ $navbar-light-toggler-border-color: transparent !default;
 // Cards
 
 $card-spacer-x: 2rem !default;
-$card-spacer-y: 1rem !default;
+$card-spacer-y: 1.5rem !default;
 $card-border-width: 0px !default;
 $card-border-color: $border-color !default;
 
@@ -434,9 +441,13 @@ $code-font-size: 0.8125rem !default;
 // Theme ===================================
 //
 
-// Fonts
-//
-// Font, line-height, and color for body text, headings, and more.
+// Paths
+
+$path-to-img: "../img" !default;
+$path-to-fonts: "../fonts" !default;
+
+
+// Typography
 
 $headings-letter-spacing: -.01em !default;
 
@@ -473,25 +484,29 @@ $blockquote-small-letter-spacing: .07em !default;
 $letter-spacing-lg: .08em !default;
 
 
-// Navbar
+// Buttons + Forms
 
-$navbar-brand-font-weight: $font-weight-bold !default;
-
-$navbar-nav-link-font-weight: $font-weight-bold !default;
-
-$navbar-nav-item-spacing: 1.5rem !default;
-
-$navbar-dropdown-toggle-margin-bottom: 1.5rem !default;
+$input-btn-padding-y-xs: .25rem !default;
+$input-btn-padding-x-xs: .625rem !default;
+$input-btn-font-size-xs: $font-size-sm !default;
+$input-btn-line-height-xs: $line-height-base !default;
 
 
 // Buttons
-//
-// For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-soft-bg-opacity: .1 !default;
 
+$btn-padding-y-xs: $input-btn-padding-y-xs !default;
+$btn-padding-x-xs: $input-btn-padding-x-xs !default;
+
 
 // Forms
+
+$input-padding-y-xs: $input-btn-padding-y-xs !default;
+$input-padding-x-xs: $input-btn-padding-x-xs !default;
+$input-font-size-xs: $input-btn-font-size-xs !default;
+$input-line-height-xs: $input-btn-line-height-xs !default;
+$input-height-xs: calc(#{$input-btn-padding-y-xs * 2} + #{$input-btn-font-size-xs} * #{$input-line-height-xs} + #{$input-border-width * 2});
 
 $custom-switch-height: 1.375rem !default;
 $custom-switch-spacing: ($custom-switch-height - $custom-switch-indicator-size) / 2 !default;
@@ -505,6 +520,55 @@ $custom-switch-indicator-bg-dark: $white !default;
 $custom-switch-active-bg-dark: $white !default;
 $custom-switch-active-indicator-bg-dark: $primary !default;
 
+$custom-select-padding-y-xs: $input-padding-y-xs !default;
+$custom-select-padding-x-xs: $input-padding-x-xs !default;
+$custom-select-font-size-xs: $input-font-size-xs !default;
+$custom-select-line-height-xs: $input-line-height-xs !default;
+$custom-select-height-xs: $input-height-xs !default;
+$custom-select-indicator-padding-xs: 1.25rem !default;
+
+
+// Navbar
+
+$navbar-brand-font-weight: $font-weight-bold !default;
+
+$navbar-nav-link-font-weight: $font-weight-bold !default;
+
+$navbar-nav-item-spacing: 1.5rem !default;
+
+$navbar-dropdown-toggle-margin-bottom: 1.5rem !default;
+
+
+// Dropdowns
+
+$dropdown-item-padding-x-lg: 2.5rem !default;
+$dropdown-item-spacing-y: .45rem !default;
+
+$dropdown-padding-x: $dropdown-item-padding-x !default;
+$dropdown-padding-x-xs: 1.25rem !default;
+$dropdown-padding-y-xs: 1rem !default;
+$dropdown-padding-x-lg: $dropdown-item-padding-x-lg !default;
+$dropdown-padding-y-lg: 2.375rem !default;
+
+$dropdown-min-width-xs: 0 !default;
+$dropdown-min-width-md: 22rem !default;
+$dropdown-min-width-lg: 35rem !default;
+$dropdown-min-width-xl: 42rem !default;
+
+
+// Card
+
+$card-meta-spacer-y: 1.5rem !default;
+
+$card-row-spacer-y: 4rem !default;
+$card-row-spacer-x: 2.5rem !default;
+
+
+// Popover
+
+$popover-header-font-size: $h6-font-size !default;
+$popover-header-color: $primary !default;
+
 
 // Badges
 
@@ -512,6 +576,25 @@ $badge-padding-y-lg: .7em !default;
 $badge-padding-x-lg: 1.15em !default;
 
 $badge-soft-bg-opacity: .1 !default;
+
+
+// List
+
+$list-item-spacing-y: .35rem;
+
+$list-link-font-size: $font-size-sm !default;
+$list-link-color: $gray-700 !default;
+$list-link-hover-color: $primary !default;
+
+
+// Breadcrumbs
+
+$breadcrumb-font-size: $font-size-sm !default;
+
+
+// Code
+
+$code-line-height: 1.35 !default;
 
 
 // Avatar
@@ -527,11 +610,6 @@ $avatar-title-bg: $gray-500 !default;
 $avatar-title-color: $white !default;
 
 
-// Paths
-
-$path-to-img: "../img" !default;
-
-
 // Icons
 
 $icon-size-base: 3rem !default;
@@ -544,60 +622,13 @@ $icon-circle-size: 4.1875rem !default;
 $icon-circle-font-size: 1.875rem !default;
 
 
-// Breadcrumbs
-
-$breadcrumb-font-size: $font-size-sm !default;
-
-
-// Screenshot
-
-$screenshot-border-radius: 0.625rem !default;
-$screenshot-box-shadow: 25px 60px 125px -25px fade-out($gray-700, .9), 16px 40px 75px -40px fade-out(black, .8) !default;
-
-
-// Code
-
-$code-line-height: 1.35 !default;
-
-
 // Images
 
 $img-skewed-rotate-y: 35deg !default;
 $img-skewed-rotate-x: 15deg !default;
 
 
-// Card
+// Screenshot
 
-$card-meta-spacer-y: 1.5rem !default;
-
-$card-row-spacer-y: 4rem !default;
-$card-row-spacer-x: 2.5rem !default;
-
-
-// List
-
-$list-item-spacing-y: .35rem;
-
-$list-link-font-size: $font-size-sm !default;
-$list-link-color: $gray-700 !default;
-$list-link-hover-color: $primary !default;
-
-
-// Dropdowns
-
-$dropdown-item-padding-x-lg: 2.5rem;
-$dropdown-item-spacing-y: .45rem !default;
-
-$dropdown-padding-x: $dropdown-item-padding-x !default;
-$dropdown-padding-x-lg: $dropdown-item-padding-x-lg;
-$dropdown-padding-y-lg: 2.375rem !default;
-
-$dropdown-min-width-md: 22rem !default;
-$dropdown-min-width-lg: 35rem !default;
-$dropdown-min-width-xl: 42rem !default;
-
-
-// Popover
-
-$popover-header-font-size: $h6-font-size !default;
-$popover-header-color: $primary !default;
+$screenshot-border-radius: 0.625rem !default;
+$screenshot-box-shadow: 25px 60px 125px -25px fade-out($gray-700, .9), 16px 40px 75px -40px fade-out(black, .8) !default;

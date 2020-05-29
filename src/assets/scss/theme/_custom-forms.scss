@@ -3,9 +3,7 @@
 // Extended from Bootstrap
 //
 
-//
-// Custom switch
-//
+// Switch
 
 .custom-switch {
   min-height: $custom-switch-height;
@@ -34,10 +32,7 @@
   }
 }
 
-
-//
-// Dark version
-//
+// Switch dark
 
 .custom-switch-dark {
 
@@ -62,4 +57,21 @@
       background-color: $custom-switch-active-indicator-bg-dark;
     }
   }
+}
+
+
+// Custom select
+
+// Sizing
+
+.custom-select-sm {
+  background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x-sm center / $custom-select-bg-size;
+}
+
+.custom-select-xs {
+  height: $custom-select-height-xs;
+  padding: $custom-select-padding-y-xs ($custom-select-padding-x-xs + $custom-select-indicator-padding-xs) $custom-select-padding-y-xs $custom-select-padding-x-xs;
+  background: $custom-select-bg $custom-select-indicator no-repeat right $custom-select-padding-x-xs center / $custom-select-bg-size;
+  line-height: $custom-select-line-height-xs;
+  font-size: $custom-select-font-size-xs;
 }

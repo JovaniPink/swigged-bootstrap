@@ -8,7 +8,7 @@
 @each $width, $widthValue in $container-max-widths {
 
   @include media-breakpoint-up($width) {
-    
+
     // Additive 
 
     .border-#{$width} {
@@ -59,6 +59,10 @@
 
 // Colors
 
+.border-white-10 {
+  border-color: fade-out($white, .9) !important;
+}
+
 .border-white-20 {
   border-color: fade-out($white, .8) !important;
 }
@@ -73,4 +77,8 @@
 
 .border-gray-800-50 {
   border-color: fade-out($gray-800, .5) !important;
+}
+
+.border-gray-900-50 {
+  border-color: rgba($gray-900, .5) !important;
 }

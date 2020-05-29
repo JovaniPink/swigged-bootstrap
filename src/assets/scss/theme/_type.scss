@@ -8,15 +8,15 @@
 @font-face {
   font-family: "HKGroteskPro";
   font-weight: 400;
-  src: url("../fonts/HKGroteskPro/HKGroteskPro-Regular.woff2") format("woff2"),
-       url("../fonts/HKGroteskPro/HKGroteskPro-Regular.woff") format("woff");
+  src: url("#{$path-to-fonts}/HKGroteskPro/HKGroteskPro-Regular.woff2") format("woff2"),
+  url("#{$path-to-fonts}/HKGroteskPro/HKGroteskPro-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "HKGroteskPro";
   font-weight: 600;
-  src: url("../fonts/HKGroteskPro/HKGroteskPro-Medium.woff2") format("woff2"),
-       url("../fonts/HKGroteskPro/HKGroteskPro-Medium.woff") format("woff");
+  src: url("#{$path-to-fonts}/HKGroteskPro/HKGroteskPro-Medium.woff2") format("woff2"),
+  url("#{$path-to-fonts}/HKGroteskPro/HKGroteskPro-Medium.woff") format("woff");
 }
 
 
@@ -145,7 +145,8 @@ h6, .h6 {
 // Social list
 
 .list-social-icon {
-  max-width: 1.25rem; height: auto;
+  max-width: 1.25rem;
+  height: auto;
 }
 
 

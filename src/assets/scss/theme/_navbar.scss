@@ -110,7 +110,8 @@
     position: fixed;
     top: $spacer;
     left: $spacer;
-    height: calc(100% - #{$spacer * 2}) !important;
+    height: auto;
+    max-height: calc(100% - #{$spacer * 2}) !important;
     width: calc(100% - #{$spacer * 2});
     background-color: $dropdown-bg;
     border-radius: $dropdown-border-radius;
@@ -142,6 +143,10 @@
 
 
 // Toggler
+
+.navbar .navbar-toggler {
+  margin-left: auto;
+}
 
 .navbar-collapse .navbar-toggler {
   position: absolute;
@@ -193,7 +198,10 @@
 }
 
 .navbar-nav .dropdown > .dropdown-menu {
-  display: block !important;
+
+  @include media-breakpoint-down(md) {
+    display: block !important;
+  }
 }
 
 .navbar-nav .dropright > .dropdown-menu {
@@ -338,38 +346,35 @@
 @include media-breakpoint-up(lg) {
 
   .navbar-nav .dropdown-menu {
-    z-index: $zindex-fixed;
-    display: block !important;
-    visibility: hidden;
+    display: none;
     opacity: 0;
+    transition: $transition-base;
+    transition-property: opacity, transform, -webkit-transform;
   }
 
-  .navbar-nav .hovered > .dropdown-menu {
-    transition: $transition-base;
-    transition-property: opacity, visibility, transform, -webkit-transform;
-    transform-origin: top center;
+  .navbar-nav .dropright > .dropdown-menu {
+    transform: translateY(10px);
   }
 
   .navbar-nav .dropdown > .dropdown-menu {
     left: 50%;
-    transform: translate3d(-50%, 10px, 0);
+    transform: translate(-50%, 10px);
   }
 
-  .navbar-nav .dropright > .dropdown-menu {
-    transform: translate3d(0, 10px, 0);
+  .navbar-nav .dropdown-menu.showing {
+    display: block;
   }
 
-  .navbar-nav .dropdown.show > .dropdown-menu,
-  .navbar-nav .dropright.show > .dropdown-menu {
-    visibility: visible;
+  .navbar-nav .dropdown-menu.show {
+    display: block;
     opacity: 1;
   }
 
-  .navbar-nav .dropdown.show > .dropdown-menu {
-    transform: translate3d(-50%, 0, 0);
+  .navbar-nav .dropright > .dropdown-menu.show {
+    transform: translateY(0);
   }
 
-  .navbar-nav .dropright.show > .dropdown-menu {
-    transform: translate3d(0, 0, 0);
+  .navbar-nav .dropdown > .dropdown-menu.show {
+    transform: translate(-50%, 0);
   }
 }

@@ -32,18 +32,22 @@
   }
 }
 
-// White text opacity
+// Text opacity
 
 .text-white-70 {
-  color: fade-out($white, .3) !important;
+  color: rgba($white, .7) !important;
 }
 
 .text-white-75 {
-  color: fade-out($white, .25) !important;
+  color: rgba($white, .75) !important;
 }
 
 .text-white-80 {
-  color: fade-out($white, .2) !important;
+  color: rgba($white, .8) !important;
+}
+
+.text-muted-80 {
+  color: rgba($text-muted, .8) !important;
 }
 
 

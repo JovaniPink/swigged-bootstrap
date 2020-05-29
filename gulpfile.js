@@ -78,7 +78,7 @@ var paths = {
 // Tasks ===================================
 //
 
-gulp.task('browsersync', function(callback) {
+gulp.task('browsersync', function (callback) {
   browsersync.init({
     server: {
       baseDir: [paths.src.tmp.dir, paths.src.base.dir, paths.base.base.dir],
@@ -87,12 +87,12 @@ gulp.task('browsersync', function(callback) {
   callback();
 });
 
-gulp.task('browsersyncReload', function(callback) {
+gulp.task('browsersyncReload', function (callback) {
   browsersync.reload();
   callback();
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(paths.src.scss.files, gulp.series('scss'));
   gulp.watch(
     [paths.src.js.files, paths.src.images.files],
@@ -104,7 +104,7 @@ gulp.task('watch', function() {
   );
 });
 
-gulp.task('scss', function() {
+gulp.task('scss', function () {
   return gulp
     .src(paths.src.scss.main)
     .pipe(sass().on('error', sass.logError))
@@ -113,14 +113,11 @@ gulp.task('scss', function() {
     .pipe(browsersync.stream());
 });
 
-gulp.task('typescript', function() {
-  return tsProject
-    .src()
-    .pipe(tsProject())
-    .js.pipe(gulp.dest(paths.src.js.dir));
+gulp.task('typescript', function () {
+  return tsProject.src().pipe(tsProject()).js.pipe(gulp.dest(paths.src.js.dir));
 });
 
-gulp.task('fileinclude', function(callback) {
+gulp.task('fileinclude', function (callback) {
   return gulp
     .src([
       paths.src.html.files,
@@ -139,7 +136,7 @@ gulp.task('fileinclude', function(callback) {
     .pipe(gulp.dest(paths.src.tmp.dir));
 });
 
-gulp.task('clean:tmp', function(callback) {
+gulp.task('clean:tmp', function (callback) {
   del.sync(paths.src.tmp.dir);
   callback();
 });
@@ -149,12 +146,12 @@ gulp.task('clean:tmp', function(callback) {
 //   callback();
 // });
 
-gulp.task('clean:dist', function(callback) {
+gulp.task('clean:dist', function (callback) {
   del.sync(paths.dist.base.dir);
   callback();
 });
 
-gulp.task('copy:all', function() {
+gulp.task('copy:all', function () {
   return gulp
     .src([
       paths.src.base.files,
@@ -173,7 +170,7 @@ gulp.task('copy:all', function() {
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
-gulp.task('copy:libs', function() {
+gulp.task('copy:libs', function () {
   return gulp
     .src(npmdist(), {
       base: paths.base.node.dir,
@@ -181,7 +178,7 @@ gulp.task('copy:libs', function() {
     .pipe(gulp.dest(paths.dist.libs.dir));
 });
 
-gulp.task('html', function() {
+gulp.task('html', function () {
   return gulp
     .src([
       paths.src.html.files,

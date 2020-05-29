@@ -107,6 +107,13 @@
 }
 
 
+// Direction
+
+.shape-flip-x {
+  transform: scaleX(-1);
+}
+
+
 // Blurs
 
 .shape-blur-1 {
@@ -169,10 +176,13 @@
   top: 0;
   bottom: 0;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%) scale(1.3);
 }
 
 .shape-blur-4 > * {
   width: auto;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }

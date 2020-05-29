@@ -48,6 +48,7 @@
 
   function overflowShow() {
     document.documentElement.style.overflow = '';
+    document.body.style.paddingRight = '';
   }
 
   function getScrollbarWidth() {

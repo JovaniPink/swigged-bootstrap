@@ -73,6 +73,11 @@
 
 // Sizing
 
+.dropdown-menu-xs {
+  min-width: $dropdown-min-width-xs;
+  padding: $dropdown-padding-y-xs $dropdown-padding-x-xs;
+}
+
 .dropdown-menu-md {
   min-width: $dropdown-min-width-md;
 }
@@ -88,14 +93,14 @@
 .dropdown-menu-lg,
 .dropdown-menu-xl {
   padding: $dropdown-padding-y-lg $dropdown-padding-x-lg;
+}
 
-  .dropdown-item,
-  .dropdown-header {
-    margin-left: -$dropdown-padding-x-lg;
-    margin-right: -$dropdown-padding-x-lg;
-    padding-left: $dropdown-item-padding-x-lg;
-    padding-right: $dropdown-item-padding-x-lg;
-  }
+.dropdown-menu-lg .dropdown-item,
+.dropdown-menu-xl .dropdown-header {
+  margin-left: -$dropdown-padding-x-lg;
+  margin-right: -$dropdown-padding-x-lg;
+  padding-left: $dropdown-item-padding-x-lg;
+  padding-right: $dropdown-item-padding-x-lg;
 }
 
 
