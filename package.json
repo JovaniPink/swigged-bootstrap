@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/aos": "3.0.3",
     "@types/bootstrap": "4.5.0",
-    "@types/eslint": "6.8.1",
+    "@types/eslint": "7.2.0",
     "@types/eslint-plugin-prettier": "3.1.0",
     "@types/babel-core": "6.25.6",
     "@types/flickity": "2.2.3",
@@ -80,7 +80,7 @@
     "typescript": "3.9.7",
     "browser-sync": "2.26.7",
     "del": "5.1.0",
-    "eslint": "7.1.0",
+    "eslint": "7.5.0",
     "@typescript-eslint/eslint-plugin": "3.7.1",
     "@typescript-eslint/parser": "3.7.1",
     "eslint-config-airbnb-typescript": "7.2.1",
