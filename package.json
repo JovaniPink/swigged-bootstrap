@@ -62,7 +62,7 @@
     "@types/prettier": "2.1.5",
     "@types/smooth-scroll": "16.1.0",
     "@babel/core": "7.12.3",
-    "babel-loader": "8.2.0",
+    "babel-loader": "8.2.1",
     "@babel/preset-env": "7.12.1",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "7.0.1",
