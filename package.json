@@ -80,7 +80,7 @@
     "typescript": "4.0.5",
     "browser-sync": "2.26.13",
     "del": "6.0.0",
-    "eslint": "7.13.0",
+    "eslint": "7.14.0",
     "@typescript-eslint/eslint-plugin": "4.8.1",
     "@typescript-eslint/parser": "4.8.1",
     "eslint-config-airbnb-typescript": "12.0.0",
