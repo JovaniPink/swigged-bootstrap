@@ -21,7 +21,7 @@ $gray-800: #384C74 !default;
 $gray-900: #1B2A4E !default;
 $black: #161C2D !default;
 
-$primary: #335EEA !default;
+$primary: #030303 !default;
 $secondary: $gray-700 !default;
 $primary-desat: #6C8AEC !default; // NEW
 $success: #42BA96 !default;
@@ -67,9 +67,9 @@ $spacers: map-merge((0: 0,
     10: ($spacer * 5), // 80px
     11: ($spacer * 6), // 96px
     12: ($spacer * 8), // 128px
-    13: ($spacer * 10), // 160px 
+    13: ($spacer * 10), // 160px
     14: ($spacer * 12), // 192px
-    15: ($spacer * 16), // 256px                                                     
+    15: ($spacer * 16), // 256px
     16: ($spacer * 25), // 400px
   ),
   $spacers);
