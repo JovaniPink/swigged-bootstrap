@@ -60,7 +60,7 @@
     "@types/node": "14.17.0",
     "@types/node-sass": "4.11.1",
     "@types/prettier": "2.2.3",
-    "@types/smooth-scroll": "16.1.0",
+    "@types/smooth-scroll": "16.1.1",
     "@babel/core": "7.14.3",
     "babel-loader": "8.2.2",
     "@babel/preset-env": "7.14.2",
