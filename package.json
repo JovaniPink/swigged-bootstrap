@@ -26,7 +26,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "bootstrap": "5.0.1",
-    "jquery": "3.6.0",
+    "jquery": "3.7.1",
     "popper.js": "1.16.1",
     "@fancyapps/fancybox": "3.5.7",
     "aos": "3.0.0-beta.6",
@@ -56,7 +56,7 @@
     "@types/highlight.js": "9.12.4",
     "@types/imagesloaded": "4.1.2",
     "@types/isotope-layout": "3.0.8",
-    "@types/jquery": "3.5.5",
+    "@types/jquery": "3.5.32",
     "@types/node": "14.17.0",
     "@types/node-sass": "4.11.1",
     "@types/prettier": "2.2.3",
